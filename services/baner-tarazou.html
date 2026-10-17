@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>بنر ترازو - پریسا زارع کاریزک</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Tahoma,Arial,sans-serif;background:#f8f5ed;padding:20px}
+
+.banner{
+  background:linear-gradient(160deg,#fdfaf2 0%,#f8f1e0 30%,#f5ebd3 70%,#f0e2c0 100%);
+  padding:40px 6% 35px;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+  border-top:5px solid #d5ad5b;
+  border-bottom:5px solid #d5ad5b;
+  border-radius:12px;
+  max-width:900px;
+  margin:auto;
+}
+
+.banner-inner{max-width:750px;margin:auto;position:relative;z-index:1}
+
+.banner-icon{
+  width:80px;
+  height:80px;
+  margin:0 auto 15px;
+  border:3px solid #d5ad5b;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#fdfaf2;
+  font-size:38px;
+  color:#d5ad5b;
+  font-weight:bold;
+  box-shadow:0 4px 15px rgba(162,122,47,0.2);
+}
+
+.banner-divider{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  margin:14px auto;
+  max-width:400px;
+}
+.banner-divider .line{
+  flex:1;
+  height:1px;
+  background:linear-gradient(90deg,transparent,#d5ad5b,transparent);
+}
+.banner-divider .diamond{
+  color:#d5ad5b;
+  font-size:12px;
+  letter-spacing:2px;
+}
+
+.banner-name{
+  font-size:42px;
+  color:#101d35;
+  margin:12px 0 8px;
+  font-weight:bold;
+  letter-spacing:1px;
+  line-height:1.3;
+}
+
+.banner-title{
+  font-size:19px;
+  color:#a27a2f;
+  margin:0;
+  font-weight:bold;
+  letter-spacing:2px;
+}
+
+.banner-slogan{
+  font-size:16px;
+  color:#4a5a73;
+  margin:20px 0 0;
+  font-style:italic;
+  letter-spacing:0.5px;
+  line-height:1.8;
+}
+
+@media(max-width:600px){
+  .banner{padding:30px 5% 25px}
+  .banner-icon{width:65px;height:65px;font-size:30px}
+  .banner-name{font-size:26px;letter-spacing:0.5px}
+  .banner-title{font-size:14px;letter-spacing:1px}
+  .banner-slogan{font-size:13px}
+}
+</style>
+</head>
+<body>
+
+<div class="banner">
+  <div class="banner-inner">
+
+    <div class="banner-icon">⚖</div>
+
+    <div class="banner-divider">
+      <span class="line"></span>
+      <span class="diamond">◆</span>
+      <span class="line"></span>
+    </div>
+
+    <h1 class="banner-name">پریسا زارع کاریزک</h1>
+
+    <p class="banner-title">وکیل پایه یک دادگستری</p>
+
+    <div class="banner-divider">
+      <span class="line"></span>
+      <span class="diamond">◆</span>
+      <span class="line"></span>
+    </div>
+
+    <p class="banner-slogan">در مسیر احقاق حق تنها قدم برندارید</p>
+
+  </div>
+</div>
+
+</body>
+  </html>
