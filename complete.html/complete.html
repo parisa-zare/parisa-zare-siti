@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="صفحه جامع وکیل ملکی (پریسا زارع کاریزک) و مطالب عمومی (دکتر سارا زارع کاریزک).">
+<title>وکیل ملکی و مطالب عمومی | زارع کاریزک</title>
+
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Tahoma,Arial,sans-serif;background:#f8f5ed;color:#17243a;line-height:2.2}
+
+/* هدر و منو */
+header{background:#101d35;color:white;padding:22px 6%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap; position: sticky; top: 0; z-index: 100;}
+.logo{font-size:20px;font-weight:bold;color:#d5ad5b}
+nav a{color:white;text-decoration:none;margin:0 8px}
+nav a:hover{color:#d5ad5b}
+
+/* بنر بالای صفحه */
+.banner{background:linear-gradient(160deg,#fdfaf2 0%,#f8f1e0 30%,#f5ebd3 70%,#f0e2c0 100%);padding:40px 6% 35px;text-align:center;position:relative;overflow:hidden;border-top:5px solid #d5ad5b;border-bottom:5px solid #d5ad5b}
+.banner-inner{max-width:750px;margin:auto;position:relative;z-index:1}
+.banner-icon{width:80px;height:80px;margin:0 auto 15px;border:3px solid #d5ad5b;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#fdfaf2;font-size:38px;color:#d5ad5b;font-weight:bold;box-shadow:0 4px 15px rgba(162,122,47,0.2)}
+.banner-divider{display:flex;align-items:center;justify-content:center;gap:12px;margin:14px auto;max-width:400px}
+.banner-divider .line{flex:1;height:1px;background:linear-gradient(90deg,transparent,#d5ad5b,transparent)}
+.banner-divider .diamond{color:#d5ad5b;font-size:12px;letter-spacing:2px}
+.banner-name{font-size:42px;color:#101d35;margin:12px 0 8px;font-weight:bold;letter-spacing:1px;line-height:1.3}
+.banner-title{font-size:19px;color:#a27a2f;margin:0;font-weight:bold;letter-spacing:2px}
+.banner-slogan{font-size:16px;color:#4a5a73;margin:20px 0 0;font-style:italic;letter-spacing:0.5px;line-height:1.8}
+
+/* محتوا */
+section{max-width:900px;margin:auto;padding:55px 6%}
+.content{background:white;border-radius:18px;padding:40px;font-size:17px;box-shadow:0 4px 15px #0000000d;line-height:2.2; margin-bottom:30px;}
+.content h2{color:#101d35;font-size:24px;margin-top:0;margin-bottom:20px;border-bottom:2px solid #e5dcc8;padding-bottom:10px}
+.content h3{color:#a27a2f;font-size:20px;margin-top:25px;margin-bottom:10px}
+.content p{margin-bottom:15px;text-align:justify}
+.content ul{padding-right:20px;margin-bottom:20px}
+.content li{margin-bottom:10px;text-align:justify}
+.content strong{color:#101d35}
+
+/* آمار مقالات */
+.stats-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:15px; margin:20px 0;}
+.stat-box{background:#101d35; color:white; padding:20px; border-radius:12px; text-align:center;}
+.stat-box span{display:block; font-size:28px; color:#d5ad5b; font-weight:bold; margin-bottom:5px;}
+.stat-box p{margin:0; font-size:15px; color:#eee;}
+
+/* مقاله */
+.article-box {background:#e8e0cc; border-radius:10px; padding:20px; margin-bottom:20px; border-right:5px solid #101d35;}
+.article-box .citation {font-family: 'Times New Roman', serif; direction: ltr; text-align: left; font-size: 16px; color: #333;}
+
+/* ویدیو */
+.video-container {position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); margin-top: 20px;}
+.video-container iframe {position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;}
+
+/* گالری عکس کتاب‌ها */
+.book-gallery{display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:20px; margin-top:20px; text-align:center;}
+.book-item{background:#f9f9f9; padding:15px; border-radius:12px; border:1px solid #e5dcc8; box-shadow:0 4px 10px rgba(0,0,0,0.05); display:flex; flex-direction:column; justify-content:space-between; align-items:center;}
+.book-gallery img{width:100%; max-width:180px; height:250px; object-fit:cover; border-radius:8px; box-shadow:0 4px 10px rgba(0,0,0,0.15); transition:transform 0.3s; margin-bottom:15px;}
+.book-gallery img:hover{transform:scale(1.05);}
+.book-gallery p{font-size:15px; font-weight:bold; color:#101d35; margin:0; line-height:1.5;}
+
+/* تماس */
+.contact{background:#101d35;color:white;text-align:center;border-radius:18px;padding:40px 20px;margin-top:30px}
+.contact h2{color:#d5ad5b;margin-top:0}
+.btn{display:inline-block;background:#d5ad5b;color:#101d35;padding:10px 24px;border-radius:8px;text-decoration:none;font-weight:bold;margin:8px}
+
+footer{text-align:center;background:#0b1527;color:#ddd;padding:25px;margin-top:40px}
+@media(max-width:600px){.banner{padding:30px 5% 25px}.banner-name{font-size:26px}nav{width:100%;margin-top:10px}nav a{display:inline-block;margin:5px 4px}.content{padding:25px 20px}}
+</style>
+</head>
+<body>
+
+<header>
+<div class="logo">زارع کاریزک</div>
+<nav>
+<a href="#melki">وکیل ملکی</a>
+<a href="#sara">مطالب عمومی (دکتر سارا)</a>
+<a href="#contact">تماس</a>
+</nav>
+</header>
+
+<!-- بنر بالای سایت -->
+<div class="banner">
+  <div class="banner-inner">
+    <div class="banner-icon">⚖</div>
+    <div class="banner-divider"><span class="line"></span><span class="diamond">◆</span><span class="line"></span></div>
+    <h1 class="banner-name">زارع کاریزک</h1>
+    <p class="banner-title">حقوق و علوم ورزشی</p>
+    <div class="banner-divider"><span class="line"></span><span class="diamond">◆</span><span class="line"></span></div>
+    <p class="banner-slogan">در مسیر احقاق حق و سلامت گام بردارید</p>
+  </div>
+</div>
+
+<!-- بخش اول: وکیل ملکی -->
+<section id="melki">
+<div class="content">
+    <h2>وکیل ملکی مشهد</h2>
+    <p>دعاوی ملکی از پیچیده‌ترین و پرتکرارترین پرونده‌های حقوقی در مشهد هستند. <strong>پریسا زارع کاریزک</strong>، وکیل پایه یک دادگستری، با بیش از ده سال سابقه در کنار شماست.</p>
+
+    <h3>خدمات وکیل ملکی در مشهد</h3>
+    <ul>
+        <li><strong>کلیه دعاوی ملکی و حقوقی:</strong> ارائه مشاوره و پیگیری تخصصی در تمامی دعاوی مرتبط با املاک.</li>
+        <li><strong>دعاوی تخلیه:</strong> پیگیری قانونی برای تخلیه ملک در صورت عدم تخلیه توسط مستأجر.</li>
+        <li><strong>خلع ید و تصرف عدوانی:</strong> اقامه دعوا علیه تصرف غیرقانونی ملک و اثبات مالکیت.</li>
+        <li><strong>الزام به تنظیم سند رسمی:</strong> پیگیری انتقال رسمی سند در صورت خودداری فروشنده.</li>
+        <li><strong>تنظیم و بررسی قراردادهای ملکی:</strong> جلوگیری از بروز اختلاف با تنظیم دقیق قرارداد اجاره، خرید و فروش و مشارکت.</li>
+    </ul>
+</div>
+</section>
+
+<!-- بخش دوم: مطالب عمومی (دکتر سارا زارع کاریزک) -->
+<section id="sara" style="background-color: #f0e9d8; border-top: 4px solid #d5ad5b; border-bottom: 4px solid #d5ad5b;">
+<div class="content">
+    <h2 style="text-align: center; border: none; font-size: 28px;">مطالب عمومی</h2>
+    <p style="text-align: center; font-weight: bold; color: #a27a2f; margin-bottom: 30px; font-size: 18px;">معرفی علمی دکتر سارا زارع کاریزک</p>
+
+    <p><strong>دکتر سارا زارع کاریزک</strong>، استادیار فیزیولوژی ورزش، گروه علوم ورزشی، دانشکده ادبیات و علوم انسانی، <strong>دانشگاه خلیج فارس، بوشهر، ایران</strong> هستند. تمرکز اصلی پژوهش‌های ایشان بر روی سازگاری‌های قلبی-عروقی، متابولیسم انرژی در ورزشکاران حرفه‌ای، و تأثیر تمرینات تخصصی است.</p>
+
+    <h3>آمار علمی (بر اساس پایگاه Magiran)</h3>
+    <div class="stats-grid">
+        <div class="stat-box"><span>۱۹</span><p>مقالات مصوب</p></div>
+        <div class="stat-box"><span>۱۴</span><p>نویسنده مسئول</p></div>
+        <div class="stat-box"><span>۹</span><p>نویسنده اول</p></div>
+        <div class="stat-box"><span>۱</span><p>تک نویسنده</p></div>
+    </div>
+
+    <h3>ویدیوهای آموزشی</h3>
+    <div class="video-container">
+        <iframe src="https://www.aparat.com/video/video/embed/videohash/lsp53mp/vt/frame" allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
+    </div>
+
+    <h3>مقالات علمی بین‌المللی</h3>
+    <div class="article-box">
+        <p class="citation"><strong>Sara Zare Karizak *</strong>, Majid Kashef<br><em>Asian Journal of Sports Medicine</em>, Sep 2021</p>
+    </div>
+
+    <h3>کتاب‌های منتشر شده</h3>
+    <ul>
+        <li><strong>علم تمرین (راهنمای مربیان ورزش‌های تیمی)</strong>، علم و حرکت (۱۳۹۲)</li>
+        <li><strong>عملکرد قلب و عروق و تنفس هنگام فعالیت ورزشی با رویکردی به بیماران قلبی</strong>، بامداد کتاب (۱۳۹۴)</li>
+        <li><strong>دستگاه تنفس و فعالیت ورزشی (از نظر تا عمل)</strong>، حتمی (۱۳۹۴)</li>
+        <li><strong>تغذیه انسانی پیشرفته (جلد اول و دوم)</strong>، مشاور توس (۱۴۰۱)</li>
+        <li><strong>فعالیت‌های ورزشی تعادلی برای جلوگیری از افتادن</strong>، بامداد (۱۴۰۲)</li>
+    </ul>
+
+    <h3>گالری تصاویر کتاب‌ها</h3>
+    <div class="book-gallery">
+        <div class="book-item">
+            <img src="https://i.postimg.cc/MvM4xHC2/IMG-20261021-182100.jpg" alt="تغذیه انسانی پیشرفته">
+            <p>تغذیه انسانی پیشرفته</p>
+        </div>
+        <div class="book-item">
+            <img src="https://i.postimg.cc/F7dqmzMX/IMG-20261021-182357.jpg" alt="دستگاه تنفس">
+            <p>دستگاه تنفس و فعالیت ورزشی</p>
+        </div>
+        <div class="book-item">
+            <img src="https://i.postimg.cc/N59VYFWV/IMG-20261021-182420.jpg" alt="تغذیه انسانی پیشرفته">
+            <p>تغذیه انسانی پیشرفته</p>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- بخش تماس -->
+<section id="contact">
+<div class="contact">
+<h2>ارتباط با ما</h2>
+<p>شماره تماس: ۰۹۱۵۱۰۶۹۲۶۶</p>
+<p>نشانی: مشهد، احمدآباد</p>
+<a class="btn" href="tel:09151069266">تماس مستقیم</a>
+</div>
+</section>
+
+<footer>© تمامی حقوق این وب‌سایت متعلق به خانواده زارع کاریزک است.</footer>
+
+</body>
+  </html>
