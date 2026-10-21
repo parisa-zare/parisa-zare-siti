@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>پریسا زارع | وکیل پایه یک دادگستری</title>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    body {
+        font-family: 'Vazirmatn', Tahoma, Arial, sans-serif;
+        background-color: #0d1117;
+        background-image: radial-gradient(circle at 50% 0%, #1a2a44 0%, #0d1117 70%);
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .card {
+        background: linear-gradient(145deg, #141e30, #243b55);
+        width: 100%;
+        max-width: 420px;
+        border-radius: 20px;
+        border: 2px solid #c5a059;
+        box-shadow: 0 20px 50px rgba(0,0,0,0.8), 0 0 20px rgba(197, 160, 89, 0.2);
+        padding: 40px 30px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* افکت نور طلایی در پس‌زمینه کارت */
+    .card::before {
+        content: "";
+        position: absolute;
+        top: -50%; left: -50%;
+        width: 200%; height: 200%;
+        background: radial-gradient(circle, rgba(197, 160, 89, 0.1) 0%, transparent 60%);
+        pointer-events: none;
+    }
+
+    .icon-container {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto 20px;
+        background: rgba(197, 160, 89, 0.1);
+        border: 2px solid #c5a059;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 0 15px rgba(197, 160, 89, 0.3);
+        position: relative;
+        z-index: 1;
+    }
+
+    .icon-container svg {
+        width: 45px;
+        height: 45px;
+        fill: #c5a059;
+    }
+
+    .name {
+        font-size: 32px;
+        font-weight: 900;
+        color: #ffffff;
+        margin-bottom: 8px;
+        letter-spacing: 1px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .title {
+        font-size: 16px;
+        font-weight: 700;
+        color: #c5a059;
+        margin-bottom: 30px;
+        letter-spacing: 2px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .divider {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 20px 0;
+        position: relative;
+        z-index: 1;
+    }
+    .divider::before, .divider::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, #c5a059, transparent);
+    }
+    .divider span {
+        color: #c5a059;
+        margin: 0 10px;
+        font-size: 14px;
+    }
+
+    .contact-info {
+        position: relative;
+        z-index: 1;
+        margin-bottom: 25px;
+    }
+
+    .contact-info p {
+        font-size: 16px;
+        color: #e2e8f0;
+        margin-bottom: 12px;
+        font-weight: 400;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        direction: rtl;
+    }
+
+    .contact-info p span.icon {
+        color: #c5a059;
+        font-size: 18px;
+    }
+
+    .slogan {
+        font-size: 14px;
+        font-style: italic;
+        color: #a0aec0;
+        position: relative;
+        z-index: 1;
+        background: rgba(255, 255, 255, 0.05);
+        padding: 10px;
+        border-radius: 8px;
+        border-right: 3px solid #c5a059;
+        text-align: right;
+    }
+
+    /* جلوه‌های واکنش‌گرا (Responsive) */
+    @media(max-width: 480px) {
+        .card { padding: 30px 20px; }
+        .name { font-size: 26px; }
+        .title { font-size: 14px; }
+        .contact-info p { font-size: 15px; }
+    }
+</style>
+</head>
+<body>
+
+    <div class="card">
+        
+        <div class="icon-container">
+            <!-- آیکون ترازوی عدالت -->
+            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <path d="M50 15 L50 85 M30 40 L70 40" stroke="#c5a059" stroke-width="3" stroke-linecap="round"/>
+                <circle cx="50" cy="15" r="4" fill="#c5a059"/>
+                <!-- کفه چپ -->
+                <path d="M20 40 L35 60 L5 60 Z" fill="none" stroke="#c5a059" stroke-width="2"/>
+                <!-- کفه راست -->
+                <path d="M80 40 L65 60 L95 60 Z" fill="none" stroke="#c5a059" stroke-width="2"/>
+                <!-- پایه -->
+                <path d="M40 85 L60 85" stroke="#c5a059" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+        </div>
+
+        <h1 class="name">پریسا زارع کاریزک</h1>
+        <h2 class="title">وکیل پایه یک دادگستری</h2>
+
+        <div class="divider"><span>◆</span></div>
+
+        <div class="contact-info">
+            <p><span class="icon">📞</span> ۰۹۱۵۱۰۶۹۲۶۶</p>
+            <p><span class="icon">📍</span> مشهد، احمدآباد</p>
+        </div>
+
+        <p class="slogan">« حق شما، شایسته پیگیری حرفه‌ای است. »</p>
+
+    </div>
+
+</body>
+  </html>
