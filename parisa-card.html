@@ -3,62 +3,204 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="کارت ویزیت و بنر اختصاصی پریسا زارع کاریزک، وکیل پایه یک دادگستری در مشهد. مشاوره حقوقی، تنظیم قراردادها و پیگیری پرونده‌ها.">
-<title>پریسا زارع کاریزک | کارت ویزیت وکیل پایه یک دادگستری</title>
+<meta name="description" content="کارت ویزیت دیجیتال پریسا زارع کاریزک، وکیل پایه یک دادگستری در مشهد. مشاوره حقوقی، تنظیم قراردادها و پیگیری پرونده‌ها.">
+<title>پریسا زارع کاریزک | کارت ویزیت اختصاصی</title>
 <style>
+    @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700;900&display=swap');
+
     * { box-sizing: border-box; margin: 0; padding: 0; }
+    
     body {
-        font-family: Tahoma, Arial, sans-serif;
-        background-color: #1a110a; /* رنگ پس‌زمینه شبیه میز چوبی */
+        font-family: 'Vazirmatn', Tahoma, Arial, sans-serif;
+        /* پس‌زمینه شبیه میز چوبی تیره */
+        background: linear-gradient(135deg, #2c1e16 0%, #1a110a 100%);
         display: flex;
-        flex-direction: column;
         justify-content: center;
         align-items: center;
         min-height: 100vh;
         padding: 20px;
     }
-    .card-container {
-        max-width: 600px;
+
+    .card {
+        background: #f8f1e0; /* رنگ کرم کاغذ */
         width: 100%;
-        text-align: center;
-        box-shadow: 0 15px 40px rgba(0,0,0,0.8);
-        border-radius: 16px;
+        max-width: 450px;
+        border-radius: 20px;
+        padding: 40px 30px;
+        box-shadow: 0 20px 50px rgba(0,0,0,0.7), 0 0 0 2px #c5a059;
+        position: relative;
         overflow: hidden;
-        background: #f8f1e0;
-        border: 2px solid #d5ad5b; /* حاشیه طلایی */
+        text-align: center;
     }
-    .card-container img {
-        width: 100%;
-        height: auto;
-        display: block;
+
+    /* افکت خطوط طلایی در پس‌زمینه کارت */
+    .card::before {
+        content: "";
+        position: absolute;
+        top: -50px; right: -50px;
+        width: 150px; height: 150px;
+        background: radial-gradient(circle, rgba(197,160,89,0.15) 0%, transparent 70%);
+        border-radius: 50%;
     }
-    .btn-back {
+
+    .icon-top {
+        width: 60px; height: 60px;
+        fill: #c5a059;
+        margin: 0 auto 15px;
+        filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
+    }
+
+    .name {
+        font-size: 36px;
+        font-weight: 900;
+        color: #101d35; /* سرمه‌ای */
+        margin-bottom: 5px;
+        letter-spacing: 1px;
+    }
+
+    .title {
+        font-size: 18px;
+        font-weight: 700;
+        color: #c5a059; /* طلایی */
+        margin-bottom: 25px;
+        position: relative;
         display: inline-block;
-        margin-top: 25px;
-        padding: 12px 30px;
-        background-color: #d5ad5b;
+    }
+
+    .title::after {
+        content: "";
+        display: block;
+        width: 40px; height: 2px;
+        background: #c5a059;
+        margin: 10px auto 0;
+    }
+
+    .tagline {
+        font-size: 15px;
+        color: #4a5a73;
+        margin-bottom: 30px;
+        line-height: 1.8;
+    }
+
+    .services {
+        text-align: right;
+        margin-bottom: 35px;
+        background: rgba(255,255,255,0.6);
+        padding: 20px;
+        border-radius: 12px;
+        border: 1px solid #e5dcc8;
+    }
+
+    .services ul {
+        list-style: none;
+    }
+
+    .services li {
+        font-size: 15px;
         color: #101d35;
+        font-weight: 700;
+        margin-bottom: 12px;
+        display: flex;
+        align-items: center;
+    }
+
+    .services li:last-child { margin-bottom: 0; }
+
+    .services li svg {
+        width: 20px; height: 20px;
+        fill: #c5a059;
+        margin-left: 10px;
+    }
+
+    .footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        border-top: 1px solid #e5dcc8;
+        padding-top: 20px;
+    }
+
+    .slogan {
+        font-size: 14px;
+        font-weight: 700;
+        color: #101d35;
+        font-style: italic;
+    }
+
+    .logo-text {
+        font-family: 'Times New Roman', serif;
+        font-size: 14px;
+        color: #c5a059;
+        letter-spacing: 2px;
+        font-weight: bold;
+    }
+
+    .btn-back {
+        display: block;
+        width: fit-content;
+        margin: 30px auto 0;
+        padding: 10px 25px;
+        background-color: #101d35;
+        color: #c5a059;
         text-decoration: none;
         border-radius: 8px;
         font-weight: bold;
-        font-size: 16px;
+        font-size: 14px;
         transition: 0.3s;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     }
+
     .btn-back:hover {
-        background-color: #f5ebd3;
-        transform: translateY(-2px);
+        background-color: #c5a059;
+        color: #101d35;
     }
 </style>
 </head>
 <body>
 
-    <div class="card-container">
-        <!-- لینک دقیق عکس شما -->
-        <img src="https://i.postimg.cc/prYNMzYn/IMG-20261022-123032-702.jpg" alt="کارت ویزیت پریسا زارع کاریزک، وکیل پایه یک دادگستری">
-    </div>
+    <div>
+        <div class="card">
+            <!-- آیکون ترازو (SVG) -->
+            <svg class="icon-top" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <path d="M50 15 L50 80 M30 40 L70 40 M50 80 L40 90 M50 80 L60 90" stroke="#c5a059" stroke-width="3" fill="none" stroke-linecap="round"/>
+                <circle cx="50" cy="15" r="4" fill="#c5a059"/>
+                <path d="M20 40 L35 60 L5 60 Z" fill="none" stroke="#c5a059" stroke-width="2"/>
+                <path d="M80 40 L65 60 L95 60 Z" fill="none" stroke="#c5a059" stroke-width="2"/>
+            </svg>
 
-    <a href="/parisa-zare-siti/" class="btn-back">بازگشت به سایت اصلی</a>
+            <h1 class="name">پریسا زارع</h1>
+            <div class="title">وکیل پایه یک دادگستری</div>
+
+            <p class="tagline">با تعهد، دانش و تجربه<br>در کنار شما هستم</p>
+
+            <div class="services">
+                <ul>
+                    <li>
+                        <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
+                        مشاوره حقوقی
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+                        تنظیم قراردادها
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+                        پیگیری پرونده‌ها
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg>
+                        دعاوی حقوقی و کیفری
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer">
+                <span class="slogan">حق شما،<br>اولویت ماست...</span>
+                <span class="logo-text">PARISA ZARE</span>
+            </div>
+        </div>
+
+        <a href="/parisa-zare-siti/" class="btn-back">بازگشت به سایت اصلی</a>
+    </div>
 
 </body>
 </html>
