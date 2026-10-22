@@ -34,18 +34,22 @@
         .header h1 { font-size: 36px; font-weight: 900; color: #101d35; margin-bottom: 5px; }
         .header .title { font-size: 18px; font-weight: 700; color: #d5ad5b; letter-spacing: 1px; }
         
-        .tagline { text-align: center; font-size: 16px; color: #4a5a73; line-height: 1.8; margin-bottom: 35px; font-weight: 500; }
+        .tagline { text-align: center; font-size: 16px; color: #4a5a73; line-height: 1.8; margin-bottom: 30px; font-weight: 500; }
 
-        .stats-grid {
-            display: grid; grid-template-columns: repeat(4, 1fr);
-            gap: 10px; margin-bottom: 35px;
+        /* کادر سرمه‌ای کانون وکلا */
+        .association-box {
+            background: #101d35; /* رنگ سرمه‌ای */
+            color: #d5ad5b; /* رنگ طلایی */
+            padding: 18px;
+            border-radius: 12px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: 900;
+            margin-bottom: 35px;
+            border: 1px solid #d5ad5b;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            letter-spacing: 1px;
         }
-        .stat-item {
-            background: #101d35; color: white; padding: 15px 5px;
-            border-radius: 12px; text-align: center;
-        }
-        .stat-item .number { display: block; font-size: 24px; font-weight: 900; color: #d5ad5b; margin-bottom: 5px; }
-        .stat-item .label { font-size: 13px; color: #eee; }
 
         .services { margin-bottom: 40px; }
         .services h3 { font-size: 18px; color: #101d35; margin-bottom: 15px; border-right: 4px solid #d5ad5b; padding-right: 10px; }
@@ -85,11 +89,9 @@
 
         <p class="tagline">با تعهد، دانش و تجربه<br>در کنار شما هستم</p>
 
-        <div class="stats-grid">
-            <div class="stat-item"><span class="number">۱۹</span><span class="label">مقالات علمی</span></div>
-            <div class="stat-item"><span class="number">۱۴</span><span class="label">نویسنده مسئول</span></div>
-            <div class="stat-item"><span class="number">۹</span><span class="label">نویسنده اول</span></div>
-            <div class="stat-item"><span class="number">۱</span><span class="label">تک نویسنده</span></div>
+        <!-- کادر کانون وکلا -->
+        <div class="association-box">
+            کانون وکلای خراسان
         </div>
 
         <div class="services">
@@ -109,4 +111,4 @@
     </div>
     <a href="/parisa-zare-siti/" class="btn-back">بازگشت به سایت اصلی</a>
 </body>
-  </html>
+</html>
