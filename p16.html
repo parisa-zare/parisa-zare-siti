@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="تحلیل تطبیقی تعریف عقد: از ماده ۱۱۰۱ قانون مدنی فرانسه تا ماده ۱۸۳ قانون مدنی ایران. نویسنده: زارع کاریزک پریسا.">
+    <title>تحلیل تطبیقی تعریف عقد: از ماده ۱۱۰۱ فرانسه تا ماده ۱۸۳ ایران | زارع کاریزک پریسا</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        html { scroll-behavior: smooth; }
+        body {
+            margin: 0;
+            font-family: 'Vazirmatn', Tahoma, Arial, sans-serif;
+            background-color: #f8f5ed; 
+            color: #101d35; 
+            line-height: 2.3;
+        }
+        
+        header {
+            background: #101d35;
+            color: white;
+            padding: 22px 6%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            position: sticky; top: 0; z-index: 100;
+        }
+        .logo { font-size: 20px; font-weight: bold; color: #d5ad5b; }
+        nav a { color: white; text-decoration: none; margin: 0 8px; font-weight: bold;}
+        nav a:hover { color: #d5ad5b; }
+
+        .hero {
+            background: linear-gradient(135deg, #101d35, #1d3557);
+            padding: 60px 7%;
+            text-align: center;
+            color: white;
+        }
+        .hero h1 { font-size: 28px; color: #d5ad5b; margin: 0 0 15px 0; line-height: 1.5; }
+        .hero p { font-size: 18px; margin: 0; }
+
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        .service-content {
+            background: white;
+            padding: 40px;
+            border-radius: 18px;
+            box-shadow: 0 10px 30px rgba(10, 25, 47, 0.08);
+            border-top: 5px solid #d5ad5b;
+            margin-bottom: 40px;
+        }
+
+        .service-content h2 {
+            color: #101d35;
+            font-size: 24px;
+            border-bottom: 2px solid #e5dcc8;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+
+        .service-content p { margin-bottom: 15px; }
+
+        .contact-box {
+            background: #101d35;
+            color: white;
+            text-align: center;
+            border-radius: 18px;
+            padding: 30px 20px;
+            margin-top: 40px;
+        }
+        .contact-box h2 { color: #d5ad5b; margin-top: 0; font-size: 24px; }
+        .contact-box p { font-size: 18px; margin: 8px 0; }
+        .btn-call {
+            display: inline-block;
+            background: #d5ad5b;
+            color: #101d35;
+            padding: 12px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            margin-top: 15px;
+            transition: 0.3s;
+        }
+        .btn-call:hover { background: #f5ebd3; }
+
+        .scroll-to-article {
+            text-align: center;
+            margin: 40px 0;
+        }
+        .scroll-btn {
+            display: inline-block;
+            background: #d5ad5b;
+            color: #101d35;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            box-shadow: 0 4px 15px rgba(213, 173, 91, 0.4);
+            transition: 0.3s;
+        }
+        .scroll-btn:hover { background: #101d35; color: #d5ad5b; }
+
+        .article-wrapper {
+            background-color: #FDFBF7;
+            color: #0A192F;
+            line-height: 2.3;
+            padding: 40px 30px;
+            border-radius: 12px;
+            max-width: 850px;
+            margin: 0 auto 50px;
+            box-shadow: 0 10px 30px rgba(10, 25, 47, 0.08);
+            direction: rtl;
+            text-align: justify;
+            border-top: 5px solid #101d35;
+        }
+        .article-wrapper h1 {
+            color: #0A192F;
+            font-size: 24px;
+            text-align: center;
+            border-bottom: 2px solid #0A192F;
+            padding-bottom: 15px;
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        .author-name {
+            text-align: center;
+            font-size: 16px;
+            color: #a27a2f;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+        .article-wrapper h2 {
+            color: #0A192F;
+            font-size: 22px;
+            margin-top: 40px;
+            margin-bottom: 15px;
+            border-right: 5px solid #0A192F;
+            padding-right: 12px;
+        }
+        .article-wrapper p { margin-bottom: 20px; font-size: 16px; }
+        
+        .law-quote {
+            background-color: #F4EFE6;
+            border-right: 4px solid #0A192F;
+            padding: 15px 20px;
+            margin: 25px 0;
+            font-style: italic;
+            border-radius: 4px;
+            color: #1A2B4C;
+            font-weight: bold;
+        }
+        .references {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px dashed #0A192F;
+            font-size: 15px;
+        }
+        .references h3 { color: #0A192F; font-size: 20px; margin-bottom: 15px; }
+        .references ul { padding-right: 20px; list-style-type: square; }
+        .references li { margin-bottom: 8px; }
+
+        /* استایل بخش تاریخ و زمان */
+        .datetime-container {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #f8f1e0;
+            border-radius: 8px;
+            border: 1px dashed #d5ad5b;
+            font-size: 15px;
+            color: #101d35;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            background: #0b1527;
+            color: #ddd;
+            padding: 25px;
+            margin-top: 40px;
+        }
+
+        @media(max-width: 600px) {
+            nav { width: 100%; margin-top: 10px; text-align: center;}
+            nav a { display: inline-block; margin: 5px 4px; }
+            .hero h1 { font-size: 22px; }
+            .article-wrapper h1 { font-size: 20px; }
+            .service-content { padding: 25px 20px; }
+            .article-wrapper { padding: 25px 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">زارع کاریزک پریسا</div>
+        <nav>
+            <a href="/parisa-zare-siti/home-6.html">صفحه اصلی</a>
+            <a href="/parisa-zare-siti/v3.html/v3.html">وکیل طلاق</a>
+            <a href="/parisa-zare-siti/services/melki.html">وکیل ملکی</a>
+            <a href="/parisa-zare-siti/services/criminal.html">وکیل کیفری</a>
+            <a href="/parisa-zare-siti/contract-page-7.html">وکیل قراردادها</a>
+            <a href="/parisa-zare-siti/will.html">وکیل وصیت</a>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h1>تحلیل تطبیقی تعریف عقد: از ماده ۱۱۰۱ قانون مدنی فرانسه تا ماده ۱۸۳ قانون مدنی ایران</h1>
+        <p>نوشته زارع کاریزک پریسا</p>
+    </div>
+
+    <div class="container">
+        <div class="service-content">
+            <h2>درباره این مقاله</h2>
+            <p>این پژوهش با رویکردی تطبیقی و با تکیه بر علم اصول فقه، تعریف «عقد» در ماده ۱۸۳ قانون مدنی ایران را با تعاریف موجود در ماده ۱۱۰۱ قانون مدنی فرانسه و ماده ۸۹ قانون مدنی مصر مقایسه می‌کند و نشان می‌دهد که چگونه قانون‌گذار ایرانی با تکیه بر اطلاق لفظی، تعریفی ممتاز و جامع ارائه داده است.</p>
+
+            <div class="contact-box">
+                <h2>مشاوره حقوقی تخصصی</h2>
+                <p>شماره تماس: ۰۹۱۵۱۰۶۹۲۶۶</p>
+                <p>نشانی: مشهد، احمدآباد</p>
+                <a href="tel:09151069266" class="btn-call">تماس مستقیم با وکیل</a>
+            </div>
+        </div>
+
+        <div class="scroll-to-article">
+            <a href="#article-section" class="scroll-btn">مطالعه متن کامل مقاله 👇</a>
+        </div>
+    </div>
+
+    <div id="article-section" class="article-wrapper">
+        <h1>تحلیل تطبیقی تعریف عقد: از ماده ۱۱۰۱ قانون مدنی فرانسه تا ماده ۱۸۳ قانون مدنی ایران</h1>
+        <div class="author-name">نویسنده: زارع کاریزک پریسا</div>
+
+        <h2>چکیده</h2>
+        <p>تعریف «عقد» در ماده ۱۸۳ قانون مدنی ایران، همواره یکی از بحث‌برانگیزترین مباحث در دکترین حقوقی بوده است. این پژوهش با رویکردی تطبیقی و با تکیه بر علم اصول فقه، تعریف عقد در حقوق ایران را با ماده ۱۱۰۱ قانون مدنی فرانسه (پس از اصلاحات ۲۰۱۶) و ماده ۸۹ قانون مدنی مصر مقایسه می‌کند. یافته‌ها نشان می‌دهد که برخلاف نقد رایج دکترین که تعریف ماده ۱۸۳ را تنها ناظر بر عقود عهدی می‌داند، از منظر علم اصول فقه، لفظ «امر» در عبارت «تعهد بر امری» یک لفظ مطلق است. بر اساس قاعده «اصالة الاطلاق»، این لفظ هم شامل انتقال مال (تملیک)، هم تعهد به فعل و هم تعهد به ترک فعل می‌شود. بنابراین، تعریف قانون‌گذار ایرانی نه تنها ناقص نیست، بلکه به دلیل ایجاز و شمول اصولی، در مقایسه با تعاریف مفصل و صریح فرانسه و مصر، یک تعریف ممتاز و منحصربه‌فرد محسوب می‌شود. رویه قضایی و دکترین حقوقی ایران نیز عملاً همین اطلاق را پذیرفته‌اند و بر اساس آن رأی می‌دهند.</p>
+        <p><strong>واژگان کلیدی:</strong> تعریف عقد، ماده ۱۸۳ قانون مدنی، ماده ۱۱۰۱ قانون مدنی فرانسه، ماده ۸۹ قانون مدنی مصر، اصول فقه، اصالة الاطلاق.</p>
+
+        <h2>روش پژوهش</h2>
+        <p>این نوشتار با روش توصیفی-تحلیلی و با تکیه بر منابع کتابخانه‌ای تدوین شده است. با مرور دقیق متون قانونی و تحلیل اصولی الفاظ، تلاش شده است تا ضمن ارائه یک تحلیل تطبیقی میان سه نظام حقوقی، از تعریف ماده ۱۸۳ با تکیه بر قواعد علم اصول فقه دفاع شود.</p>
+
+        <h2>مقدمه</h2>
+        <p>تعریف «عقد» در ماده ۱۸۳ قانون مدنی ایران، از دیرباز محل مناقشه بوده است. دکترین حقوقی غالباً این تعریف را به دلیل محدود کردن عقد به «تعهد»، ناقص دانسته و معتقد است که این ماده نمی‌تواند عقود تملیکی (مانند بیع) را توصیف کند. اما آیا این نقد از منظر علم اصول فقه نیز وارد است؟ برای پاسخ به این پرسش، باید تعریف عقد را در دو نظام حقوقی که قانون مدنی ایران از آن‌ها تأثیر پذیرفته (فرانسه و مصر) نیز بررسی کنیم.</p>
+
+        <h2>۱. بازخوانی تعریف ماده ۱۸۳ از منظر اصول فقه</h2>
+        <p>ماده ۱۸۳ قانون مدنی ایران مقرر می‌دارد: «عقد عبارت است از اینکه یک یا چند نفر در مقابل یک یا چند نفر دیگر تعهد بر امری نمایند و مورد قبول آنها باشد». منتقدان (از جمله دکتر کاتوزیان) معتقدند واژه «تعهد» ناظر بر ایجاد دین و التزام است و بنابراین، عقودی مانند بیع که اثر مستقیم آن‌ها انتقال مالکیت است را پوشش نمی‌دهد.</p>
+        <p>با این حال، با تکیه بر علم اصول فقه، می‌توان از این تعریف دفاع کرد. در عبارت «تعهد بر امری»، کلمه <strong>«امر»</strong> یک لفظ <strong>مطلق</strong> است. طبق قاعده «اصالة الاطلاق»، لفظ مطلق بر تمام مصادیق خود دلالت دارد، مگر اینکه قرینه‌ای بر تقیید آن وجود داشته باشد. مصادیق «امر» در اینجا بسیار گسترده است و شامل سه دسته می‌شود:</p>
+        <ul>
+            <li><strong>انتقال مال (تملیک):</strong> مانند بیع و هبه که در آن فرد تعهد می‌دهد ملکیت را منتقل کند.</li>
+            <li><strong>تعهد به فعل:</strong> مانند اجاره که تعهد به انجام کار یا بهره‌دهی است.</li>
+            <li><strong>تعهد به ترک فعل:</strong> مانند تعهد به عدم رقابت در قراردادهای تجاری.</li>
+        </ul>
+        <p>بنابراین، از نظر اصولی، تعریف ماده ۱۸۳ هیچ نقصی ندارد و «امر» مطلق، به تمام این موارد تعمیم داده می‌شود. نقد دکترین بر این ماده، بیشتر ناشی از عرف حقوقی و اصطلاحات خاص است، نه از اطلاق لغوی و اصولی. رویه قضایی نیز در عمل، همین اطلاق را پذیرفته و بر اساس آن، عقود تملیکی را نیز مشمول ماده ۱۸۳ می‌داند.</p>
+
+        <h2>۲. تعریف عقد در حقوق فرانسه (ماده ۱۱۰۱)</h2>
+        <p>حقوق فرانسه پیش از اصلاحات ۲۰۱۶، در ماده ۱۱۰۱ قدیم، عقد را «توافق برای تعهد به دادن، انجام دادن یا انجام ندادن کاری» تعریف کرده بود. این تعریف، دقیقاً همان مبنایی است که ماده ۱۸۳ ایران از آن الهام گرفته است. اما قانون‌گذار فرانسوی در اصلاحات ۲۰۱۶، با درک پیچیدگی‌های جدید، تعریف را به «توافق اراده‌ها برای ایجاد، تغییر، انتقال یا اسقاط تعهدات» تغییر داد. این تغییر، تعریف را از یک قالب صرفاً تعهدی خارج کرده و جنبه‌های مختلف اثر عقد را به صراحت در متن قانون آورد.</p>
+
+        <h2>۳. تعریف عقد در حقوق مصر (ماده ۸۹)</h2>
+        <p>قانون مدنی مصر (مصوب ۱۹۴۸) در ماده ۸۹، عقد را «تبادل دو اراده متطابق» تعریف کرده است. این تعریف، برخلاف تعریف ایرانی و فرانسوی قدیم، بر «توافق اراده‌ها» به عنوان عنصر اصلی عقد تأکید دارد و نه صرفاً بر تعهد. این رویکرد، راه را برای پذیرش آثار گسترده‌تر عقد باز می‌کند.</p>
+
+        <h2>۴. تحلیل تطبیقی و امتیاز منحصربه‌فرد قانون‌گذار ایرانی</h2>
+        <p>مقایسه این سه نظام حقوقی نشان می‌دهد که برخلاف تصور رایج، قانون‌گذار ایرانی در این زمینه یک شاهکار انجام داده است:</p>
+        <ul>
+            <li><strong>ایجاز و شمول (امتیاز ایرانی):</strong> قانون‌گذار ایرانی با استفاده از واژه مطلق «امر»، همه مصادیق (تملیک، فعل، ترک فعل) را در یک عبارت کوتاه گنجانده است. این در حالی است که فرانسوی‌ها برای رسیدن به همین جامعیت، مجبور شده‌اند در اصلاحات ۲۰۱۶، چهار کلمه «ایجاد، تغییر، انتقال و اسقاط» را صریحاً بیاورند. بنابراین، تعریف ایرانی از نظر بلاغت حقوقی و اصولی، برتر و ممتاز است.</li>
+            <li><strong>انعطاف‌پذیری با قاعده «اصالة الاطلاق»:</strong> تعریف ایرانی بدون نیاز به بازنگری قانونی، می‌تواند قراردادهای جدید و مدرن را نیز در خود جای دهد، زیرا «امر» مطلق، محدود به زمان و مکان نیست.</li>
+            <li><strong>پشتوانه غنی فقهی:</strong> حقوق مصر و فرانسه بر پایه تعاریف صریح و طولانی بنا شده‌اند، اما حقوق ایران از یک پشتوانه عظیم اصولی برخوردار است که به آن عمق و اعتبار ویژه‌ای می‌بخشد.</li>
+        </ul>
+
+        <h2>نتیجه‌گیری</h2>
+        <p>تعریف ماده ۱۸۳ قانون مدنی ایران، با وجود نقدهای ظاهری دکترین، از نظر اصولی و با تکیه بر قاعده «اصالة الاطلاق» تعریفی کامل و جامع است. رویه قضایی و دکترین عملی نیز همین اطلاق را پذیرفته‌اند. بنابراین، برخلاف حقوق فرانسه که ناچار به اصلاح صریح تعریف خود شد، قانون‌گذار ایرانی با تکیه بر پشتوانه غنی فقهی و اصولی، تعریفی موجز، جامع و بدون نیاز به بازنگری ارائه داده است. این ویژگی، یک امتیاز منحصربه‌فرد برای حقوق ایران محسوب می‌شود که ریشه در عمق فقهی و اصولی آن دارد.</p>
+
+        <div class="references">
+            <h3>فهرست منابع</h3>
+            <ul>
+                <li>کاتوزیان، ناصر. <em>قواعد عمومی قراردادها</em>، جلد ۱. تهران: شرکت انتشار، ۱۳۸۸.</li>
+                <li>قانون مدنی ایران، ماده ۱۸۳.</li>
+                <li>قانون مدنی فرانسه، مواد ۱۱۰۱ (قدیم و جدید).</li>
+                <li>قانون مدنی مصر، ماده ۸۹.</li>
+                <li>مظفر، محمدرضا. <em>اصول الفقه</em>، جلد ۱ (مباحث الفاظ). قم: انتشارات اسلامی.</li>
+            </ul>
+        </div>
+
+        <!-- بخش تاریخ و زمان -->
+        <div class="datetime-container">
+            <p>تاریخ و زمان به وقت ایران: <span id="iran-time"></span></p>
+            <p>تاریخ و زمان به وقت جهانی (UTC): <span id="utc-time"></span></p>
+        </div>
+    </div>
+
+    <footer>© تمامی حقوق این وب‌سایت متعلق به زارع کاریزک پریسا است.</footer>
+
+    <script>
+        function updateTime() {
+            const now = new Date();
+            const options = { 
+                dateStyle: 'full', 
+                timeStyle: 'medium',
+                calendar: 'persian',
+                numberingSystem: 'latn'
+            };
+            
+            const iranTime = now.toLocaleString('fa-IR', { ...options, timeZone: 'Asia/Tehran' });
+            const utcTime = now.toLocaleString('fa-IR', { ...options, timeZone: 'UTC' });
+            
+            document.getElementById('iran-time').textContent = iranTime;
+            document.getElementById('utc-time').textContent = utcTime;
+        }
+        
+        updateTime();
+        setInterval(updateTime, 1000);
+    </script>
+</body>
+  </html>
