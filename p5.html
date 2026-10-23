@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="تحلیل حقوقی سکوت در قراردادها از قاعده لاینسب الی الساکت قول تا مسئولیت مدنی. نویسنده: زارع کاریزک پریسا، وکیل پایه یک دادگستری.">
+    <title>سکوت در قراردادها: از قاعده لاینسب الی الساکت قول تا مسئولیت مدنی | زارع کاریزک پریسا</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        html { scroll-behavior: smooth; }
+        body {
+            margin: 0;
+            font-family: 'Vazirmatn', Tahoma, Arial, sans-serif;
+            background-color: #f8f5ed; 
+            color: #101d35; 
+            line-height: 2.2;
+        }
+        
+        header {
+            background: #101d35;
+            color: white;
+            padding: 22px 6%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            position: sticky; top: 0; z-index: 100;
+        }
+        .logo { font-size: 20px; font-weight: bold; color: #d5ad5b; }
+        nav a { color: white; text-decoration: none; margin: 0 8px; font-weight: bold;}
+        nav a:hover { color: #d5ad5b; }
+
+        .hero {
+            background: linear-gradient(135deg, #101d35, #1d3557);
+            padding: 60px 7%;
+            text-align: center;
+            color: white;
+        }
+        .hero h1 { font-size: 30px; color: #d5ad5b; margin: 0 0 15px 0; line-height: 1.5; }
+        .hero p { font-size: 18px; margin: 0; }
+
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        .service-content {
+            background: white;
+            padding: 40px;
+            border-radius: 18px;
+            box-shadow: 0 10px 30px rgba(10, 25, 47, 0.08);
+            border-top: 5px solid #d5ad5b;
+            margin-bottom: 40px;
+        }
+
+        .service-content h2 {
+            color: #101d35;
+            font-size: 24px;
+            border-bottom: 2px solid #e5dcc8;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+
+        .service-content p { margin-bottom: 15px; }
+
+        .contact-box {
+            background: #101d35;
+            color: white;
+            text-align: center;
+            border-radius: 18px;
+            padding: 30px 20px;
+            margin-top: 40px;
+        }
+        .contact-box h2 { color: #d5ad5b; margin-top: 0; font-size: 24px; }
+        .contact-box p { font-size: 18px; margin: 8px 0; }
+        .btn-call {
+            display: inline-block;
+            background: #d5ad5b;
+            color: #101d35;
+            padding: 12px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            margin-top: 15px;
+            transition: 0.3s;
+        }
+        .btn-call:hover { background: #f5ebd3; }
+
+        .scroll-to-article {
+            text-align: center;
+            margin: 40px 0;
+        }
+        .scroll-btn {
+            display: inline-block;
+            background: #d5ad5b;
+            color: #101d35;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            box-shadow: 0 4px 15px rgba(213, 173, 91, 0.4);
+            transition: 0.3s;
+        }
+        .scroll-btn:hover { background: #101d35; color: #d5ad5b; }
+
+        .article-wrapper {
+            background-color: #FDFBF7;
+            color: #0A192F;
+            line-height: 2.3;
+            padding: 40px 30px;
+            border-radius: 12px;
+            max-width: 850px;
+            margin: 0 auto 50px;
+            box-shadow: 0 10px 30px rgba(10, 25, 47, 0.08);
+            direction: rtl;
+            text-align: justify;
+            border-top: 5px solid #101d35;
+        }
+        .article-wrapper h1 {
+            color: #0A192F;
+            font-size: 26px;
+            text-align: center;
+            border-bottom: 2px solid #0A192F;
+            padding-bottom: 15px;
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        .author-name {
+            text-align: center;
+            font-size: 16px;
+            color: #a27a2f;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+        .article-wrapper h2 {
+            color: #0A192F;
+            font-size: 22px;
+            margin-top: 40px;
+            margin-bottom: 15px;
+            border-right: 5px solid #0A192F;
+            padding-right: 12px;
+        }
+        .article-wrapper p { margin-bottom: 20px; font-size: 16px; }
+        
+        .law-quote {
+            background-color: #F4EFE6;
+            border-right: 4px solid #0A192F;
+            padding: 15px 20px;
+            margin: 25px 0;
+            font-style: italic;
+            border-radius: 4px;
+            color: #1A2B4C;
+            font-weight: bold;
+        }
+        .references {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px dashed #0A192F;
+            font-size: 15px;
+        }
+        .references h3 { color: #0A192F; font-size: 20px; margin-bottom: 15px; }
+        .references ul { padding-right: 20px; list-style-type: square; }
+        .references li { margin-bottom: 8px; }
+
+        footer {
+            text-align: center;
+            background: #0b1527;
+            color: #ddd;
+            padding: 25px;
+            margin-top: 40px;
+        }
+
+        @media(max-width: 600px) {
+            nav { width: 100%; margin-top: 10px; text-align: center;}
+            nav a { display: inline-block; margin: 5px 4px; }
+            .hero h1 { font-size: 24px; }
+            .article-wrapper h1 { font-size: 22px; }
+            .service-content { padding: 25px 20px; }
+            .article-wrapper { padding: 25px 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">زارع کاریزک پریسا</div>
+        <nav>
+            <a href="/parisa-zare-siti/home-3.html">صفحه اصلی</a>
+            <a href="/parisa-zare-siti/v3.html/v3.html">وکیل طلاق</a>
+            <a href="/parisa-zare-siti/services/melki.html">وکیل ملکی</a>
+            <a href="/parisa-zare-siti/services/criminal.html">وکیل کیفری</a>
+            <a href="/parisa-zare-siti/contract-page.html">وکیل قراردادها</a>
+            <a href="/parisa-zare-siti/will.html">وکیل وصیت</a>
+            <a href="/parisa-zare-siti/silence-5.html">مقاله سکوت</a>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h1>سکوت در قراردادها: از قاعده لاینسب الی الساکت قول تا مسئولیت مدنی ناشی از تفریط</h1>
+        <p>تحلیل تخصصی حقوق خصوصی</p>
+    </div>
+
+    <div class="container">
+        <div class="service-content">
+            <h2>درباره این مقاله</h2>
+            <p>در تحلیل روابط قراردادی، ابراز اراده رکن اساسی محسوب می‌شود. اما در بسیاری از معاملات، طرفین به دلایل مختلف از بیان صریح خواسته خود خودداری می‌کنند و سکوت اختیار می‌کنند. این مقاله با تکیه بر ماده ۲۴۹ قانون مدنی و تفکیک دقیق سکوت محض از ترک فعل، به تحلیل مرزهای مسئولیت مدنی ناشی از تفریط می‌پردازد.</p>
+
+            <div class="contact-box">
+                <h2>مشاوره حقوقی تخصصی</h2>
+                <p>شماره تماس: ۰۹۱۵۱۰۶۹۲۶۶</p>
+                <p>نشانی: مشهد، احمدآباد</p>
+                <a href="tel:09151069266" class="btn-call">تماس مستقیم با وکیل</a>
+            </div>
+        </div>
+
+        <div class="scroll-to-article">
+            <a href="#article-section" class="scroll-btn">مطالعه متن کامل مقاله 👇</a>
+        </div>
+    </div>
+
+    <div id="article-section" class="article-wrapper">
+        <h1>سکوت در قراردادها: از قاعده لاینسب الی الساکت قول تا مسئولیت مدنی ناشی از تفریط</h1>
+        <div class="author-name">نویسنده: زارع کاریزک پریسا</div>
+
+        <h2>چکیده</h2>
+        <p>قاعده کلی در حقوق قراردادهای ایران، اصل بر بی‌اعتباری سکوت است و سکوت از موارد ابراز اراده نمی‌باشد. ماده ۲۴۹ قانون مدنی با عبارت صریح «سکوت مالک ولو با حضور در مجلس عقد، اجازه محسوب نمی‌شود»، این اصل را تثبیت کرده است. با این وجود، در رویه عملی و برخی مواد قانونی، سکوت می‌تواند در قالب «ترک فعل» ظهور یافته و آثار حقوقی مهمی از جمله اسقاط حق یا مسئولیت مدنی به دنبال داشته باشد. این مقاله به تحلیل مرزهای این دو مفهوم می‌پردازد.</p>
+
+        <h2>مقدمه</h2>
+        <p>در تحلیل روابط قراردادی، ابراز اراده رکن اساسی محسوب می‌شود. اما در بسیاری از معاملات، طرفین به دلایل مختلف از بیان صریح خواسته خود خودداری می‌کنند و سکوت اختیار می‌کنند. رویکرد سنتی حقوق ایران، بر مبنای قاعده فقهی «لاینسب الی الساکت قول»، سکوت را فاقد اثر حقوقی و به مثابه عدم اراده می‌داند. قانون‌گذار در ماده ۲۴۹ قانون مدنی نیز این رویکرد را تأیید کرده است. با این حال، تجربه رسیدگی به اختلافات قراردادی نشان می‌دهد که سکوت محض را نباید با «ترک فعل» و «تفریط» یکسان دانست؛ چرا که در شرایط خاص، سکوت می‌تواند مبنای مسئولیت قرار گیرد.</p>
+
+        <h2>۱. اصل عدم اعتبار سکوت در ماده ۲۴۹ قانون مدنی</h2>
+        <p>ماده ۲۴۹ قانون مدنی به طور مشخص بیان می‌دارد که سکوت مالک، حتی در صورت حضور در مجلس عقد، به منزله اجازه و رضایت تلقی نمی‌شود. مبنای این حکم، ابهام ذاتی سکوت است؛ چرا که سکوت می‌تواند ناشی از رضا، اکراه، غفلت یا اشتباه باشد. بنابراین، قانون‌گذار برای حفظ امنیت معاملات و جلوگیری از تفسیرهای نادرست، این قاعده را به عنوان یک اصل بنیادین پذیرفته است.</p>
+
+        <h2>۲. استثنائات اصل عدم اعتبار سکوت</h2>
+        <p>با وجود قاعده فوق، سکوت در مواردی خاص به عنوان بیان اراده ضمنی شناخته می‌شود:</p>
+        <ul>
+            <li><strong>حکم قانون‌گذار:</strong> در برخی نهادها مانند عقد نکاح، سکوت دختر باکره به منزله رضایت اوست.</li>
+            <li><strong>قرائن و اوضاع و احوال:</strong> چنانچه سکوت در بستری رخ دهد که عرف یا رابطه قراردادی پیشین، معنای خاصی به آن بدهد، می‌تواند حاکی از رضایت باشد. در واقع، سکوتِ همراه با قرینه، از سکوت محض تفکیک می‌شود.</li>
+        </ul>
+
+        <h2>۳. سکوت در دادرسی: تمایز سکوت از نکول</h2>
+        <p>در آیین دادرسی مدنی، سکوت خوانده به معنای پذیرش ادعای خواهان نیست، بلکه به عنوان «نکول» یا عدم ارائه دفاعیات ارزیابی می‌شود. دادرس در این شرایط بر اساس مستندات پرونده رأی صادر می‌کند. این تمایز نشان می‌دهد که حتی در فضای قضایی، سکوت یک طرف به تنهایی مبنای محکومیت او نیست، اما سکوت در برابر ادله، موضع او را تضعیف می‌کند.</p>
+
+        <h2>۴. سکوت در برابر نقض تعهد: اسقاط ضمنی حق فسخ</h2>
+        <p>یکی از چالش‌های مهم در قراردادها، سکوت در برابر نقض تعهد از سوی طرف مقابل است. در صورت بروز نقض، طرف زیان‌دیده حق فسخ یا مطالبه خسارت دارد. اما اگر در برابر این نقض، سکوت اختیار کند و رفتارهایی مبنی بر التزام به قرارداد از خود نشان دهد (مانند ادامه همکاری یا دریافت بخشی از ثمن)، ممکن است این سکوت به عنوان «اسقاط ضمنی حق فسخ» تفسیر شود. در چنین حالتی، صرف سکوت نبوده است، بلکه قرائن رفتاری، موجب سقوط حق شده است.</p>
+
+        <h2>۵. سکوت و مسئولیت مدنی: تحلیل تفریط</h2>
+        <p>مهم‌ترین حوزه‌ای که سکوت می‌تواند موجب مسئولیت شود، مبحث «تفریط» در مسئولیت مدنی است. ماده ۹۵۲ قانون مدنی تفریط را «ترک عملی که به موجب قرارداد یا متعارف برای حفظ مال غیر لازم است» تعریف می‌کند. در واقع، اگر شخصی به موجب قانون یا قرارداد، تکلیف به اقدام یا هشدار داشته باشد و از این اقدام خودداری کند (سکوت کند)، این سکوت در قالب «ترک فعل» مصداق تقصیر بوده و در صورت احراز ورود خسارت، موجب مسئولیت مدنی خواهد بود (ماده ۱ قانون مسئولیت مدنی).</p>
+
+        <h2>نتیجه‌گیری</h2>
+        <p>حقوق قراردادهای ایران، سکوت محض را به عنوان ابراز اراده نمی‌شناسد. با این حال، تفکیک دقیق سکوت از ترک فعل ضروری است. سکوت به تنهایی فاقد اثر است، اما زمانی که با قرائن رفتاری همراه شود (اسقاط حق) یا در برابر تکلیف قانونی قرار گیرد (تفریط)، می‌تواند آثار حقوقی سنگینی به همراه داشته باشد. بنابراین، اتکا به سکوت در معاملات و قراردادها، رویکردی پرخطر است و شفافیت در ابراز اراده همواره باید در اولویت قرار گیرد.</p>
+
+        <div class="references">
+            <h3>فهرست منابع</h3>
+            <ul>
+                <li>قانون مدنی ایران (مواد ۲۴۷، ۲۴۹، ۴۴۰، ۹۵۱ و ۹۵۲).</li>
+                <li>قانون مسئولیت مدنی (مصوب ۱۳۳۹)، ماده ۱.</li>
+                <li>قانون تجارت الکترونیک، ماده ۳۴.</li>
+                <li>قانون آیین دادرسی مدنی، ماده ۱۷۶.</li>
+                <li>کاتوزیان، ناصر. <em>قواعد عمومی قراردادها</em>، جلد ۱. تهران: شرکت انتشار، ۱۳۸۸.</li>
+                <li>صفایی، سید حسین. <em>قواعد عمومی قراردادها</em>، جلد ۲. تهران: میزان، ۱۳۹۹.</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>© تمامی حقوق این وب‌سایت متعلق به زارع کاریزک پریسا است.</footer>
+
+</body>
+  </html>
