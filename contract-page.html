@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="وکیل قراردادها در مشهد، پریسا زارع کاریزک. مشاوره تخصصی، تنظیم و بررسی انواع قراردادهای حقوقی. همراه با مقاله جامع قرارداد؛ سند آینده.">
+    <title>وکیل قراردادها و مقاله قرارداد؛ سند آینده | پریسا زارع کاریزک</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        /* تنظیمات کلی */
+        html { scroll-behavior: smooth; }
+        body {
+            margin: 0;
+            font-family: 'Vazirmatn', Tahoma, Arial, sans-serif;
+            background-color: #f8f5ed; /* کرم */
+            color: #101d35; /* سرمه‌ای */
+            line-height: 2;
+        }
+        
+        /* هدر و منو */
+        header {
+            background: #101d35;
+            color: white;
+            padding: 22px 6%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .logo { font-size: 20px; font-weight: bold; color: #d5ad5b; }
+        nav a { color: white; text-decoration: none; margin: 0 8px; font-weight: bold;}
+        nav a:hover { color: #d5ad5b; }
+
+        /* بخش خدمات (بالای صفحه) */
+        .hero {
+            background: linear-gradient(135deg, #101d35, #1d3557);
+            padding: 60px 7%;
+            text-align: center;
+            color: white;
+        }
+        .hero h1 { font-size: 34px; color: #d5ad5b; margin: 0 0 15px 0; }
+        .hero p { font-size: 18px; margin: 0; }
+
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        .service-content {
+            background: white;
+            padding: 40px;
+            border-radius: 18px;
+            box-shadow: 0 10px 30px rgba(10, 25, 47, 0.08);
+            border-top: 5px solid #d5ad5b;
+            margin-bottom: 40px;
+        }
+
+        .service-content h2 {
+            color: #101d35;
+            font-size: 24px;
+            border-bottom: 2px solid #e5dcc8;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+
+        .service-content h3 {
+            color: #a27a2f;
+            font-size: 20px;
+            margin-top: 30px;
+        }
+
+        .service-content p { margin-bottom: 15px; }
+
+        /* باکس تماس */
+        .contact-box {
+            background: #101d35;
+            color: white;
+            text-align: center;
+            border-radius: 18px;
+            padding: 30px 20px;
+            margin-top: 40px;
+        }
+        .contact-box h2 { color: #d5ad5b; margin-top: 0; font-size: 24px; }
+        .contact-box p { font-size: 18px; margin: 8px 0; }
+        .btn-call {
+            display: inline-block;
+            background: #d5ad5b;
+            color: #101d35;
+            padding: 12px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            margin-top: 15px;
+            transition: 0.3s;
+        }
+        .btn-call:hover { background: #f5ebd3; }
+
+        /* دکمه اسکرول به مقاله */
+        .scroll-to-article {
+            text-align: center;
+            margin: 40px 0;
+        }
+        .scroll-btn {
+            display: inline-block;
+            background: #d5ad5b;
+            color: #101d35;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            box-shadow: 0 4px 15px rgba(213, 173, 91, 0.4);
+            transition: 0.3s;
+        }
+        .scroll-btn:hover { background: #101d35; color: #d5ad5b; }
+
+        /* بخش مقاله (پایین صفحه) */
+        .article-wrapper {
+            background-color: #FDFBF7;
+            color: #0A192F;
+            line-height: 2.2;
+            padding: 40px 30px;
+            border-radius: 12px;
+            max-width: 850px;
+            margin: 0 auto 50px;
+            box-shadow: 0 10px 30px rgba(10, 25, 47, 0.08);
+            direction: rtl;
+            text-align: justify;
+            border-top: 5px solid #101d35;
+        }
+        .article-wrapper h1 {
+            color: #0A192F;
+            font-size: 28px;
+            text-align: center;
+            border-bottom: 2px solid #0A192F;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+        .article-wrapper h2 {
+            color: #0A192F;
+            font-size: 22px;
+            margin-top: 35px;
+            margin-bottom: 15px;
+            border-right: 5px solid #0A192F;
+            padding-right: 12px;
+        }
+        .article-wrapper p { margin-bottom: 20px; font-size: 16px; }
+        
+        .law-quote {
+            background-color: #F4EFE6;
+            border-right: 4px solid #0A192F;
+            padding: 15px 20px;
+            margin: 20px 0;
+            font-style: italic;
+            border-radius: 4px;
+            color: #1A2B4C;
+        }
+        .references {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #0A192F;
+            font-size: 14px;
+        }
+        .references h3 { color: #0A192F; font-size: 18px; margin-bottom: 15px; }
+        .references ul { padding-right: 20px; list-style-type: square; }
+        .references li { margin-bottom: 8px; }
+
+        footer {
+            text-align: center;
+            background: #0b1527;
+            color: #ddd;
+            padding: 25px;
+            margin-top: 40px;
+        }
+
+        @media(max-width: 600px) {
+            nav { width: 100%; margin-top: 10px; text-align: center;}
+            nav a { display: inline-block; margin: 5px 4px; }
+            .hero h1 { font-size: 26px; }
+            .service-content { padding: 25px 20px; }
+            .article-wrapper { padding: 25px 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">پریسا زارع کاریزک</div>
+        <nav>
+            <a href="/parisa-zare-siti/new-home.html">صفحه اصلی</a>
+            <a href="/parisa-zare-siti/v3.html/v3.html">وکیل طلاق</a>
+            <a href="/parisa-zare-siti/services/melki.html">وکیل ملکی</a>
+            <a href="/parisa-zare-siti/services/criminal.html">وکیل کیفری</a>
+            <a href="/parisa-zare-siti/contract-page.html">وکیل قراردادها</a>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h1>وکیل قراردادها در مشهد</h1>
+        <p>مشاوره تخصصی، تنظیم و بررسی انواع قراردادهای حقوقی</p>
+    </div>
+
+    <div class="container">
+        <div class="service-content">
+            <h2>خدمات تخصصی قراردادها</h2>
+            <p>قراردادها ستون فقرات هر معامله و رابطه حقوقی هستند. یک بند نادرست یا مبهم می‌تواند زمینه‌ساز سال‌ها اختلاف و ضررهای مالی سنگین شود. <strong>پریسا زارع کاریزک</strong>، وکیل پایه یک دادگستری، با سال‌ها تجربه در کنار شماست تا با تنظیم دقیق قراردادها، از حقوق شما محافظت کند.</p>
+
+            <h3>۱. تنظیم و نگارش تخصصی قرارداد</h3>
+            <p>تنظیم قراردادهای خرید و فروش، اجاره، مشارکت در ساخت، پیمانکاری و قراردادهای تجاری با در نظر گرفتن تمامی جوانب قانونی و منافع شما.</p>
+
+            <h3>۲. بررسی و بازبینی قرارداد (پیش از امضا)</h3>
+            <p>هرگز سندی را که به طور کامل درک نمی‌کنید امضا نکنید. ما قرارداد شما را بررسی کرده و نقاط ضعف و خطرات موجود در متن را به شما گوشزد می‌کنیم.</p>
+
+            <h3>۳. پیگیری دعاوی و اختلافات قراردادی</h3>
+            <p>در صورت نقض تعهد از سوی طرف مقابل، ما در کنار شما هستیم تا از طریق مراجع قانونی، حقوق شما را استیفا کنیم.</p>
+
+            <div class="contact-box">
+                <h2>تماس و مشاوره</h2>
+                <p>شماره تماس: ۰۹۱۵۱۰۶۹۲۶۶</p>
+                <p>نشانی: مشهد، احمدآباد</p>
+                <a href="tel:09151069266" class="btn-call">تماس مستقیم</a>
+            </div>
+        </div>
+
+        <div class="scroll-to-article">
+            <a href="#article-section" class="scroll-btn">مطالعه متن کامل مقاله 👇</a>
+        </div>
+    </div>
+
+    <div id="article-section" class="article-wrapper">
+        <h1>قرارداد؛ سند آینده</h1>
+
+        <h2>مقدمه</h2>
+        <p>قرارداد توافقی است که میان دو یا چند شخص با ارادهٔ طرفین آثار حقوقی ایجاد می‌کند. کارکرد اصلی قرارداد، تعیین حقوق و تعهدات طرفین و کاهش احتمال اختلاف است. دامنهٔ کاربرد قرارداد تنها به معاملات بزرگ محدود نیست؛ از خریدهای روزمره تا قراردادهای استخدام، اجاره و مشارکت تجاری، همگی در چارچوب قرارداد تحلیل می‌شوند.</p>
+
+        <h2>شرایط اساسی اعتبار</h2>
+        <p>برای اعتبار قرارداد، وجود ارادهٔ واقعی طرفین، اهلیت قانونی، موضوع معین و مشروعیت جهت ضروری است. ماده ۱۹۰ قانون مدنی این چهار شرط را به‌صراحت برشمرده است:</p>
+        
+        <div class="law-quote">
+            «برای صحت معامله شرایط ذیل اساسی است: ۱- قصد و رضای طرفین ۲- اهلیت طرفین ۳- موضوع معین که مورد معامله باشد ۴- مشروعیت جهت معامله».
+        </div>
+
+        <p>اصل آزادی قراردادی به طرفین امکان می‌دهد شرایط مورد نظر خود را تعیین کنند (ماده ۱۰ قانون مدنی)، اما این اصل مطلق نیست و قرارداد نباید مخالف صریح قانون یا نظم عمومی باشد.</p>
+
+        <h2>تقسیم‌بندی قراردادها</h2>
+        <p>قراردادها از جهات مختلف قابل تقسیم‌بندی‌اند؛ از جمله قرارداد لازم و جایز، عهدی و تملیکی، و قراردادهای الحاقی و مذاکره‌ای. ماده ۱۸۳ قانون مدنی و مواد پس از آن، تقسیم‌بندی عقود به لازم، جایز، خیاری، منجز و معلق را مورد تصریح قرار داده‌اند. با گسترش فضای دیجیتال، قراردادهای الکترونیکی نیز در صورت رعایت شرایط قانونی اعتبار یافته‌اند؛ قانون تجارت الکترونیک مصوب ۱۳۸۲، در ماده ۶ مقرر می‌دارد: «هرگاه وجود یک نوشته از نظر قانون لازم باشد، داده‌پیام در حکم نوشته است».</p>
+
+        <h2>بندهای کلیدی قرارداد</h2>
+        <p>یک قرارداد دقیق باید موضوع، مدت، مبلغ، شیوهٔ پرداخت، تعهدات طرفین، شرایط فسخ یا خاتمه، جبران خسارت، محرمانگی، فورس ماژور و شیوهٔ حل اختلاف را به‌روشنی تعیین کند. ابهام در این موارد زمینهٔ تفسیرهای متفاوت و بروز اختلاف را فراهم می‌کند. در خصوص فورس ماژور، هرچند قانون مدنی تعریف جامعی از آن ارائه نداده، مواد ۲۲۷ و ۲۲۹ قانون مدنی مبنای حقوقی معافیت متعهد در صورت حدوث حادثهٔ خارج از اختیار اوست.</p>
+
+        <h2>نقض تعهد و ضمانت اجرا</h2>
+        <p>در صورت نقض تعهد از سوی یکی از طرفین، طرف دیگر می‌تواند بر اساس قرارداد و قانون، مطالبهٔ اجرای تعهد، جبران خسارت یا فسخ قرارداد را دنبال کند. ماده ۲۱۹ قانون مدنی اصل لزوم قراردادها را تثبیت کرده و ماده ۲۳۰ به شرط وجه التزام (خسارت توافقی) اختصاص دارد. با این حال، تنظیم کتبی و شفاف قرارداد با مشورت حقوقی، مؤثرترین راه برای کاهش ریسک است.</p>
+
+        <h2>نتیجه‌گیری</h2>
+        <p>قرارداد ابزاری برای اعتمادسازی و نظم‌بخشی به روابط حقوقی است. هرچه قرارداد شفاف‌تر تنظیم شود، حقوق طرفین بهتر حفظ می‌شود و مسیر همکاری روشن‌تر خواهد بود. این متن جنبهٔ عمومی دارد و جای مشاورهٔ حقوقی تخصصی را نمی‌گیرد.</p>
+
+        <div class="references">
+            <h3>فهرست منابع</h3>
+            <ul>
+                <li>قانون مدنی ایران، مواد ۱۰، ۱۸۳، ۱۹۰، ۲۱۹، ۲۲۰، ۲۲۷، ۲۲۹ و ۲۳۰.</li>
+                <li>قانون تجارت الکترونیک ایران، مصوب ۱۳۸۲، مواد ۲ و ۶.</li>
+                <li>کاتوزیان، ناصر. <em>قواعد عمومی قراردادها</em>، جلد ۱: مفهوم، انعقاد و اعتبار قرارداد. تهران: شرکت انتشار، ۱۳۸۸.</li>
+                <li>صفایی، سید حسین. <em>قواعد عمومی قراردادها</em>، جلد ۲. تهران: میزان، ۱۳۹۹.</li>
+                <li>شهیدی، مهدی. <em>حقوق مدنی: تشکیل قراردادها و تعهدات</em>. تهران: مجد.</li>
+                <li>Pirhaji, Mehdi; Mazaheri Kuhanestani, Rasul; Eskandari Pudeh, Mohammad. “Analysis of Contract Law in Iran”, <em>Mediterranean Journal of Social Sciences</em>, 2015.</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>© تمامی حقوق این وب‌سایت متعلق به پریسا زارع کاریزک است.</footer>
+
+</body>
+  </html>
