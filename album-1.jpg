@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>آلبوم تصاویر - پریسا زارع کاریزک</title>
     <style>
-        /* تنظیمات کلی صفحه */
         body {
             margin: 0;
             padding: 0;
@@ -17,8 +16,6 @@
             flex-direction: column;
             min-height: 100vh;
         }
-
-        /* هدر بالای صفحه */
         header {
             background-color: #1a2238;
             color: #d4af37;
@@ -34,8 +31,6 @@
             font-size: 15px;
             color: #ffffff;
         }
-
-        /* بخش اصلی */
         .main-content {
             flex: 1;
             padding: 40px 20px;
@@ -48,8 +43,6 @@
             margin-bottom: 30px;
             margin-top: 0;
         }
-
-        /* کارت آلبوم */
         .album-card {
             display: block;
             background-color: #ffffff;
@@ -63,8 +56,6 @@
             box-shadow: 0 4px 12px rgba(0,0,0,0.08);
             box-sizing: border-box;
         }
-
-        /* تصویر داخل کارت */
         .album-card img {
             width: 100%;
             height: 250px;
@@ -74,8 +65,6 @@
             margin-bottom: 15px;
             background-color: #eee;
         }
-
-        /* متن‌های داخل کارت */
         .album-text-small {
             font-size: 14px;
             color: #666666;
@@ -88,8 +77,6 @@
             color: #1a2238;
             text-align: right;
         }
-
-        /* دکمه بازگشت */
         .btn-back {
             background-color: #1a2238;
             color: #d4af37;
@@ -101,8 +88,6 @@
             display: inline-block;
             margin-top: 40px;
         }
-
-        /* فوتر */
         footer {
             background-color: #1a2238;
             color: #ffffff;
@@ -121,6 +106,7 @@
     <div class="main-content">
         <h2>آلبوم تصاویر</h2>
 
+        <!-- اینجا آدرس عکس دقیقاً ست شده است -->
         <a href="./album-1.jpg" class="album-card">
             <img src="./album-1.jpg" alt="آلبوم شماره یک">
             <div class="album-text-small">تصویر شماره یک آلبوم</div>
