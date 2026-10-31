@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
@@ -30,12 +31,13 @@
     header h1 {
       margin: 0;
       font-size: 27px;
+      font-weight: 800;
     }
 
     header p {
       color: #f8f5ed;
       margin: 12px 0 0;
-      font-size: 15px;
+      font-size: 16px;
     }
 
     main {
@@ -49,6 +51,7 @@
       font-size: 25px;
       margin-bottom: 28px;
       color: #101d35;
+      font-weight: 800;
     }
 
     .photo-card {
@@ -70,18 +73,9 @@
 
     .photo-caption {
       color: #101d35;
-      font-size: 19px;
-      font-weight: 700;
+      font-size: 21px;
+      font-weight: 800;
       margin: 20px 0 8px;
-    }
-
-    .image-error {
-      display: none;
-      color: #a33;
-      background: #fff4f4;
-      padding: 20px;
-      border-radius: 10px;
-      line-height: 2;
     }
 
     .back-button {
@@ -93,6 +87,7 @@
       text-decoration: none;
       border-radius: 10px;
       font-weight: 700;
+      font-size: 17px;
     }
 
     .back-button:hover {
@@ -137,15 +132,9 @@
     <div class="photo-card">
 
       <img
-        src="./IMG_20261031_12301.jpg"
-        alt="عکس شماره یک آلبوم"
-        onerror="this.style.display='none'; document.getElementById('imageError').style.display='block';"
+        src="./IMG_202610131_12301.jpg"
+        alt="تصویر شماره یک آلبوم"
       >
-
-      <div id="imageError" class="image-error">
-        تصویر هنوز بارگذاری نشده است.
-        لطفاً نام و محل فایل عکس را در مخزن GitHub بررسی کنید.
-      </div>
 
       <div class="photo-caption">
         آلبوم شماره یک
