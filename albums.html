@@ -2,191 +2,149 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="آلبوم تصاویر منتخب پریسا زارع کاریزک">
-<title>آلبوم | پریسا زارع کاریزک</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="آلبوم تصاویر پریسا زارع کاریزک">
+  <title>آلبوم تصاویر | پریسا زارع کاریزک</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-<style>
-* {
- box-sizing: border-box;
-}
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-body {
- margin: 0;
- font-family: 'Vazirmatn', Tahoma, sans-serif;
- background: #f8f5ed;
- color: #101d35;
- line-height: 2;
-}
+    body {
+      margin: 0;
+      font-family: 'Vazirmatn', sans-serif;
+      background: #f8f5ed;
+      color: #101d35;
+    }
 
-header {
- background: #101d35;
- padding: 20px 12px;
- text-align: center;
-}
+    header {
+      background: #101d35;
+      color: #d5ad5b;
+      text-align: center;
+      padding: 35px 15px;
+    }
 
-.logo {
- color: #d5ad5b;
- font-size: 23px;
- font-weight: 900;
-}
+    header h1 {
+      margin: 0;
+      font-size: 27px;
+    }
 
-nav {
- margin-top: 12px;
- display: flex;
- justify-content: center;
- flex-wrap: wrap;
- gap: 12px;
-}
+    header p {
+      color: #f8f5ed;
+      margin: 12px 0 0;
+      font-size: 15px;
+    }
 
-nav a {
- color: white;
- text-decoration: none;
- font-size: 14px;
- font-weight: bold;
-}
+    main {
+      max-width: 900px;
+      margin: 35px auto;
+      padding: 0 18px;
+      text-align: center;
+    }
 
-nav a:hover {
- color: #d5ad5b;
-}
+    .album-title {
+      font-size: 23px;
+      margin-bottom: 25px;
+      color: #101d35;
+    }
 
-.hero {
- background: linear-gradient(135deg,#101d35,#1d3557);
- color: white;
- text-align: center;
- padding: 55px 15px;
-}
+    .photo-card {
+      background: white;
+      padding: 15px;
+      border: 1px solid #d5ad5b;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(16, 29, 53, 0.08);
+    }
 
-.hero h1 {
- color: #d5ad5b;
- font-size: 30px;
- margin: 0;
-}
+    .photo-card img {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: 750px;
+      object-fit: contain;
+      border-radius: 10px;
+    }
 
-.hero p {
- font-size: 16px;
- margin: 10px 0 0;
-}
+    .photo-caption {
+      color: #101d35;
+      font-size: 17px;
+      font-weight: 600;
+      margin: 18px 0 8px;
+    }
 
-.container {
- max-width: 950px;
- margin: 45px auto;
- padding: 0 18px;
-}
+    .back-button {
+      display: inline-block;
+      margin: 30px 0;
+      padding: 12px 28px;
+      background: #101d35;
+      color: #d5ad5b;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+    }
 
-.album-card {
- background: white;
- padding: 22px;
- border-radius: 16px;
- border-top: 5px solid #d5ad5b;
- box-shadow: 0 8px 25px rgba(16,29,53,0.09);
- text-align: center;
-}
+    .back-button:hover {
+      background: #243b60;
+    }
 
-.album-card img {
- width: 100%;
- height: auto;
- display: block;
- border-radius: 10px;
-}
+    footer {
+      background: #101d35;
+      color: #f8f5ed;
+      text-align: center;
+      padding: 20px 12px;
+      font-size: 13px;
+      line-height: 2;
+    }
 
-.album-card h2 {
- color: #a27a2f;
- font-size: 23px;
- margin-bottom: 5px;
-}
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 23px;
+      }
 
-.album-card p {
- color: #555;
- margin-top: 0;
-}
+      .album-title {
+        font-size: 20px;
+      }
 
-.btn {
- display: inline-block;
- background: #101d35;
- color: #d5ad5b;
- padding: 11px 27px;
- border-radius: 8px;
- text-decoration: none;
- font-weight: bold;
- margin-top: 20px;
-}
-
-.btn:hover {
- background: #d5ad5b;
- color: #101d35;
-}
-
-footer {
- background: #0b1527;
- color: #ddd;
- text-align: center;
- padding: 22px;
- margin-top: 50px;
- font-size: 14px;
-}
-
-@media(max-width:600px) {
- .hero h1 {
-  font-size: 25px;
- }
- .album-card {
-  padding: 13px;
- }
-}
-</style>
+      main {
+        margin-top: 25px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
- <div class="logo">پریسا زارع کاریزک</div>
+  <header>
+    <h1>پریسا زارع کاریزک</h1>
+    <p>لحظه‌ها و تصاویر منتخب</p>
+  </header>
 
- <nav>
-  <a href="/parisa-zare-siti/home-6.html">صفحه اصلی</a>
-  <a href="/parisa-zare-siti/v3.html/v3.html">وکیل طلاق</a>
-  <a href="/parisa-zare-siti/services/melki.html">وکیل ملکی</a>
-  <a href="/parisa-zare-siti/services/criminal.html">وکیل کیفری</a>
-  <a href="/parisa-zare-siti/contract-page-8.html">وکیل قراردادها</a>
-  <a href="/parisa-zare-siti/will.html">وکیل وصیت</a>
-  <a href="/parisa-zare-siti/albums.html">آلبوم</a>
- </nav>
-</header>
+  <main>
+    <h2 class="album-title">آلبوم تصاویر</h2>
 
-<section class="hero">
- <h1>آلبوم تصاویر</h1>
- <p>لحظه‌ها و تصاویر منتخب</p>
-</section>
+    <div class="photo-card">
+      <img
+        src="IMG_20261031_12301.jpg"
+        alt="عکس شماره یک آلبوم"
+      >
 
-<main class="container">
+      <div class="photo-caption">
+        آلبوم شماره یک
+      </div>
+    </div>
 
- <section class="album-card">
+    <a class="back-button" href="/parisa-zare-siti/home-6.html">
+      بازگشت به صفحه اصلی
+    </a>
+  </main>
 
-  <img
-   src="/parisa-zare-siti/assets/parisa-zare-album.jpg"
-   alt="آلبوم"
-   loading="lazy">
-
-  <h2>آلبوم شماره یک</h2>
-
- </section>
-
- <div style="text-align:center">
-  <a href="/parisa-zare-siti/home-6.html" class="btn">
-   بازگشت به صفحه اصلی
-  </a>
- </div>
-
-</main>
-
-<footer>
- © تمامی حقوق این وب‌سایت متعلق به پریسا زارع کاریزک است.
-</footer>
+  <footer>
+    تمامی حقوق این وب‌سایت متعلق به پریسا زارع کاریزک است.
+  </footer>
 
 </body>
 </html>
-
-
