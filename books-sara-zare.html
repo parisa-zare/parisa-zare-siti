@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>گالری ۴ | کتاب‌های خانم دکتر سارا زارع کاریزک</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Vazirmatn', 'IRANSans', Tahoma, sans-serif;
+      background: #f8fafc;
+      color: #1e293b;
+      line-height: 1.7;
+      padding: 20px;
+    }
+
+    .top-nav {
+      max-width: 1200px;
+      margin: 0 auto 24px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      padding: 12px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+
+    .top-nav a {
+      text-decoration: none;
+      color: #1e40af;
+      background: #eff6ff;
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+
+    .top-nav a:hover { background: #1e40af; color: #fff; }
+    .top-nav a.active { background: #1e40af; color: #fff; }
+
+    .page-header {
+      max-width: 1200px;
+      margin: 0 auto 32px;
+      text-align: center;
+      padding: 32px 20px;
+      background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+      border-radius: 16px;
+      color: #fff;
+    }
+
+    .page-header h1 { font-size: 26px; margin-bottom: 8px; }
+    .page-header p { font-size: 15px; opacity: 0.9; }
+
+    .book-gallery {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      padding: 20px 0;
+    }
+
+    .book-gallery figure {
+      margin: 0;
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .book-gallery figure:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    }
+
+    .book-gallery img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .book-gallery figcaption {
+      padding: 10px 12px;
+      font-size: 13px;
+      text-align: center;
+      color: #374151;
+      font-weight: 600;
+    }
+
+    .book-gallery a { text-decoration: none; }
+
+    @media (max-width: 1024px) {
+      .book-gallery { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .book-gallery { grid-template-columns: repeat(2, 1fr); }
+      .page-header h1 { font-size: 20px; }
+    }
+    @media (max-width: 480px) {
+      .book-gallery { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="top-nav">
+    <a href="my-card.html">🏠 بازگشت به کارت ویزیت</a>
+    <a href="books-sara-zare.html" class="active">📖 گالری تصاویر ۴</a>
+  </nav>
+
+  <header class="page-header">
+    <h1>کتاب‌های خانم دکتر سارا زارع کاریزک</h1>
+    <p>عضو هیئت علمی دانشگاه خلیج فارس</p>
+  </header>
+
+  <div class="book-gallery">
+
+    <figure>
+      <a href="https://github.com/parisa-zare/parisa-zare-siti/blob/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B0%DB%B3%DB%B1_%DB%B2%DB%B3%DB%B0%DB%B3%DB%B2%DB%B4.jpg" target="_blank">
+        <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B0%DB%B3%DB%B1_%DB%B2%DB%B3%DB%B0%DB%B3%DB%B2%DB%B4.jpg" alt="جلد کتاب ۱">
+      </a>
+      <figcaption>کتاب ۱</figcaption>
+    </figure>
+
+    <figure>
+      <a href="https://github.com/parisa-zare/parisa-zare-siti/blob/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B0%DB%B3%DB%B1_%DB%B2%DB%B3%DB%B0%DB%B2%DB%B5%DB%B7.jpg" target="_blank">
+        <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B0%DB%B3%DB%B1_%DB%B2%DB%B3%DB%B0%DB%B2%DB%B5%DB%B7.jpg" alt="جلد کتاب ۲">
+      </a>
+      <figcaption>کتاب ۲</figcaption>
+    </figure>
+
+    <figure>
+      <a href="https://github.com/parisa-zare/parisa-zare-siti/blob/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B0%DB%B3%DB%B1_%DB%B2%DB%B3%DB%B0%DB%B1%DB%B5%DB%B3.jpg" target="_blank">
+        <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B0%DB%B3%DB%B1_%DB%B2%DB%B3%DB%B0%DB%B1%DB%B5%DB%B3.jpg" alt="جلد کتاب ۳">
+      </a>
+      <figcaption>کتاب ۳</figcaption>
+    </figure>
+
+    <figure>
+      <a href="https://github.com/parisa-zare/parisa-zare-siti/blob/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B0%DB%B3%DB%B1_%DB%B2%DB%B3%DB%B0%DB%B2%DB%B2%DB%B5.jpg" target="_blank">
+        <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B0%DB%B3%DB%B1_%DB%B2%DB%B3%DB%B0%DB%B2%DB%B2%DB%B5.jpg" alt="جلد کتاب ۴">
+      </a>
+      <figcaption>کتاب ۴</figcaption>
+    </figure>
+
+    <figure>
+      <a href="https://github.com/parisa-zare/parisa-zare-siti/blob/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B0%DB%B3%DB%B1_%DB%B2%DB%B2%DB%B4%DB%B9%DB%B1%DB%B1.jpg" target="_blank">
+        <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B0%DB%B3%DB%B1_%DB%B2%DB%B2%DB%B4%DB%B9%DB%B1%DB%B1.jpg" alt="جلد کتاب ۵">
+      </a>
+      <figcaption>کتاب ۵</figcaption>
+    </figure>
+
+    <figure>
+      <a href="https://github.com/parisa-zare/parisa-zare-siti/blob/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B0%DB%B3%DB%B1_%DB%B2%DB%B2%DB%B4%DB%B8%DB%B4%DB%B1.jpg" target="_blank">
+        <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B0%DB%B3%DB%B1_%DB%B2%DB%B2%DB%B4%DB%B8%DB%B4%DB%B1.jpg" alt="جلد کتاب ۶">
+      </a>
+      <figcaption>کتاب ۶</figcaption>
+    </figure>
+
+  </div>
+
+</body>
+</html>
