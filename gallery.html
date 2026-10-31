@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>آلبوم تصاویر - پریسا زارع کاریزک</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Tahoma, Vazirmatn, sans-serif;
+            background-color: #f8f5ec;
+            color: #1a2238;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background-color: #1a2238;
+            color: #d4af37;
+            padding: 35px 20px;
+        }
+        header h1 { margin: 0; font-size: 26px; }
+        header p { margin-top: 10px; margin-bottom: 0; font-size: 15px; color: #ffffff; }
+        
+        .main-content {
+            flex: 1;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .main-content h2 { font-size: 24px; margin-bottom: 30px; margin-top: 0; }
+        
+        .album-card {
+            display: block;
+            background-color: #ffffff;
+            border: 2px solid #d4af37;
+            border-radius: 15px;
+            padding: 15px;
+            width: 100%;
+            max-width: 380px;
+            text-decoration: none;
+            color: #1a2238;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            box-sizing: border-box;
+        }
+        .album-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            display: block;
+            margin-bottom: 15px;
+            background-color: #eee;
+        }
+        .album-text-small {
+            font-size: 14px;
+            color: #666666;
+            margin-bottom: 8px;
+            text-align: right;
+        }
+        .album-text-large {
+            font-size: 22px;
+            font-weight: bold;
+            color: #1a2238;
+            text-align: right;
+        }
+        .btn-back {
+            background-color: #1a2238;
+            color: #d4af37;
+            text-decoration: none;
+            padding: 12px 40px;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 40px;
+        }
+        footer {
+            background-color: #1a2238;
+            color: #ffffff;
+            padding: 20px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>پریسا زارع کاریزک</h1>
+        <p>لحظه‌ها و تصاویر منتخب</p>
+    </header>
+
+    <div class="main-content">
+        <h2>آلبوم تصاویر</h2>
+
+        <!-- آدرس‌دهی به همان نام طولانی عکس که در گیت‌هاب دارید -->
+        <a href="./IMG_202610131_12301.jpg" class="album-card">
+            <img src="./IMG_202610131_12301.jpg" alt="آلبوم شماره یک">
+            <div class="album-text-small">تصویر شماره یک آلبوم</div>
+            <div class="album-text-large">آلبوم شماره یک</div>
+        </a>
+
+        <!-- دکمه بازگشت به صفحه اصلی -->
+        <a href="./index.html" class="btn-back">بازگشت به صفحه اصلی</a>
+    </div>
+
+    <footer>
+        تمامی حقوق این وب‌سایت متعلق به پریسا زارع کاریزک است.
+    </footer>
+
+</body>
+</html>
