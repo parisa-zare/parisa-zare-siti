@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
@@ -41,23 +40,23 @@
 
     main {
       max-width: 900px;
-      margin: 35px auto;
+      margin: 40px auto;
       padding: 0 18px;
       text-align: center;
     }
 
     .album-title {
-      font-size: 23px;
-      margin-bottom: 25px;
+      font-size: 25px;
+      margin-bottom: 28px;
       color: #101d35;
     }
 
     .photo-card {
       background: white;
-      padding: 15px;
-      border: 1px solid #d5ad5b;
-      border-radius: 15px;
-      box-shadow: 0 5px 20px rgba(16, 29, 53, 0.08);
+      padding: 18px;
+      border: 2px solid #d5ad5b;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(16, 29, 53, 0.10);
     }
 
     .photo-card img {
@@ -66,25 +65,34 @@
       height: auto;
       max-height: 750px;
       object-fit: contain;
-      border-radius: 10px;
+      border-radius: 12px;
     }
 
     .photo-caption {
       color: #101d35;
-      font-size: 17px;
-      font-weight: 600;
-      margin: 18px 0 8px;
+      font-size: 19px;
+      font-weight: 700;
+      margin: 20px 0 8px;
+    }
+
+    .image-error {
+      display: none;
+      color: #a33;
+      background: #fff4f4;
+      padding: 20px;
+      border-radius: 10px;
+      line-height: 2;
     }
 
     .back-button {
       display: inline-block;
       margin: 30px 0;
-      padding: 12px 28px;
+      padding: 14px 30px;
       background: #101d35;
       color: #d5ad5b;
       text-decoration: none;
-      border-radius: 8px;
-      font-weight: 600;
+      border-radius: 10px;
+      font-weight: 700;
     }
 
     .back-button:hover {
@@ -95,8 +103,8 @@
       background: #101d35;
       color: #f8f5ed;
       text-align: center;
-      padding: 20px 12px;
-      font-size: 13px;
+      padding: 22px 12px;
+      font-size: 14px;
       line-height: 2;
     }
 
@@ -106,11 +114,11 @@
       }
 
       .album-title {
-        font-size: 20px;
+        font-size: 21px;
       }
 
       main {
-        margin-top: 25px;
+        margin-top: 28px;
       }
     }
   </style>
@@ -127,17 +135,25 @@
     <h2 class="album-title">آلبوم تصاویر</h2>
 
     <div class="photo-card">
+
       <img
-        src="IMG_20261031_12301.jpg"
+        src="./IMG_20261031_12301.jpg"
         alt="عکس شماره یک آلبوم"
+        onerror="this.style.display='none'; document.getElementById('imageError').style.display='block';"
       >
+
+      <div id="imageError" class="image-error">
+        تصویر هنوز بارگذاری نشده است.
+        لطفاً نام و محل فایل عکس را در مخزن GitHub بررسی کنید.
+      </div>
 
       <div class="photo-caption">
         آلبوم شماره یک
       </div>
+
     </div>
 
-    <a class="back-button" href="/parisa-zare-siti/home-6.html">
+    <a class="back-button" href="./home-6.html">
       بازگشت به صفحه اصلی
     </a>
   </main>
