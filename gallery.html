@@ -13,24 +13,33 @@
         header { background-color: #1a2238; color: #d4af37; padding: 35px 20px; }
         header h1 { margin: 0; font-size: 26px; }
         header p { margin-top: 10px; margin-bottom: 0; font-size: 15px; color: #ffffff; }
-        .main-content { flex: 1; padding: 40px 20px; display: flex; flex-direction: column; align-items: center; }
+        
+        .main-content { 
+            flex: 1; padding: 40px 20px; 
+            display: flex; flex-direction: column; align-items: center; 
+        }
         .main-content h2 { font-size: 24px; margin-bottom: 30px; margin-top: 0; }
+        
+        /* استایل کارت آلبوم */
         .album-card {
             display: block; background-color: #ffffff; border: 2px solid #d4af37;
             border-radius: 15px; padding: 15px; width: 100%; max-width: 380px;
             text-decoration: none; color: #1a2238; box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-            box-sizing: border-box;
+            box-sizing: border-box; margin-bottom: 30px; /* فاصله بین دو کارت */
         }
+        
         .album-card img {
             width: 100%; height: 250px; object-fit: cover; border-radius: 10px;
             display: block; margin-bottom: 15px; background-color: #eee;
         }
+        
         .album-text-small { font-size: 14px; color: #666666; margin-bottom: 8px; text-align: right; }
         .album-text-large { font-size: 22px; font-weight: bold; color: #1a2238; text-align: right; }
+        
         .btn-back {
             background-color: #1a2238; color: #d4af37; text-decoration: none;
             padding: 12px 40px; border-radius: 8px; font-size: 18px;
-            font-weight: bold; display: inline-block; margin-top: 40px;
+            font-weight: bold; display: inline-block; margin-top: 20px;
         }
         footer { background-color: #1a2238; color: #ffffff; padding: 20px; font-size: 14px; }
     </style>
@@ -45,11 +54,18 @@
     <div class="main-content">
         <h2>آلبوم تصاویر</h2>
 
-        <!-- استفاده از لینک Raw گیت‌هاب برای دور زدن مشکل اعداد فارسی -->
+        <!-- آلبوم شماره یک (عکس اول: میز و ترازو) -->
         <a href="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B0%DB%B3%DB%B1_%DB%B1%DB%B2%DB%B1%DB%B3%DB%B0%DB%B1.jpg" class="album-card">
             <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B0%DB%B3%DB%B1_%DB%B1%DB%B2%DB%B1%DB%B3%DB%B0%DB%B1.jpg" alt="آلبوم شماره یک">
             <div class="album-text-small">تصویر شماره یک آلبوم</div>
             <div class="album-text-large">آلبوم شماره یک</div>
+        </a>
+
+        <!-- آلبوم شماره دو (عکس دوم: بیلبورد) -->
+        <a href="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B0%DB%B2%DB%B0%DB%B1%DB%B0_%DB%B1%DB%B6%DB%B4%DB%B4%DB%B4%DB%B5%DB%B5%DB%B0.jpg" class="album-card">
+            <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B0%DB%B2%DB%B0%DB%B1%DB%B0_%DB%B1%DB%B6%DB%B4%DB%B4%DB%B4%DB%B5%DB%B5%DB%B0.jpg" alt="آلبوم شماره دو">
+            <div class="album-text-small">تصویر شماره دو آلبوم</div>
+            <div class="album-text-large">آلبوم شماره دو</div>
         </a>
 
         <a href="./index.html" class="btn-back">بازگشت به صفحه اصلی</a>
@@ -60,4 +76,4 @@
     </footer>
 
 </body>
-</html>
+    </html>
