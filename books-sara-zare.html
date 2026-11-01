@@ -2,7 +2,7 @@
 <html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
@@ -112,6 +112,26 @@
       font-weight: 600;
     }
 
+    /* ===== لایه سفید تمام صفحه ===== */
+    #fullscreen-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #ffffff;
+      z-index: 99999;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #fullscreen-overlay img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
     @media (max-width: 1024px) {
       .book-gallery { grid-template-columns: repeat(3, 1fr); }
     }
@@ -142,81 +162,52 @@
 
   <div class="book-gallery">
 
-    <!-- کتاب ۱ -->
     <figure>
-      <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B0%DB%B3%DB%B1_%DB%B2%DB%B3%DB%B0%DB%B3%DB%B2%DB%B4.jpg" alt="کتاب ۱" onclick="openImage(this.src)">
+      <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B0%DB%B3%DB%B1_%DB%B2%DB%B3%DB%B0%DB%B3%DB%B2%DB%B4.jpg" alt="کتاب ۱" onclick="showFull(this.src)">
       <figcaption>کتاب ۱</figcaption>
     </figure>
 
-    <!-- کتاب ۲ -->
     <figure>
-      <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B0%DB%B3%DB%B1_%DB%B2%DB%B3%DB%B0%DB%B2%DB%B5%DB%B7.jpg" alt="کتاب ۲" onclick="openImage(this.src)">
+      <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B0%DB%B3%DB%B1_%DB%B2%DB%B3%DB%B0%DB%B2%DB%B5%DB%B7.jpg" alt="کتاب ۲" onclick="showFull(this.src)">
       <figcaption>کتاب ۲</figcaption>
     </figure>
 
-    <!-- کتاب ۳ -->
     <figure>
-      <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B0%DB%B3%DB%B1_%DB%B2%DB%B3%DB%B0%DB%B1%DB%B5%DB%B3.jpg" alt="کتاب ۳" onclick="openImage(this.src)">
+      <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B0%DB%B3%DB%B1_%DB%B2%DB%B3%DB%B0%DB%B1%DB%B5%DB%B3.jpg" alt="کتاب ۳" onclick="showFull(this.src)">
       <figcaption>کتاب ۳</figcaption>
     </figure>
 
-    <!-- کتاب ۴ -->
     <figure>
-      <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B0%DB%B3%DB%B1_%DB%B2%DB%B3%DB%B0%DB%B2%DB%B2%DB%B5.jpg" alt="کتاب ۴" onclick="openImage(this.src)">
+      <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B0%DB%B3%DB%B1_%DB%B2%DB%B3%DB%B0%DB%B2%DB%B2%DB%B5.jpg" alt="کتاب ۴" onclick="showFull(this.src)">
       <figcaption>کتاب ۴</figcaption>
     </figure>
 
-    <!-- کتاب ۵ -->
     <figure>
-      <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B0%DB%B3%DB%B1_%DB%B2%DB%B2%DB%B4%DB%B9%DB%B1%DB%B1.jpg" alt="کتاب ۵" onclick="openImage(this.src)">
+      <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B0%DB%B3%DB%B1_%DB%B2%DB%B2%DB%B4%DB%B9%DB%B1%DB%B1.jpg" alt="کتاب ۵" onclick="showFull(this.src)">
       <figcaption>کتاب ۵</figcaption>
     </figure>
 
-    <!-- کتاب ۶ -->
     <figure>
-      <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B1%DB%B0%DB%B1_%DB%B1%DB%B6%DB%B4%DB%B2%DB%B2%DB%B9.jpg" alt="کتاب ۶" onclick="openImage(this.src)">
+      <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B1%DB%B0%DB%B1_%DB%B1%DB%B6%DB%B4%DB%B2%DB%B2%DB%B9.jpg" alt="کتاب ۶" onclick="showFull(this.src)">
       <figcaption>کتاب ۶ (علم تمرین)</figcaption>
     </figure>
 
   </div>
 
+  <!-- این لایه سفید، عکس را در کل صفحه نمایش می‌دهد -->
+  <div id="fullscreen-overlay" onclick="hideFull()">
+    <img id="full-img" src="" alt="عکس بزرگ">
+  </div>
+
   <script>
-    function openImage(imageUrl) {
-      // باز کردن یک پنجره جدید با صفحه سفید
-      var newWindow = window.open("", "_blank");
-      
-      // نوشتن کدهای HTML با استایل‌های اجباری برای بزرگ کردن عکس
-      newWindow.document.write(`
-        <!DOCTYPE html>
-        <html>
-        <head>
-          <title>مشاهده عکس</title>
-          <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-          <style>
-            /* استایل‌های اجباری برای بزرگ کردن عکس در کل صفحه */
-            html, body { 
-              margin: 0; 
-              padding: 0; 
-              width: 100%; 
-              height: 100%; 
-              background-color: #ffffff; 
-              overflow: hidden; /* جلوگیری از اسکرول */
-            } 
-            img { 
-              width: 100vw; /* عرض کل صفحه */
-              height: 100vh; /* ارتفاع کل صفحه */
-              object-fit: contain; /* نمایش کامل عکس بدون بریدگی */
-              display: block;
-            }
-          </style>
-        </head>
-        <body>
-          <img src="${imageUrl}">
-        </body>
-        </html>
-      `);
-      
-      newWindow.document.close();
+    function showFull(src) {
+      document.getElementById('full-img').src = src;
+      document.getElementById('fullscreen-overlay').style.display = 'flex';
+    }
+
+    function hideFull() {
+      document.getElementById('fullscreen-overlay').style.display = 'none';
+      document.getElementById('full-img').src = '';
     }
   </script>
 
