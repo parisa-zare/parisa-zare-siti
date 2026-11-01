@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- جلوگیری از کش شدن -->
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
@@ -90,13 +89,6 @@
       overflow: hidden;
       box-shadow: 0 2px 8px rgba(0,0,0,0.06);
       transition: transform 0.2s ease, box-shadow 0.2s ease;
-      /* این خط برای جلوگیری از رفتار پیش‌فرض گوشی اضافه شد */
-      -webkit-touch-callout: none;
-      -webkit-user-select: none;
-      -khtml-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
     }
 
     .book-gallery figure:hover {
@@ -110,7 +102,6 @@
       object-fit: cover;
       display: block;
       cursor: pointer;
-      pointer-events: auto; /* اطمینان از دریافت کلیک */
     }
 
     .book-gallery figcaption {
@@ -119,27 +110,6 @@
       text-align: center;
       color: #374151;
       font-weight: 600;
-    }
-
-    /* استایل برای صفحه تمام صفحه */
-    #fullscreen-overlay {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background-color: #ffffff;
-      z-index: 9999;
-      justify-content: center;
-      align-items: center;
-      cursor: zoom-out;
-    }
-
-    #fullscreen-overlay img {
-      max-width: 100%;
-      max-height: 100%;
-      object-fit: contain;
     }
 
     @media (max-width: 1024px) {
@@ -174,83 +144,50 @@
 
     <!-- کتاب ۱ -->
     <figure>
-      <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B0%DB%B3%DB%B1_%DB%B2%DB%B3%DB%B0%DB%B3%DB%B2%DB%B4.jpg" alt="کتاب ۱" class="gallery-img">
+      <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B0%DB%B3%DB%B1_%DB%B2%DB%B3%DB%B0%DB%B3%DB%B2%DB%B4.jpg" alt="کتاب ۱" onclick="showImage(this.src)">
       <figcaption>کتاب ۱</figcaption>
     </figure>
 
     <!-- کتاب ۲ -->
     <figure>
-      <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B0%DB%B3%DB%B1_%DB%B2%DB%B3%DB%B0%DB%B2%DB%B5%DB%B7.jpg" alt="کتاب ۲" class="gallery-img">
+      <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B0%DB%B3%DB%B1_%DB%B2%DB%B3%DB%B0%DB%B2%DB%B5%DB%B7.jpg" alt="کتاب ۲" onclick="showImage(this.src)">
       <figcaption>کتاب ۲</figcaption>
     </figure>
 
     <!-- کتاب ۳ -->
     <figure>
-      <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B0%DB%B3%DB%B1_%DB%B2%DB%B3%DB%B0%DB%B1%DB%B5%DB%B3.jpg" alt="کتاب ۳" class="gallery-img">
+      <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B0%DB%B3%DB%B1_%DB%B2%DB%B3%DB%B0%DB%B1%DB%B5%DB%B3.jpg" alt="کتاب ۳" onclick="showImage(this.src)">
       <figcaption>کتاب ۳</figcaption>
     </figure>
 
     <!-- کتاب ۴ -->
     <figure>
-      <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B0%DB%B3%DB%B1_%DB%B2%DB%B3%DB%B0%DB%B2%DB%B2%DB%B5.jpg" alt="کتاب ۴" class="gallery-img">
+      <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B0%DB%B3%DB%B1_%DB%B2%DB%B3%DB%B0%DB%B2%DB%B2%DB%B5.jpg" alt="کتاب ۴" onclick="showImage(this.src)">
       <figcaption>کتاب ۴</figcaption>
     </figure>
 
     <!-- کتاب ۵ -->
     <figure>
-      <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B0%DB%B3%DB%B1_%DB%B2%DB%B2%DB%B4%DB%B9%DB%B1%DB%B1.jpg" alt="کتاب ۵" class="gallery-img">
+      <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B0%DB%B3%DB%B1_%DB%B2%DB%B2%DB%B4%DB%B9%DB%B1%DB%B1.jpg" alt="کتاب ۵" onclick="showImage(this.src)">
       <figcaption>کتاب ۵</figcaption>
     </figure>
 
     <!-- کتاب ۶ -->
     <figure>
-      <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B1%DB%B0%DB%B1_%DB%B1%DB%B6%DB%B4%DB%B2%DB%B2%DB%B9.jpg" alt="کتاب ۶" class="gallery-img">
+      <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B1%DB%B0%DB%B1_%DB%B1%DB%B6%DB%B4%DB%B2%DB%B2%DB%B9.jpg" alt="کتاب ۶" onclick="showImage(this.src)">
       <figcaption>کتاب ۶ (علم تمرین)</figcaption>
     </figure>
 
   </div>
 
-  <!-- کانتینر عکس تمام صفحه -->
-  <div id="fullscreen-overlay">
-    <img id="fullscreen-img" src="" alt="عکس بزرگ">
-  </div>
-
-  <!-- کد جاوااسکریپت -->
   <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      var images = document.querySelectorAll('.gallery-img');
-      var overlay = document.getElementById('fullscreen-overlay');
-      var fullscreenImg = document.getElementById('fullscreen-img');
-
-      images.forEach(function(img) {
-        // استفاده از رویدادهای لمسی و کلیک برای پوشش همه دستگاه‌ها
-        img.addEventListener('click', function(event) {
-          event.preventDefault(); 
-          event.stopPropagation();
-          fullscreenImg.src = this.src;
-          overlay.style.display = 'flex';
-        });
-
-        // برای گوشی‌ها که ممکن است با لمس (touch) رفتار متفاوتی داشته باشند
-        img.addEventListener('touchstart', function(event) {
-          event.preventDefault();
-          fullscreenImg.src = this.src;
-          overlay.style.display = 'flex';
-        }, {passive: false});
-      });
-
-      overlay.addEventListener('click', function() {
-        overlay.style.display = 'none';
-        fullscreenImg.src = '';
-      });
-      
-      overlay.addEventListener('touchstart', function(event) {
-        event.preventDefault();
-        overlay.style.display = 'none';
-        fullscreenImg.src = '';
-      }, {passive: false});
-    });
+    function showImage(imageUrl) {
+      // این کد یک پنجره جدید باز می‌کند و فقط عکس را در آن نمایش می‌دهد
+      var newWindow = window.open("", "_blank");
+      newWindow.document.write("<html><head><title>مشاهده عکس</title><style>body { margin: 0; display: flex; justify-content: center; align-items: center; height: 100vh; background: #fff; } img { max-width: 100%; max-height: 100%; }</style></head><body><img src='" + imageUrl + "'></body></html>");
+      newWindow.document.close();
+    }
   </script>
 
 </body>
-  </html>
+</html>
