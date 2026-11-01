@@ -90,6 +90,13 @@
       overflow: hidden;
       box-shadow: 0 2px 8px rgba(0,0,0,0.06);
       transition: transform 0.2s ease, box-shadow 0.2s ease;
+      /* این خط برای جلوگیری از رفتار پیش‌فرض گوشی اضافه شد */
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
     }
 
     .book-gallery figure:hover {
@@ -103,6 +110,7 @@
       object-fit: cover;
       display: block;
       cursor: pointer;
+      pointer-events: auto; /* اطمینان از دریافت کلیک */
     }
 
     .book-gallery figcaption {
@@ -209,31 +217,40 @@
 
   <!-- کد جاوااسکریپت -->
   <script>
-    // این کد منتظر می‌ماند تا صفحه کامل لود شود
     document.addEventListener("DOMContentLoaded", function() {
       var images = document.querySelectorAll('.gallery-img');
       var overlay = document.getElementById('fullscreen-overlay');
       var fullscreenImg = document.getElementById('fullscreen-img');
 
-      // برای هر عکس، رویداد کلیک تعریف می‌کنیم
       images.forEach(function(img) {
+        // استفاده از رویدادهای لمسی و کلیک برای پوشش همه دستگاه‌ها
         img.addEventListener('click', function(event) {
-          // جلوگیری از هر رفتار پیش‌فرضی که باعث تغییر آدرس می‌شود
           event.preventDefault(); 
           event.stopPropagation();
-          
           fullscreenImg.src = this.src;
           overlay.style.display = 'flex';
         });
+
+        // برای گوشی‌ها که ممکن است با لمس (touch) رفتار متفاوتی داشته باشند
+        img.addEventListener('touchstart', function(event) {
+          event.preventDefault();
+          fullscreenImg.src = this.src;
+          overlay.style.display = 'flex';
+        }, {passive: false});
       });
 
-      // بستن عکس با کلیک روی صفحه سفید
       overlay.addEventListener('click', function() {
         overlay.style.display = 'none';
         fullscreenImg.src = '';
       });
+      
+      overlay.addEventListener('touchstart', function(event) {
+        event.preventDefault();
+        overlay.style.display = 'none';
+        fullscreenImg.src = '';
+      }, {passive: false});
     });
   </script>
 
 </body>
-</html>
+  </html>
