@@ -112,6 +112,27 @@
       font-weight: 600;
     }
 
+    /* ===== استایل برای عکس تمام صفحه ===== */
+    #lightbox-overlay {
+      display: none; /* در حالت عادی مخفی است */
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: #ffffff; /* پس زمینه کاملاً سفید */
+      z-index: 9999;
+      justify-content: center;
+      align-items: center;
+      cursor: zoom-out; /* برای بستن با کلیک */
+    }
+
+    #lightbox-overlay img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain; /* نمایش عکس بدون بریدگی */
+    }
+
     @media (max-width: 1024px) {
       .book-gallery { grid-template-columns: repeat(3, 1fr); }
     }
@@ -144,80 +165,60 @@
 
     <!-- کتاب ۱ -->
     <figure>
-      <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B0%DB%B3%DB%B1_%DB%B2%DB%B3%DB%B0%DB%B3%DB%B2%DB%B4.jpg" alt="کتاب ۱" onclick="openImageInNewWindow(this.src)">
+      <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B0%DB%B3%DB%B1_%DB%B2%DB%B3%DB%B0%DB%B3%DB%B2%DB%B4.jpg" alt="کتاب ۱" onclick="openLightbox(this.src)">
       <figcaption>کتاب ۱</figcaption>
     </figure>
 
     <!-- کتاب ۲ -->
     <figure>
-      <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B0%DB%B3%DB%B1_%DB%B2%DB%B3%DB%B0%DB%B2%DB%B5%DB%B7.jpg" alt="کتاب ۲" onclick="openImageInNewWindow(this.src)">
+      <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B0%DB%B3%DB%B1_%DB%B2%DB%B3%DB%B0%DB%B2%DB%B5%DB%B7.jpg" alt="کتاب ۲" onclick="openLightbox(this.src)">
       <figcaption>کتاب ۲</figcaption>
     </figure>
 
     <!-- کتاب ۳ -->
     <figure>
-      <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B0%DB%B3%DB%B1_%DB%B2%DB%B3%DB%B0%DB%B1%DB%B5%DB%B3.jpg" alt="کتاب ۳" onclick="openImageInNewWindow(this.src)">
+      <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B0%DB%B3%DB%B1_%DB%B2%DB%B3%DB%B0%DB%B1%DB%B5%DB%B3.jpg" alt="کتاب ۳" onclick="openLightbox(this.src)">
       <figcaption>کتاب ۳</figcaption>
     </figure>
 
     <!-- کتاب ۴ -->
     <figure>
-      <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B0%DB%B3%DB%B1_%DB%B2%DB%B3%DB%B0%DB%B2%DB%B2%DB%B5.jpg" alt="کتاب ۴" onclick="openImageInNewWindow(this.src)">
+      <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B0%DB%B3%DB%B1_%DB%B2%DB%B3%DB%B0%DB%B2%DB%B2%DB%B5.jpg" alt="کتاب ۴" onclick="openLightbox(this.src)">
       <figcaption>کتاب ۴</figcaption>
     </figure>
 
     <!-- کتاب ۵ -->
     <figure>
-      <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B0%DB%B3%DB%B1_%DB%B2%DB%B2%DB%B4%DB%B9%DB%B1%DB%B1.jpg" alt="کتاب ۵" onclick="openImageInNewWindow(this.src)">
+      <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B0%DB%B3%DB%B1_%DB%B2%DB%B2%DB%B4%DB%B9%DB%B1%DB%B1.jpg" alt="کتاب ۵" onclick="openLightbox(this.src)">
       <figcaption>کتاب ۵</figcaption>
     </figure>
 
     <!-- کتاب ۶ -->
     <figure>
-      <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B1%DB%B0%DB%B1_%DB%B1%DB%B6%DB%B4%DB%B2%DB%B2%DB%B9.jpg" alt="کتاب ۶" onclick="openImageInNewWindow(this.src)">
+      <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B1%DB%B0%DB%B1_%DB%B1%DB%B6%DB%B4%DB%B2%DB%B2%DB%B9.jpg" alt="کتاب ۶" onclick="openLightbox(this.src)">
       <figcaption>کتاب ۶ (علم تمرین)</figcaption>
     </figure>
 
   </div>
 
+  <!-- لایه سفید برای نمایش عکس بزرگ -->
+  <div id="lightbox-overlay" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="عکس بزرگ">
+  </div>
+
   <script>
-    function openImageInNewWindow(imageUrl) {
-      // این کد یک پنجره جدید با یک صفحه سفید باز می‌کند
-      var newWindow = window.open("", "_blank");
-      
-      // کدهای HTML را داخل صفحه جدید می‌نویسیم تا فقط عکس نمایش داده شود
-      newWindow.document.write(`
-        <!DOCTYPE html>
-        <html>
-        <head>
-          <title>مشاهده عکس</title>
-          <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <style>
-            body { 
-              margin: 0; 
-              display: flex; 
-              justify-content: center; 
-              align-items: center; 
-              height: 100vh; 
-              background-color: #ffffff; 
-            } 
-            img { 
-              max-width: 100%; 
-              max-height: 100%; 
-              object-fit: contain; 
-            }
-          </style>
-        </head>
-        <body>
-          <img src="${imageUrl}">
-        </body>
-        </html>
-      `);
-      
-      // بستن عملیات نوشتن
-      newWindow.document.close();
+    function openLightbox(src) {
+      // نمایش لایه سفید و قرار دادن عکس در آن
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox-overlay').style.display = 'flex';
+    }
+
+    function closeLightbox() {
+      // مخفی کردن لایه سفید
+      document.getElementById('lightbox-overlay').style.display = 'none';
+      document.getElementById('lightbox-img').src = '';
     }
   </script>
 
 </body>
-</html>
+  </html>
