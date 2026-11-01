@@ -118,6 +118,7 @@
       height: 260px;
       object-fit: cover;
       display: block;
+      cursor: pointer; /* تغییر شکل موس به دست */
     }
 
     .book-gallery figcaption {
@@ -128,7 +129,30 @@
       font-weight: 600;
     }
 
-    .book-gallery a { text-decoration: none; }
+    /* استایل برای صفحه تمام صفحه */
+    .fullscreen-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #ffffff; /* پس زمینه کاملاً سفید */
+      z-index: 9999;
+      justify-content: center;
+      align-items: center;
+      cursor: zoom-out; /* نشان دادن دست برای بستن */
+    }
+
+    .fullscreen-overlay img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain; /* نمایش عکس بدون بریدگی */
+    }
+
+    .fullscreen-overlay:target {
+      display: flex;
+    }
 
     @media (max-width: 1024px) {
       .book-gallery { grid-template-columns: repeat(3, 1fr); }
@@ -177,7 +201,7 @@
 
     <!-- کتاب ۱ -->
     <figure>
-      <a href="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B0%DB%B3%DB%B1_%DB%B2%DB%B3%DB%B0%DB%B3%DB%B2%DB%B4.jpg" target="_blank">
+      <a href="#img1">
         <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B0%DB%B3%DB%B1_%DB%B2%DB%B3%DB%B0%DB%B3%DB%B2%DB%B4.jpg" alt="جلد کتاب ۱ اثر دکتر سارا زارع کاریزک">
       </a>
       <figcaption>کتاب ۱</figcaption>
@@ -185,7 +209,7 @@
 
     <!-- کتاب ۲ -->
     <figure>
-      <a href="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B0%DB%B3%DB%B1_%DB%B2%DB%B3%DB%B0%DB%B2%DB%B5%DB%B7.jpg" target="_blank">
+      <a href="#img2">
         <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B0%DB%B3%DB%B1_%DB%B2%DB%B3%DB%B0%DB%B2%DB%B5%DB%B7.jpg" alt="جلد کتاب ۲ اثر دکتر سارا زارع کاریزک">
       </a>
       <figcaption>کتاب ۲</figcaption>
@@ -193,7 +217,7 @@
 
     <!-- کتاب ۳ -->
     <figure>
-      <a href="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B0%DB%B3%DB%B1_%DB%B2%DB%B3%DB%B0%DB%B1%DB%B5%DB%B3.jpg" target="_blank">
+      <a href="#img3">
         <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B0%DB%B3%DB%B1_%DB%B2%DB%B3%DB%B0%DB%B1%DB%B5%DB%B3.jpg" alt="جلد کتاب ۳ اثر دکتر سارا زارع کاریزک">
       </a>
       <figcaption>کتاب ۳</figcaption>
@@ -201,7 +225,7 @@
 
     <!-- کتاب ۴ -->
     <figure>
-      <a href="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B0%DB%B3%DB%B1_%DB%B2%DB%B3%DB%B0%DB%B2%DB%B2%DB%B5.jpg" target="_blank">
+      <a href="#img4">
         <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B0%DB%B3%DB%B1_%DB%B2%DB%B3%DB%B0%DB%B2%DB%B2%DB%B5.jpg" alt="جلد کتاب ۴ اثر دکتر سارا زارع کاریزک">
       </a>
       <figcaption>کتاب ۴</figcaption>
@@ -209,15 +233,15 @@
 
     <!-- کتاب ۵ -->
     <figure>
-      <a href="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B0%DB%B3%DB%B1_%DB%B2%DB%B2%DB%B4%DB%B9%DB%B1%DB%B1.jpg" target="_blank">
+      <a href="#img5">
         <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B0%DB%B3%DB%B1_%DB%B2%DB%B2%DB%B4%DB%B9%DB%B1%DB%B1.jpg" alt="جلد کتاب ۵ اثر دکتر سارا زارع کاریزک">
       </a>
       <figcaption>کتاب ۵</figcaption>
     </figure>
 
-    <!-- کتاب ۶ (علم تمرین - با آدرس دقیق) -->
+    <!-- کتاب ۶ (علم تمرین) -->
     <figure>
-      <a href="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B1%DB%B0%DB%B1_%DB%B1%DB%B6%DB%B4%DB%B2%DB%B2%DB%B9.jpg" target="_blank">
+      <a href="#img6">
         <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B1%DB%B0%DB%B1_%DB%B1%DB%B6%DB%B4%DB%B2%DB%B2%DB%B9.jpg" alt="جلد کتاب علم تمرین اثر دکتر سارا زارع کاریزک">
       </a>
       <figcaption>کتاب ۶ (علم تمرین)</figcaption>
@@ -225,5 +249,30 @@
 
   </div>
 
+  <!-- بخش‌های باز شدن عکس در حالت تمام صفحه (سفید) -->
+  <div id="img1" class="fullscreen-overlay">
+    <a href="#!"><img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B0%DB%B3%DB%B1_%DB%B2%DB%B3%DB%B0%DB%B3%DB%B2%DB%B4.jpg" alt="کتاب ۱"></a>
+  </div>
+  
+  <div id="img2" class="fullscreen-overlay">
+    <a href="#!"><img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B0%DB%B3%DB%B1_%DB%B2%DB%B3%DB%B0%DB%B2%DB%B5%DB%B7.jpg" alt="کتاب ۲"></a>
+  </div>
+
+  <div id="img3" class="fullscreen-overlay">
+    <a href="#!"><img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B0%DB%B3%DB%B1_%DB%B2%DB%B3%DB%B0%DB%B1%DB%B5%DB%B3.jpg" alt="کتاب ۳"></a>
+  </div>
+
+  <div id="img4" class="fullscreen-overlay">
+    <a href="#!"><img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B0%DB%B3%DB%B1_%DB%B2%DB%B3%DB%B0%DB%B2%DB%B2%DB%B5.jpg" alt="کتاب ۴"></a>
+  </div>
+
+  <div id="img5" class="fullscreen-overlay">
+    <a href="#!"><img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B0%DB%B3%DB%B1_%DB%B2%DB%B2%DB%B4%DB%B9%DB%B1%DB%B1.jpg" alt="کتاب ۵"></a>
+  </div>
+
+  <div id="img6" class="fullscreen-overlay">
+    <a href="#!"><img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B1%DB%B0%DB%B1_%DB%B1%DB%B6%DB%B4%DB%B2%DB%B2%DB%B9.jpg" alt="کتاب ۶"></a>
+  </div>
+
 </body>
-  </html>
+</html>
