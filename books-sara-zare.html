@@ -3,6 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- این خط برای جلوگیری از کش شدن است -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
 
   <!-- ===== SEO ===== -->
   <title>کتاب‌های دکتر سارا زارع کاریزک | عضو هیئت علمی دانشگاه خلیج فارس</title>
@@ -118,7 +122,7 @@
       height: 260px;
       object-fit: cover;
       display: block;
-      cursor: pointer; /* نشان دادن دست برای کلیک */
+      cursor: pointer;
     }
 
     .book-gallery figcaption {
@@ -131,17 +135,17 @@
 
     /* ===== استایل برای صفحه تمام صفحه ===== */
     #fullscreen-overlay {
-      display: none; /* در حالت عادی مخفی است */
+      display: none;
       position: fixed;
       top: 0;
       left: 0;
       width: 100vw;
       height: 100vh;
-      background-color: #ffffff; /* پس زمینه کاملاً سفید */
+      background-color: #ffffff;
       z-index: 9999;
       justify-content: center;
       align-items: center;
-      cursor: zoom-out; /* برای بستن با کلیک */
+      cursor: zoom-out;
     }
 
     #fullscreen-overlay img {
@@ -195,59 +199,73 @@
 
   <div class="book-gallery">
 
-    <!-- کتاب ۱ (تگ a کاملاً حذف شد) -->
+    <!-- کتاب ۱ -->
     <figure>
-      <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B0%DB%B3%DB%B1_%DB%B2%DB%B3%DB%B0%DB%B3%DB%B2%DB%B4.jpg" alt="جلد کتاب ۱ اثر دکتر سارا زارع کاریزک" onclick="openImage(this.src)">
+      <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B0%DB%B3%DB%B1_%DB%B2%DB%B3%DB%B0%DB%B3%DB%B2%DB%B4.jpg" alt="جلد کتاب ۱ اثر دکتر سارا زارع کاریزک" class="gallery-img">
       <figcaption>کتاب ۱</figcaption>
     </figure>
 
     <!-- کتاب ۲ -->
     <figure>
-      <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B0%DB%B3%DB%B1_%DB%B2%DB%B3%DB%B0%DB%B2%DB%B5%DB%B7.jpg" alt="جلد کتاب ۲ اثر دکتر سارا زارع کاریزک" onclick="openImage(this.src)">
+      <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B0%DB%B3%DB%B1_%DB%B2%DB%B3%DB%B0%DB%B2%DB%B5%DB%B7.jpg" alt="جلد کتاب ۲ اثر دکتر سارا زارع کاریزک" class="gallery-img">
       <figcaption>کتاب ۲</figcaption>
     </figure>
 
     <!-- کتاب ۳ -->
     <figure>
-      <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B0%DB%B3%DB%B1_%DB%B2%DB%B3%DB%B0%DB%B1%DB%B5%DB%B3.jpg" alt="جلد کتاب ۳ اثر دکتر سارا زارع کاریزک" onclick="openImage(this.src)">
+      <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B0%DB%B3%DB%B1_%DB%B2%DB%B3%DB%B0%DB%B1%DB%B5%DB%B3.jpg" alt="جلد کتاب ۳ اثر دکتر سارا زارع کاریزک" class="gallery-img">
       <figcaption>کتاب ۳</figcaption>
     </figure>
 
     <!-- کتاب ۴ -->
     <figure>
-      <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B0%DB%B3%DB%B1_%DB%B2%DB%B3%DB%B0%DB%B2%DB%B2%DB%B5.jpg" alt="جلد کتاب ۴ اثر دکتر سارا زارع کاریزک" onclick="openImage(this.src)">
+      <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B0%DB%B3%DB%B1_%DB%B2%DB%B3%DB%B0%DB%B2%DB%B2%DB%B5.jpg" alt="جلد کتاب ۴ اثر دکتر سارا زارع کاریزک" class="gallery-img">
       <figcaption>کتاب ۴</figcaption>
     </figure>
 
     <!-- کتاب ۵ -->
     <figure>
-      <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B0%DB%B3%DB%B1_%DB%B2%DB%B2%DB%B4%DB%B9%DB%B1%DB%B1.jpg" alt="جلد کتاب ۵ اثر دکتر سارا زارع کاریزک" onclick="openImage(this.src)">
+      <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B0%DB%B3%DB%B1_%DB%B2%DB%B2%DB%B4%DB%B9%DB%B1%DB%B1.jpg" alt="جلد کتاب ۵ اثر دکتر سارا زارع کاریزک" class="gallery-img">
       <figcaption>کتاب ۵</figcaption>
     </figure>
 
     <!-- کتاب ۶ (علم تمرین) -->
     <figure>
-      <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B1%DB%B0%DB%B1_%DB%B1%DB%B6%DB%B4%DB%B2%DB%B2%DB%B9.jpg" alt="جلد کتاب علم تمرین اثر دکتر سارا زارع کاریزک" onclick="openImage(this.src)">
+      <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B1%DB%B0%DB%B1_%DB%B1%DB%B6%DB%B4%DB%B2%DB%B2%DB%B9.jpg" alt="جلد کتاب علم تمرین اثر دکتر سارا زارع کاریزک" class="gallery-img">
       <figcaption>کتاب ۶ (علم تمرین)</figcaption>
     </figure>
 
   </div>
 
   <!-- کانتینر عکس تمام صفحه -->
-  <div id="fullscreen-overlay" onclick="closeImage()">
+  <div id="fullscreen-overlay">
     <img id="fullscreen-img" src="" alt="عکس بزرگ">
   </div>
 
-  <!-- کد جاوااسکریپت برای باز و بسته کردن عکس بدون تغییر آدرس -->
+  <!-- کد جاوااسکریپت با روش جدید برای جلوگیری از تغییر آدرس -->
   <script>
-    function openImage(src) {
-      document.getElementById('fullscreen-img').src = src;
-      document.getElementById('fullscreen-overlay').style.display = 'flex';
-    }
+    document.addEventListener("DOMContentLoaded", function() {
+      // پیدا کردن همه عکس‌های گالری
+      var images = document.querySelectorAll('.gallery-img');
+      var overlay = document.getElementById('fullscreen-overlay');
+      var fullscreenImg = document.getElementById('fullscreen-img');
 
-    function closeImage() {
-      document.getElementById('fullscreen-overlay').style.display = 'none';
-    }
+      // برای هر عکس یک رویداد کلیک تعریف می‌کنیم
+      images.forEach(function(img) {
+        img.addEventListener('click', function(e) {
+          // جلوگیری از هر رفتار پیش‌فرضی که باعث تغییر آدرس شود
+          e.preventDefault(); 
+          fullscreenImg.src = this.src;
+          overlay.style.display = 'flex';
+        });
+      });
+
+      // بستن عکس با کلیک روی پس زمینه سفید
+      overlay.addEventListener('click', function() {
+        overlay.style.display = 'none';
+        fullscreenImg.src = ''; // پاک کردن آدرس عکس برای جلوگیری از لود شدن مجدد
+      });
+    });
   </script>
 
 </body>
