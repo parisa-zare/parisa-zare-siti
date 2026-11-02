@@ -58,14 +58,75 @@
             align-items: center;
         }
 
+        /* --- تنظیمات مربوط به عکس و بزرگنمایی (لایت باکس) --- */
         .image-wrapper img {
             width: 100%;
             height: auto;
             max-height: 500px;
             object-fit: cover;
             display: block;
+            cursor: pointer; /* تغییر شکل موس به دست برای نشان دادن قابلیت کلیک */
+            transition: transform 0.3s ease, filter 0.3s ease;
         }
 
+        .image-wrapper img:hover {
+            filter: brightness(0.9); /* کمی تیره شدن موقع هاور */
+        }
+
+        /* لایه پس‌زمینه تیره (مودال) */
+        .lightbox {
+            display: none; /* در حالت عادی مخفی است */
+            position: fixed;
+            z-index: 9999;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.85); /* پس‌زمینه مشکی نیمه شفاف */
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        /* زمانی که کلاس active اضافه شود، نمایش داده می‌شود */
+        .lightbox.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        /* تصویر داخل لایت باکس */
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90vh;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+            transform: scale(0.9);
+            transition: transform 0.3s ease;
+        }
+
+        .lightbox.active img {
+            transform: scale(1);
+        }
+
+        /* دکمه بستن (ضربدر) */
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            line-height: 1;
+        }
+
+        .close-btn:hover {
+            color: var(--gold-color);
+        }
+
+        /* --- بقیه استایل‌ها --- */
         .card-info {
             padding-top: 20px;
             text-align: right;
@@ -102,6 +163,7 @@
             border-radius: 12px;
             transition: all 0.3s ease;
             font-family: inherit;
+            cursor: pointer;
         }
 
         .back-to-menu-btn:hover {
@@ -115,6 +177,7 @@
             .album-title { font-size: 18px; }
             .main-title { font-size: 20px; }
             .back-to-menu-btn { padding: 10px 20px; font-size: 14px; width: 80%; }
+            .close-btn { top: 10px; right: 20px; font-size: 35px; }
         }
     </style>
 </head>
@@ -126,8 +189,8 @@
         <!-- کارت عکس اول -->
         <div class="gallery-card">
             <div class="image-wrapper">
-                <!-- نام فایل عکس اول -->
-                <img src="IMG_۲۰۲۶۱۱۰۳_۰۰۱۷۴۴.jpg" alt="تصویر شماره یک" loading="lazy">
+                <!-- اضافه شدن onclick برای باز کردن لایت باکس -->
+                <img src="IMG_۲۰۲۶۱۱۰۳_۰۰۱۷۴۴.jpg" alt="تصویر شماره یک" loading="lazy" onclick="openLightbox(this.src)">
             </div>
             <div class="card-info">
                 <div class="image-caption">تصویر شماره یک (جدید)</div>
@@ -138,8 +201,7 @@
         <!-- کارت عکس دوم -->
         <div class="gallery-card">
             <div class="image-wrapper">
-                <!-- نام فایل عکس دوم -->
-                <img src="IMG_۲۰۲۶۱۱۰۳_۰۰۱۸۴۴.jpg" alt="تصویر شماره دو" loading="lazy">
+                <img src="IMG_۲۰۲۶۱۱۰۳_۰۰۱۸۴۴.jpg" alt="تصویر شماره دو" loading="lazy" onclick="openLightbox(this.src)">
             </div>
             <div class="card-info">
                 <div class="image-caption">تصویر شماره دو (جدید)</div>
@@ -150,8 +212,7 @@
         <!-- کارت عکس سوم -->
         <div class="gallery-card">
             <div class="image-wrapper">
-                <!-- نام فایل عکس سوم -->
-                <img src="IMG_۲۰۲۶۱۱۰۳_۰۰۱۸۱۶.jpg" alt="تصویر شماره سه" loading="lazy">
+                <img src="IMG_۲۰۲۶۱۱۰۳_۰۰۱۸۱۶.jpg" alt="تصویر شماره سه" loading="lazy" onclick="openLightbox(this.src)">
             </div>
             <div class="card-info">
                 <div class="image-caption">تصویر شماره سه (جدید)</div>
@@ -162,8 +223,7 @@
         <!-- کارت عکس چهارم -->
         <div class="gallery-card">
             <div class="image-wrapper">
-                <!-- نام فایل عکس چهارم -->
-                <img src="IMG_۲۰۲۶۱۱۰۳_۰۰۱۹۱۵.jpg" alt="تصویر شماره چهار" loading="lazy">
+                <img src="IMG_۲۰۲۶۱۱۰۳_۰۰۱۹۱۵.jpg" alt="تصویر شماره چهار" loading="lazy" onclick="openLightbox(this.src)">
             </div>
             <div class="card-info">
                 <div class="image-caption">تصویر شماره چهار (جدید)</div>
@@ -177,5 +237,35 @@
         <a href="menu.html" class="back-to-menu-btn">بازگشت به منو</a>
     </div>
 
+    <!-- ساختار لایت باکس در انتهای صفحه -->
+    <div id="imageLightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="close-btn">&times;</span>
+        <img id="lightboxImg" src="" alt="تصویر بزرگ">
+    </div>
+
+    <!-- کدهای جاوا اسکریپت برای عملکرد لایت باکس -->
+    <script>
+        const lightbox = document.getElementById('imageLightbox');
+        const lightboxImg = document.getElementById('lightboxImg');
+
+        // تابع باز کردن عکس
+        function openLightbox(imageSrc) {
+            lightboxImg.src = imageSrc;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden'; // جلوگیری از اسکرول صفحه هنگام باز بودن عکس
+        }
+
+        // تابع بستن عکس
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = 'auto'; // برگرداندن اسکرول
+        }
+
+        // جلوگیری از بسته شدن وقتی روی خود عکس کلیک می‌شود
+        lightboxImg.onclick = function(event) {
+            event.stopPropagation();
+        }
+    </script>
+
 </body>
-  </html>
+        </html>
