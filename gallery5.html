@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>گالری تصاویر (بخش پنجم) | پریسا زارع</title>
+    <style>
+        :root {
+            --bg-color: #fcf9f2;
+            --card-bg: #ffffff;
+            --gold-color: #c9a45c;
+            --navy-color: #1a2235;
+            --text-dark: #111827;
+            --text-gray: #6b7280;
+        }
+
+        body {
+            font-family: 'Tahoma', 'Vazirmatn', sans-serif;
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+            color: var(--text-dark);
+        }
+
+        .main-title {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 40px;
+            margin-top: 20px;
+        }
+
+        .gallery-container {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .gallery-card {
+            background-color: var(--card-bg);
+            border: 2px solid var(--gold-color);
+            border-radius: 16px;
+            padding: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .image-wrapper {
+            width: 100%;
+            border-radius: 12px;
+            overflow: hidden;
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-wrapper img {
+            width: 100%;
+            height: auto;
+            max-height: 500px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .card-info {
+            padding-top: 20px;
+            text-align: right;
+        }
+
+        .image-caption {
+            font-size: 14px;
+            color: var(--text-gray);
+            margin-bottom: 10px;
+        }
+
+        .album-title {
+            font-size: 22px;
+            font-weight: bold;
+            color: var(--text-dark);
+            margin: 0;
+        }
+
+        .back-to-menu-container {
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+
+        .back-to-menu-btn {
+            display: inline-block;
+            background-color: transparent;
+            color: var(--navy-color);
+            border: 2px solid var(--navy-color);
+            padding: 12px 30px;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            font-family: inherit;
+        }
+
+        .back-to-menu-btn:hover {
+            background-color: var(--navy-color);
+            color: #ffffff;
+            box-shadow: 0 4px 10px rgba(26, 34, 53, 0.3);
+        }
+
+        @media (max-width: 600px) {
+            .gallery-card { padding: 10px; }
+            .album-title { font-size: 18px; }
+            .main-title { font-size: 20px; }
+            .back-to-menu-btn { padding: 10px 20px; font-size: 14px; width: 80%; }
+        }
+    </style>
+</head>
+<body>
+
+    <h1 class="main-title">گالری تصاویر (بخش پنجم)</h1>
+
+    <div class="gallery-container">
+        <!-- کارت عکس اول -->
+        <div class="gallery-card">
+            <div class="image-wrapper">
+                <!-- نام فایل عکس اول -->
+                <img src="IMG_۲۰۲۶۱۱۰۳_۰۰۱۷۴۴.jpg" alt="تصویر شماره یک" loading="lazy">
+            </div>
+            <div class="card-info">
+                <div class="image-caption">تصویر شماره یک (جدید)</div>
+                <h2 class="album-title">آلبوم جدید ۱</h2>
+            </div>
+        </div>
+
+        <!-- کارت عکس دوم -->
+        <div class="gallery-card">
+            <div class="image-wrapper">
+                <!-- نام فایل عکس دوم -->
+                <img src="IMG_۲۰۲۶۱۱۰۳_۰۰۱۸۴۴.jpg" alt="تصویر شماره دو" loading="lazy">
+            </div>
+            <div class="card-info">
+                <div class="image-caption">تصویر شماره دو (جدید)</div>
+                <h2 class="album-title">آلبوم جدید ۲</h2>
+            </div>
+        </div>
+
+        <!-- کارت عکس سوم -->
+        <div class="gallery-card">
+            <div class="image-wrapper">
+                <!-- نام فایل عکس سوم -->
+                <img src="IMG_۲۰۲۶۱۱۰۳_۰۰۱۸۱۶.jpg" alt="تصویر شماره سه" loading="lazy">
+            </div>
+            <div class="card-info">
+                <div class="image-caption">تصویر شماره سه (جدید)</div>
+                <h2 class="album-title">آلبوم جدید ۳</h2>
+            </div>
+        </div>
+
+        <!-- کارت عکس چهارم -->
+        <div class="gallery-card">
+            <div class="image-wrapper">
+                <!-- نام فایل عکس چهارم -->
+                <img src="IMG_۲۰۲۶۱۱۰۳_۰۰۱۹۱۵.jpg" alt="تصویر شماره چهار" loading="lazy">
+            </div>
+            <div class="card-info">
+                <div class="image-caption">تصویر شماره چهار (جدید)</div>
+                <h2 class="album-title">آلبوم جدید ۴</h2>
+            </div>
+        </div>
+    </div>
+
+    <!-- دکمه بازگشت به منو -->
+    <div class="back-to-menu-container">
+        <a href="menu.html" class="back-to-menu-btn">بازگشت به منو</a>
+    </div>
+
+</body>
+  </html>
