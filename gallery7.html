@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>گالری ۷ | پریسا زارع کاریزک</title>
+<title>گالری‌ها | پریسا زارع کاریزک</title>
 
 <style>
 * { box-sizing: border-box; }
@@ -15,7 +15,7 @@ body {
   font-family: Tahoma, sans-serif;
 }
 
-/* --- استایل هدر (بر اساس تصویر) --- */
+/* --- استایل هدر --- */
 header {
   text-align: center;
   padding: 40px 20px;
@@ -58,65 +58,47 @@ h1 { color: #0f1c2e; font-size: 26px; margin: 10px 0; }
 .footer-quote .en-name { font-family: Georgia, serif; font-weight: bold; font-size: 18px; letter-spacing: 1px; }
 .footer-quote .fa-quote { color: #0f1c2e; font-size: 14px; font-weight: bold; line-height: 1.5; text-align: left; }
 
-/* --- استایل گالری --- */
+/* --- استایل گالری‌ها --- */
 main { max-width: 1100px; margin: auto; padding: 20px 15px 30px; }
 
-.gallery-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-  flex-wrap: wrap;
-  gap: 15px;
+.gallery-header { text-align: center; margin-bottom: 30px; }
+.gallery-title { color: #0f1c2e; font-size: 26px; margin-bottom: 10px; border-bottom: 2px solid #d4af37; display: inline-block; padding-bottom: 5px; }
+.gallery-desc { color: #888; font-size: 14px; margin-top: 10px; }
+
+.gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin-bottom: 40px; }
+
+/* کارت‌های گالری (فقط عکس) */
+.item { 
+  border: 1px solid #c5a059; 
+  border-radius: 10px; 
+  overflow: hidden; 
+  background: #fff; 
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08); 
 }
 
-.gallery-title { color: #0f1c2e; font-size: 24px; margin: 0; }
-.gallery-desc { color: #888; font-size: 14px; margin: 0; }
-
-/* --- دکمه‌های کپی --- */
-.btn-copy {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: #c5a059;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 8px;
-  font-size: 14px;
-  font-weight: bold;
-  font-family: Tahoma, sans-serif;
-  cursor: pointer;
-  transition: 0.3s;
+.item img { 
+  width: 100%; 
+  height: 220px; 
+  object-fit: cover; 
+  display: block; 
+  cursor: pointer; 
+  transition: transform 0.3s; 
 }
-
-.btn-copy:hover { background: #b08d4a; }
-.btn-copy:active { transform: scale(0.95); }
-
-.gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; }
-
-.item { border: 1px solid #c5a059; border-radius: 10px; overflow: hidden; background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
-.item img { width: 100%; height: 200px; object-fit: cover; display: block; cursor: pointer; transition: transform 0.3s; }
 .item img:hover { transform: scale(1.05); }
-.caption { padding: 12px; text-align: center; color: #0f1c2e; font-size: 14px; background: #fcf9f2; }
 
-/* --- استایل دکمه بازگشت به منو و کپی نام فایل --- */
-.action-buttons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-  margin: 40px 0;
-  flex-wrap: wrap;
-}
+/* خط جداکننده بین دو گالری */
+hr.divider { border: 0; height: 1px; background: #d4af37; margin: 50px 0; opacity: 0.4; }
+
+/* --- استایل دکمه بازگشت به منو --- */
+.back-to-menu-container { text-align: center; margin: 40px 0; }
 
 .btn-back {
   display: inline-block;
-  background: transparent;
-  color: #0f1c2e;
+  background: #0f1c2e;
+  color: #d4af37;
   border: 2px solid #0f1c2e;
   text-decoration: none;
-  padding: 12px 35px;
+  padding: 12px 45px;
   border-radius: 30px;
   font-size: 16px;
   font-weight: bold;
@@ -124,30 +106,10 @@ main { max-width: 1100px; margin: auto; padding: 20px 15px 30px; }
 }
 
 .btn-back:hover {
-  background: #0f1c2e;
-  color: #d4af37;
+  background: transparent;
+  color: #0f1c2e;
   transform: translateY(-3px);
   box-shadow: 0 5px 15px rgba(15, 28, 46, 0.2);
-}
-
-/* دکمه کپی نام فایل */
-.btn-copy-filename {
-  display: inline-block;
-  background: #e9ecef;
-  color: #495057;
-  border: 2px dashed #adb5bd;
-  padding: 12px 25px;
-  border-radius: 30px;
-  font-size: 14px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s;
-  font-family: monospace;
-}
-
-.btn-copy-filename:hover {
-  background: #dee2e6;
-  border-color: #6c757d;
 }
 
 /* --- ویوئر تصویر --- */
@@ -159,12 +121,13 @@ main { max-width: 1100px; margin: auto; padding: 20px 15px 30px; }
 /* --- فوتر --- */
 footer { text-align: center; padding: 20px; color: #0f1c2e; background: #f4ebd9; font-size: 14px; }
 
+@media(max-width: 600px) {
+  .gallery { grid-template-columns: 1fr; }
+  .item img { height: 250px; }
+}
+
 @media(max-width: 400px) {
-  .gallery { gap: 9px; }
-  .item img { height: 150px; }
   h1 { font-size: 22px; }
-  .gallery-header { justify-content: center; text-align: center; }
-  .action-buttons { flex-direction: column; gap: 10px; }
 }
 </style>
 </head>
@@ -200,25 +163,27 @@ footer { text-align: center; padding: 20px; color: #0f1c2e; background: #f4ebd9;
   </div>
 </header>
 
-<!-- بخش گالری ۷ -->
+<!-- بخش گالری‌ها -->
 <main>
+  <!-- گالری ۷ -->
   <div class="gallery-header">
-    <div>
-      <h2 class="gallery-title">گالری ۷</h2>
-      <p class="gallery-desc">برای مشاهده بزرگتر، روی عکس کلیک کنید.</p>
-    </div>
+    <h2 class="gallery-title">گالری ۷</h2>
+    <p class="gallery-desc">برای مشاهده بزرگتر، روی عکس کلیک کنید.</p>
   </div>
-  
   <div class="gallery" id="gallery7Items"></div>
 
-  <!-- دکمه‌های پایین صفحه -->
-  <div class="action-buttons">
+  <hr class="divider">
+
+  <!-- گالری هویت بصری (۲۰ عکس) -->
+  <div class="gallery-header">
+    <h2 class="gallery-title">گالری طرح‌ها و هویت بصری</h2>
+    <p class="gallery-desc">مجموعه طرح‌های حقوقی و لوگو</p>
+  </div>
+  <div class="gallery" id="galleryMainItems"></div>
+
+  <!-- دکمه بازگشت به منو -->
+  <div class="back-to-menu-container">
     <a href="index.html" class="btn-back">← بازگشت به منو اصلی</a>
-    
-    <!-- دکمه کپی نام فایل -->
-    <button class="btn-copy-filename" onclick="copyFilename()">
-      📄 کپی نام فایل (gallery7.html)
-    </button>
   </div>
 </main>
 
@@ -233,46 +198,85 @@ footer { text-align: center; padding: 20px; color: #0f1c2e; background: #f4ebd9;
 </footer>
 
 <script>
-// ⚠️ نام فایل‌های عکس‌های گالری ۷ خود را در این آرایه جایگزین کنید
-const photosGallery7 = [
-  "g7_1.png",
-  "g7_2.png",
-  "g7_3.png",
-  "g7_4.png",
-  "g7_5.png",
-  "g7_6.png"
+// ==========================================
+// ۱. لیست عکس‌های گالری هویت بصری (۲۰ عکس)
+// ==========================================
+const photosMain = [
+  { file: "a_clean_elegant_brand_logo_mockup_on_textured_off.png" },
+  { file: "a_clean_elegant_embossed_gold_logo_on_a_light_cre.png" },
+  { file: "a_clean_elegant_embossed_logo_on_textured_off_whi.png" },
+  { file: "a_close_up_angled_luxury_embossed_logo_mockup_on.png" },
+  { file: "a_close_up_angled_professional_mockup_of_a_luxur.png" },
+  { file: "a_close_up_angled_realistic_mockup_of_an_embosse.png" },
+  { file: "a_close_up_angled_studio_lit_photo_of_an_elegant.png" },
+  { file: "a_close_up_elegant_embossed_gold_logo_on_a_light_c.png" },
+  { file: "a_close_up_elegant_embossed_logo_mockup_on_texture.png" },
+  { file: "a_close_up_high_resolution_elegant_embossed_gold.png" },
+  { file: "a_luxurious_elegant_embossed_gold_logo_plaquette.png" },
+  { file: "a_luxurious_elegant_formal_emblem_logo_on_a_dark.png" },
+  { file: "a_luxurious_elegant_law_office_logo_emblem_on_a_d.png" },
+  { file: "a_luxurious_law_firm_branding_collage_in_rich_blac.png" },
+  { file: "a_luxurious_professional_branding_collage_for_a_l.png" },
+  { file: "a_polished_elegant_black_and_gold_law_firm_logo_d.png" },
+  { file: "a_polished_elegant_official_looking_emblem_logo.png" },
+  { file: "a_polished_luxurious_law_branding_collage_in_blac.png" },
+  { file: "a_polished_luxurious_professional_gallery_webpag.png" },
+  { file: "a_sleek_luxurious_golden_law_firm_logo_on_a_black.png" }
 ];
 
-const container = document.getElementById("gallery7Items");
+// ==========================================
+// ۲. لیست عکس‌های گالری ۷ 
+// ⚠️ نام دقیق عکس‌های خود را اینجا جایگزین کنید
+// ==========================================
+const photosGallery7 = [
+  { file: "g7_1.png" },
+  { file: "g7_2.png" },
+  { file: "g7_3.png" },
+  { file: "g7_4.png" },
+  { file: "g7_5.png" },
+  { file: "g7_6.png" }
+];
 
-photosGallery7.forEach((photo, index) => {
-  const item = document.createElement("div");
-  item.className = "item";
+// ==========================================
+// ۳. تابع ساخت گالری (فقط عکس)
+// ==========================================
+function buildGallery(containerId, list) {
+  const container = document.getElementById(containerId);
+  if (!container) return;
 
-  const img = document.createElement("img");
-  img.src = "images/" + photo; // مسیر پوشه عکس‌ها
-  img.alt = "طرح گالری ۷ - " + (index + 1);
-  img.loading = "lazy";
+  list.forEach((itemData) => {
+    const item = document.createElement("div");
+    item.className = "item";
 
-  img.onerror = function() {
-    this.alt = "تصویر بارگذاری نشد: " + photo;
-    this.style.background = "#eee";
-  };
+    const img = document.createElement("img");
+    img.src = "images/" + itemData.file; // مسیر پوشه عکس‌ها
+    img.alt = "طرح گالری";
+    img.loading = "lazy";
 
-  img.onclick = function() {
-    document.getElementById("largeImage").src = this.src;
-    document.getElementById("viewer").classList.add("open");
-  };
+    // اگر عکس پیدا نشد
+    img.onerror = function() {
+      this.src = "https://placehold.co/400x300/f4ebd9/0f1c2e?text=Image+Not+Found"; 
+    };
 
-  const caption = document.createElement("div");
-  caption.className = "caption";
-  caption.textContent = "طرح شماره " + (index + 1);
+    img.onclick = function() {
+      document.getElementById("largeImage").src = this.src;
+      document.getElementById("viewer").classList.add("open");
+    };
 
-  item.appendChild(img);
-  item.appendChild(caption);
-  container.appendChild(item);
-});
+    item.appendChild(img);
+    container.appendChild(item);
+  });
+}
 
+// ==========================================
+// ۴. اجرای توابع
+// ==========================================
+buildGallery("gallery7Items", photosGallery7);
+buildGallery("galleryMainItems", photosMain);
+
+// ==========================================
+// ۵. بستن عکس
+// ==========================================
 function closeImage() {
   document.getElementById("viewer").classList.remove("open");
 }
@@ -280,29 +284,6 @@ function closeImage() {
 document.getElementById("viewer").onclick = function(e) {
   if (e.target === this) closeImage();
 };
-
-// --- تابع کپی کردن نام فایل ---
-function copyFilename() {
-  const filename = "gallery7.html";
-  
-  navigator.clipboard.writeText(filename).then(() => {
-    const btn = document.querySelector('.btn-copy-filename');
-    const originalText = btn.innerHTML;
-    btn.innerHTML = '✅ کپی شد!';
-    btn.style.background = '#d4edda';
-    btn.style.color = '#155724';
-    btn.style.borderColor = '#c3e6cb';
-    
-    setTimeout(() => {
-      btn.innerHTML = originalText;
-      btn.style.background = '#e9ecef';
-      btn.style.color = '#495057';
-      btn.style.borderColor = '#adb5bd';
-    }, 2000);
-  }).catch(err => {
-    alert('خطا در کپی کردن!');
-  });
-}
 </script>
 
 </body>
