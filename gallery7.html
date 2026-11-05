@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>گالری ۷ | پریسا زارع کاریزک</title>
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: #fdfaf3; /* پس‌زمینه کرم */
+  color: #1a1a1a;
+  font-family: Tahoma, sans-serif;
+}
+
+/* --- استایل هدر (بر اساس تصویر) --- */
+header {
+  text-align: center;
+  padding: 40px 20px;
+  background: #fdfaf3;
+  border: 1px solid #d4af37;
+  border-radius: 15px;
+  margin: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.header-top-icon { font-size: 40px; color: #0f1c2e; margin-bottom: 15px; }
+h1 { color: #0f1c2e; font-size: 26px; margin: 10px 0; }
+.subtitle { color: #c5a059; font-size: 18px; margin-bottom: 20px; }
+
+.slogan { color: #555; font-size: 15px; line-height: 1.6; margin-bottom: 25px; }
+
+.btn-main {
+  display: inline-block;
+  background: #0f1c2e;
+  color: #d4af37;
+  text-decoration: none;
+  padding: 15px 40px;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  width: 100%;
+  max-width: 350px;
+  transition: 0.3s;
+}
+.btn-main:hover { background: #1a2b45; }
+
+.specialties { text-align: right; margin-top: 35px; border-top: 1px solid #eee; padding-top: 25px; }
+.specialties h2 { color: #0f1c2e; font-size: 20px; border-right: 4px solid #d4af37; padding-right: 10px; margin-bottom: 20px; text-align: right; }
+
+.specialty-list { list-style: none; padding: 0; margin: 0; }
+.specialty-list li { display: flex; align-items: center; margin-bottom: 15px; font-size: 16px; color: #0f1c2e; }
+.specialty-list li span.icon { display: inline-block; width: 24px; height: 24px; background: #c5a059; color: #fff; border-radius: 5px; text-align: center; line-height: 24px; margin-left: 10px; font-size: 14px; }
+
+.footer-quote { display: flex; justify-content: space-between; align-items: flex-end; margin-top: 40px; padding-top: 15px; border-top: 1px solid #eee; color: #c5a059; }
+.footer-quote .en-name { font-family: Georgia, serif; font-weight: bold; font-size: 18px; letter-spacing: 1px; }
+.footer-quote .fa-quote { color: #0f1c2e; font-size: 14px; font-weight: bold; line-height: 1.5; text-align: left; }
+
+/* --- استایل گالری --- */
+main { max-width: 1100px; margin: auto; padding: 20px 15px 30px; }
+
+.gallery-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.gallery-title { color: #0f1c2e; font-size: 24px; margin: 0; }
+.gallery-desc { color: #888; font-size: 14px; margin: 0; }
+
+/* --- دکمه‌های کپی --- */
+.btn-copy {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #c5a059;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: Tahoma, sans-serif;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-copy:hover { background: #b08d4a; }
+.btn-copy:active { transform: scale(0.95); }
+
+.gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; }
+
+.item { border: 1px solid #c5a059; border-radius: 10px; overflow: hidden; background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+.item img { width: 100%; height: 200px; object-fit: cover; display: block; cursor: pointer; transition: transform 0.3s; }
+.item img:hover { transform: scale(1.05); }
+.caption { padding: 12px; text-align: center; color: #0f1c2e; font-size: 14px; background: #fcf9f2; }
+
+/* --- استایل دکمه بازگشت به منو و کپی نام فایل --- */
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin: 40px 0;
+  flex-wrap: wrap;
+}
+
+.btn-back {
+  display: inline-block;
+  background: transparent;
+  color: #0f1c2e;
+  border: 2px solid #0f1c2e;
+  text-decoration: none;
+  padding: 12px 35px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn-back:hover {
+  background: #0f1c2e;
+  color: #d4af37;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(15, 28, 46, 0.2);
+}
+
+/* دکمه کپی نام فایل */
+.btn-copy-filename {
+  display: inline-block;
+  background: #e9ecef;
+  color: #495057;
+  border: 2px dashed #adb5bd;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  font-family: monospace;
+}
+
+.btn-copy-filename:hover {
+  background: #dee2e6;
+  border-color: #6c757d;
+}
+
+/* --- ویوئر تصویر --- */
+.viewer { display: none; position: fixed; inset: 0; z-index: 10; background: rgba(0,0,0,0.9); align-items: center; justify-content: center; padding: 15px; }
+.viewer img { max-width: 95%; max-height: 85%; object-fit: contain; }
+.viewer.open { display: flex; }
+.close { position: absolute; top: 20px; left: 20px; background: #c5a059; color: #fff; border: none; border-radius: 50%; width: 42px; height: 42px; font-size: 25px; cursor: pointer; }
+
+/* --- فوتر --- */
+footer { text-align: center; padding: 20px; color: #0f1c2e; background: #f4ebd9; font-size: 14px; }
+
+@media(max-width: 400px) {
+  .gallery { gap: 9px; }
+  .item img { height: 150px; }
+  h1 { font-size: 22px; }
+  .gallery-header { justify-content: center; text-align: center; }
+  .action-buttons { flex-direction: column; gap: 10px; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- هدر اختصاصی -->
+<header>
+  <div class="header-top-icon">⚖️</div>
+  <h1>پریسا زارع کاریزک</h1>
+  <div class="subtitle">وکیل پایه یک دادگستری</div>
+  
+  <p class="slogan">
+    با تعهد، دانش و تجربه<br>
+    در کنار شما هستم
+  </p>
+
+  <a href="#" class="btn-main">کانون وکلای خراسان</a>
+
+  <div class="specialties">
+    <h2>حوزه‌های تخصصی</h2>
+    <ul class="specialty-list">
+      <li><span class="icon">💬</span> مشاوره حقوقی</li>
+      <li><span class="icon">📄</span> تنظیم قراردادها</li>
+      <li><span class="icon">ℹ️</span> پیگیری پرونده‌ها</li>
+      <li><span class="icon">⚡</span> دعاوی حقوقی و کیفری</li>
+    </ul>
+  </div>
+
+  <div class="footer-quote">
+    <div class="en-name">PARISA ZARE</div>
+    <div class="fa-quote">حق شما،<br>اولویت ماست...</div>
+  </div>
+</header>
+
+<!-- بخش گالری ۷ -->
+<main>
+  <div class="gallery-header">
+    <div>
+      <h2 class="gallery-title">گالری ۷</h2>
+      <p class="gallery-desc">برای مشاهده بزرگتر، روی عکس کلیک کنید.</p>
+    </div>
+  </div>
+  
+  <div class="gallery" id="gallery7Items"></div>
+
+  <!-- دکمه‌های پایین صفحه -->
+  <div class="action-buttons">
+    <a href="index.html" class="btn-back">← بازگشت به منو اصلی</a>
+    
+    <!-- دکمه کپی نام فایل -->
+    <button class="btn-copy-filename" onclick="copyFilename()">
+      📄 کپی نام فایل (gallery7.html)
+    </button>
+  </div>
+</main>
+
+<!-- ویوئر تصویر -->
+<div class="viewer" id="viewer">
+  <button class="close" onclick="closeImage()">×</button>
+  <img id="largeImage" src="" alt="تصویر بزرگ">
+</div>
+
+<footer>
+  © ۱۴۰۵ | تمامی حقوق برای پریسا زارع کاریزک محفوظ است.
+</footer>
+
+<script>
+// ⚠️ نام فایل‌های عکس‌های گالری ۷ خود را در این آرایه جایگزین کنید
+const photosGallery7 = [
+  "g7_1.png",
+  "g7_2.png",
+  "g7_3.png",
+  "g7_4.png",
+  "g7_5.png",
+  "g7_6.png"
+];
+
+const container = document.getElementById("gallery7Items");
+
+photosGallery7.forEach((photo, index) => {
+  const item = document.createElement("div");
+  item.className = "item";
+
+  const img = document.createElement("img");
+  img.src = "images/" + photo; // مسیر پوشه عکس‌ها
+  img.alt = "طرح گالری ۷ - " + (index + 1);
+  img.loading = "lazy";
+
+  img.onerror = function() {
+    this.alt = "تصویر بارگذاری نشد: " + photo;
+    this.style.background = "#eee";
+  };
+
+  img.onclick = function() {
+    document.getElementById("largeImage").src = this.src;
+    document.getElementById("viewer").classList.add("open");
+  };
+
+  const caption = document.createElement("div");
+  caption.className = "caption";
+  caption.textContent = "طرح شماره " + (index + 1);
+
+  item.appendChild(img);
+  item.appendChild(caption);
+  container.appendChild(item);
+});
+
+function closeImage() {
+  document.getElementById("viewer").classList.remove("open");
+}
+
+document.getElementById("viewer").onclick = function(e) {
+  if (e.target === this) closeImage();
+};
+
+// --- تابع کپی کردن نام فایل ---
+function copyFilename() {
+  const filename = "gallery7.html";
+  
+  navigator.clipboard.writeText(filename).then(() => {
+    const btn = document.querySelector('.btn-copy-filename');
+    const originalText = btn.innerHTML;
+    btn.innerHTML = '✅ کپی شد!';
+    btn.style.background = '#d4edda';
+    btn.style.color = '#155724';
+    btn.style.borderColor = '#c3e6cb';
+    
+    setTimeout(() => {
+      btn.innerHTML = originalText;
+      btn.style.background = '#e9ecef';
+      btn.style.color = '#495057';
+      btn.style.borderColor = '#adb5bd';
+    }, 2000);
+  }).catch(err => {
+    alert('خطا در کپی کردن!');
+  });
+}
+</script>
+
+</body>
+  </html>
