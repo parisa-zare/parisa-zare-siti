@@ -38,336 +38,100 @@
             position: relative;
         }
 
-        /* ================= استایل آیکون کپی ================= */
+        /* استایل آیکون کپی */
         .copy-icon-btn {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background-color: var(--card-bg);
-            border: 1px solid var(--border-gold);
-            border-radius: 50%;
-            width: 45px;
-            height: 45px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            z-index: 1000;
-            transition: all 0.3s ease;
+            position: fixed; top: 20px; right: 20px; background-color: var(--card-bg);
+            border: 1px solid var(--border-gold); border-radius: 50%; width: 45px; height: 45px;
+            display: flex; justify-content: center; align-items: center; cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1); z-index: 1000; transition: all 0.3s ease;
         }
+        .copy-icon-btn:hover { background-color: var(--primary-navy); }
+        .copy-icon-btn:hover svg { fill: var(--gold-accent); }
+        .copy-icon-btn svg { width: 20px; height: 20px; fill: var(--primary-navy); transition: all 0.3s ease; }
 
-        .copy-icon-btn:hover {
-            background-color: var(--primary-navy);
-        }
-
-        .copy-icon-btn:hover svg {
-            fill: var(--gold-accent);
-        }
-
-        .copy-icon-btn svg {
-            width: 20px;
-            height: 20px;
-            fill: var(--primary-navy);
-            transition: all 0.3s ease;
-        }
-
-        /* پیام کپی شدن */
         .toast-msg {
-            position: fixed;
-            top: 75px;
-            right: 20px;
-            background-color: var(--primary-navy);
-            color: var(--gold-accent);
-            padding: 10px 15px;
-            border-radius: 8px;
-            font-size: 13px;
-            border: 1px solid var(--gold-accent);
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s ease;
-            z-index: 1000;
+            position: fixed; top: 75px; right: 20px; background-color: var(--primary-navy);
+            color: var(--gold-accent); padding: 10px 15px; border-radius: 8px; font-size: 13px;
+            border: 1px solid var(--gold-accent); opacity: 0; visibility: hidden; transition: all 0.3s ease; z-index: 1000;
         }
+        .toast-msg.show { opacity: 1; visibility: visible; }
 
-        .toast-msg.show {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        /* ================= استایل پروفایل ================= */
+        /* استایل پروفایل */
         .profile-card {
-            background-color: var(--card-bg);
-            border-radius: 20px;
-            border: 2px solid var(--border-gold);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-            padding: 40px 30px 30px 30px;
-            margin-bottom: 30px;
-            position: relative;
+            background-color: var(--card-bg); border-radius: 20px; border: 2px solid var(--border-gold);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); padding: 40px 30px 30px 30px; margin-bottom: 30px; position: relative;
         }
-
-        .back-menu-top {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-        }
-
+        .back-menu-top { position: absolute; top: 20px; right: 20px; }
         .btn-back-small {
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
-            background-color: transparent;
-            color: var(--primary-navy);
-            text-decoration: none;
-            font-size: 12px;
-            font-weight: 500;
-            padding: 5px 10px;
-            border-radius: 8px;
-            border: 1px solid var(--border-gold);
-            transition: all 0.3s ease;
+            display: inline-flex; align-items: center; gap: 5px; background-color: transparent;
+            color: var(--primary-navy); text-decoration: none; font-size: 12px; font-weight: 500;
+            padding: 5px 10px; border-radius: 8px; border: 1px solid var(--border-gold); transition: all 0.3s ease;
         }
+        .btn-back-small:hover { background-color: var(--primary-navy); color: var(--gold-accent); }
 
-        .btn-back-small:hover {
-            background-color: var(--primary-navy);
-            color: var(--gold-accent);
-        }
-
-        .logo-icon svg {
-            width: 60px;
-            height: 60px;
-            fill: var(--primary-navy);
-            margin-bottom: 10px;
-        }
-
-        h1 {
-            font-family: 'IranSans', sans-serif;
-            color: var(--primary-navy);
-            font-size: 26px;
-            margin: 0 0 10px 0;
-            font-weight: bold;
-        }
-
+        .logo-icon svg { width: 60px; height: 60px; fill: var(--primary-navy); margin-bottom: 10px; }
+        h1 { font-family: 'IranSans', sans-serif; color: var(--primary-navy); font-size: 26px; margin: 0 0 10px 0; font-weight: bold; }
+        
         .title-sub {
-            color: var(--gold-accent);
-            font-size: 16px;
-            font-weight: 500;
-            margin-bottom: 25px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
+            color: var(--gold-accent); font-size: 16px; font-weight: 500; margin-bottom: 25px;
+            display: flex; align-items: center; justify-content: center; gap: 10px;
         }
+        .title-sub::before, .title-sub::after { content: ""; display: block; width: 30px; height: 1px; background-color: var(--gold-accent); opacity: 0.5; }
 
-        .title-sub::before, .title-sub::after {
-            content: "";
-            display: block;
-            width: 30px;
-            height: 1px;
-            background-color: var(--gold-accent);
-            opacity: 0.5;
-        }
-
-        .slogan {
-            color: var(--text-dark);
-            font-size: 15px;
-            line-height: 1.8;
-            margin-bottom: 25px;
-        }
-
+        .slogan { color: var(--text-dark); font-size: 15px; line-height: 1.8; margin-bottom: 25px; }
+        
         .btn-bar {
-            background-color: var(--primary-navy);
-            color: var(--gold-accent);
-            text-decoration: none;
-            display: block;
-            padding: 15px;
-            border-radius: 12px;
-            font-size: 16px;
-            font-weight: bold;
-            margin-bottom: 30px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 10px rgba(22, 33, 62, 0.2);
+            background-color: var(--primary-navy); color: var(--gold-accent); text-decoration: none;
+            display: block; padding: 15px; border-radius: 12px; font-size: 16px; font-weight: bold;
+            margin-bottom: 30px; transition: all 0.3s ease; box-shadow: 0 4px 10px rgba(22, 33, 62, 0.2);
         }
+        .btn-bar:hover { background-color: #0d152b; transform: translateY(-2px); }
 
-        .btn-bar:hover {
-            background-color: #0d152b;
-            transform: translateY(-2px);
-        }
+        .expertise-section { text-align: right; margin-bottom: 20px; }
+        .expertise-title { color: var(--primary-navy); font-size: 20px; font-weight: bold; margin-bottom: 15px; display: flex; align-items: center; }
+        .expertise-title::after { content: ""; display: inline-block; width: 3px; height: 20px; background-color: var(--gold-accent); margin-right: 10px; border-radius: 3px; }
+        
+        .expertise-list { list-style: none; padding: 0; margin: 0; }
+        .expertise-list li { color: var(--text-dark); font-size: 15px; margin-bottom: 12px; display: flex; align-items: center; gap: 10px; font-weight: 500; }
+        .expertise-list li svg { width: 18px; height: 18px; fill: var(--gold-accent); }
 
-        .expertise-section {
-            text-align: right;
-            margin-bottom: 20px;
-        }
+        .footer-profile { border-top: 1px solid #E5E5E5; padding-top: 15px; display: flex; justify-content: space-between; align-items: center; margin-top: 25px; }
+        .footer-en { color: var(--gold-accent); font-family: 'Times New Roman', serif; font-size: 14px; font-weight: bold; }
+        .footer-fa { color: var(--primary-navy); font-size: 13px; font-weight: bold; text-align: left; line-height: 1.5; }
 
-        .expertise-title {
-            color: var(--primary-navy);
-            font-size: 20px;
-            font-weight: bold;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-        }
-
-        .expertise-title::after {
-            content: "";
-            display: inline-block;
-            width: 3px;
-            height: 20px;
-            background-color: var(--gold-accent);
-            margin-right: 10px;
-            border-radius: 3px;
-        }
-
-        .expertise-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .expertise-list li {
-            color: var(--text-dark);
-            font-size: 15px;
-            margin-bottom: 12px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: 500;
-        }
-
-        .expertise-list li svg {
-            width: 18px;
-            height: 18px;
-            fill: var(--gold-accent);
-        }
-
-        .footer-profile {
-            border-top: 1px solid #E5E5E5;
-            padding-top: 15px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 25px;
-        }
-
-        .footer-en {
-            color: var(--gold-accent);
-            font-family: 'Times New Roman', serif;
-            font-size: 14px;
-            font-weight: bold;
-        }
-
-        .footer-fa {
-            color: var(--primary-navy);
-            font-size: 13px;
-            font-weight: bold;
-            text-align: left;
-            line-height: 1.5;
-        }
-
-        /* ================= استایل گالری ================= */
-        .gallery-title-top {
-            color: var(--primary-navy);
-            font-size: 22px;
-            font-weight: bold;
-            margin-bottom: 20px;
-            font-family: 'IranSans', sans-serif;
-            margin-top: 10px;
-        }
+        /* استایل گالری */
+        .gallery-title-top { color: var(--primary-navy); font-size: 22px; font-weight: bold; margin-bottom: 20px; font-family: 'IranSans', sans-serif; margin-top: 10px; }
 
         .photo-card {
-            background-color: var(--card-bg);
-            border-radius: 20px;
-            border: 2px solid var(--border-gold);
-            padding: 15px;
-            margin-bottom: 30px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            background-color: var(--card-bg); border-radius: 20px; border: 2px solid var(--border-gold);
+            padding: 15px; margin-bottom: 30px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
         }
-
-        .photo-card img {
-            width: 100%;
-            height: auto;
-            border-radius: 12px;
-            object-fit: cover;
-            display: block;
-        }
+        .photo-card img { width: 100%; height: auto; border-radius: 12px; object-fit: cover; display: block; }
 
         .photo-info {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            margin-top: 15px;
-            padding-right: 5px;
-            margin-bottom: 15px;
+            display: flex; flex-direction: column; align-items: flex-end;
+            margin-top: 15px; padding-right: 5px; margin-bottom: 15px;
         }
+        .photo-caption { color: var(--text-muted); font-size: 13px; margin-bottom: 5px; }
+        .photo-title { color: var(--primary-navy); font-size: 18px; font-weight: bold; font-family: 'IranSans', sans-serif; }
 
-        .photo-caption {
-            color: var(--text-muted);
-            font-size: 13px;
-            margin-bottom: 5px;
+        /* استایل تک شعار (زیر هر عکس) */
+        .single-slogan {
+            background-color: var(--primary-navy); border-radius: 12px; padding: 15px 20px;
+            text-align: right; border-right: 4px solid var(--gold-accent); display: flex;
+            align-items: center; gap: 10px; box-shadow: 0 4px 10px rgba(22, 33, 62, 0.1);
         }
-
-        .photo-title {
-            color: var(--primary-navy);
-            font-size: 18px;
-            font-weight: bold;
-            font-family: 'IranSans', sans-serif;
-        }
-
-        /* ================= ۴ شعار بنر ================= */
-        .banner-slogans {
-            background-color: var(--primary-navy);
-            border-radius: 12px;
-            padding: 15px;
-            text-align: right;
-            border-right: 4px solid var(--gold-accent);
-        }
-
-        .banner-slogans p {
-            color: #FFFFFF;
-            font-size: 14px;
-            line-height: 1.5;
-            margin: 0 0 10px 0;
-            padding-bottom: 10px;
-            border-bottom: 1px dashed rgba(196, 161, 103, 0.3);
-            display: flex;
-            align-items: flex-start;
-            gap: 8px;
-        }
-
-        .banner-slogans p:last-child {
-            margin-bottom: 0;
-            padding-bottom: 0;
-            border-bottom: none;
-        }
-
-        .banner-slogans p::before {
-            content: "✦";
-            color: var(--gold-accent);
-            font-size: 14px;
-        }
+        .single-slogan p { color: #FFFFFF; font-size: 15px; font-weight: 500; margin: 0; line-height: 1.5; }
+        .single-slogan::before { content: "✦"; color: var(--gold-accent); font-size: 18px; }
 
         /* دکمه بازگشت پایین */
-        .back-btn-container {
-            text-align: center;
-            margin-bottom: 40px;
-            margin-top: 20px;
-        }
-
+        .back-btn-container { text-align: center; margin-bottom: 40px; margin-top: 20px; }
         .btn-back-main {
-            display: inline-block;
-            background-color: var(--gold-accent);
-            color: var(--primary-navy);
-            text-decoration: none;
-            font-size: 16px;
-            font-weight: bold;
-            padding: 15px 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(196, 161, 103, 0.3);
-            transition: all 0.3s;
+            display: inline-block; background-color: var(--gold-accent); color: var(--primary-navy);
+            text-decoration: none; font-size: 16px; font-weight: bold; padding: 15px 40px;
+            border-radius: 12px; box-shadow: 0 4px 10px rgba(196, 161, 103, 0.3); transition: all 0.3s;
         }
-
-        .btn-back-main:hover {
-            background-color: var(--primary-navy);
-            color: var(--gold-accent);
-        }
+        .btn-back-main:hover { background-color: var(--primary-navy); color: var(--gold-accent); }
     </style>
 </head>
 <body>
@@ -406,22 +170,10 @@
             <div class="expertise-section">
                 <div class="expertise-title">حوزه‌های تخصصی</div>
                 <ul class="expertise-list">
-                    <li>
-                        <svg viewBox="0 0 24 24"><path d="M20 2H4C2.9 2 2 2.9 2 4V22L6 18H20C21.1 18 22 17.1 22 16V4C22 2.9 21.1 2 20 2Z"/></svg>
-                        مشاوره حقوقی
-                    </li>
-                    <li>
-                        <svg viewBox="0 0 24 24"><path d="M14 2H6C4.9 2 4 2.9 4 4V20C4 21.1 4.9 22 6 22H18C19.1 22 20 21.1 20 20V8L14 2ZM16 18H8V16H16V18ZM16 14H8V12H16V14ZM13 9V3.5L18.5 9H13Z"/></svg>
-                        تنظیم قراردادها
-                    </li>
-                    <li>
-                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM13 17H11V15H13V17ZM13 13H11V7H13V13Z"/></svg>
-                        پیگیری پرونده‌ها
-                    </li>
-                    <li>
-                        <svg viewBox="0 0 24 24"><path d="M12 2L3 7V12C3 17.55 6.84 22.74 12 24C17.16 22.74 21 17.55 21 12V7L12 2ZM13 16H11V14H13V16ZM13 12H11V8H13V12Z"/></svg>
-                        دعاوی حقوقی و کیفری
-                    </li>
+                    <li><svg viewBox="0 0 24 24"><path d="M20 2H4C2.9 2 2 2.9 2 4V22L6 18H20C21.1 18 22 17.1 22 16V4C22 2.9 21.1 2 20 2Z"/></svg> مشاوره حقوقی</li>
+                    <li><svg viewBox="0 0 24 24"><path d="M14 2H6C4.9 2 4 2.9 4 4V20C4 21.1 4.9 22 6 22H18C19.1 22 20 21.1 20 20V8L14 2ZM16 18H8V16H16V18ZM16 14H8V12H16V14ZM13 9V3.5L18.5 9H13Z"/></svg> تنظیم قراردادها</li>
+                    <li><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM13 17H11V15H13V17ZM13 13H11V7H13V13Z"/></svg> پیگیری پرونده‌ها</li>
+                    <li><svg viewBox="0 0 24 24"><path d="M12 2L3 7V12C3 17.55 6.84 22.74 12 24C17.16 22.74 21 17.55 21 12V7L12 2ZM13 16H11V14H13V16ZM13 12H11V8H13V12Z"/></svg> دعاوی حقوقی و کیفری</li>
                 </ul>
             </div>
 
@@ -433,56 +185,105 @@
 
         <div class="gallery-title-top">گالری تصاویر وکیل</div>
 
+        <!-- آلبوم ۱ + شعار ۱ -->
         <div class="photo-card">
-            <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_20261108_010349_195.jpg" alt="آلبوم جدید ۱">
+            <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B1%DB%B0%DB%B5_%DB%B2%DB%B2%DB%B5%DB%B0%DB%B1%DB%B4.jpg" alt="آلبوم ۱">
             <div class="photo-info">
                 <span class="photo-caption">تصویر شماره یک (جدید)</span>
                 <span class="photo-title">آلبوم جدید ۱</span>
             </div>
-            <div class="banner-slogans">
+            <div class="single-slogan">
                 <p>حق شما شایسته پیگیری حرفه‌ای است.</p>
-                <p>با دانش و تخصص و تجربه، در کنار شما هستم.</p>
-                <p>در سختی‌های حقوقی تنها نیستید.</p>
-                <p>با اطمینان قدم بردارید؛ ما پشتوانه حقوقی شما هستیم.</p>
             </div>
         </div>
 
+        <!-- آلبوم ۲ + شعار ۲ -->
         <div class="photo-card">
-            <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_202611005_225514.jpg" alt="آلبوم جدید ۲" onerror="this.src='https://via.placeholder.com/400x300?text=Error'">
+            <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B1%DB%B0%DB%B9_%DB%B2%DB%B1%DB%B2%DB%B0%DB%B4%DB%B0.jpg" alt="آلبوم ۲">
             <div class="photo-info">
                 <span class="photo-caption">تصویر شماره دو (جدید)</span>
                 <span class="photo-title">آلبوم جدید ۲</span>
             </div>
-            <div class="banner-slogans">
-                <p>حق شما شایسته پیگیری حرفه‌ای است.</p>
+            <div class="single-slogan">
                 <p>با دانش و تخصص و تجربه، در کنار شما هستم.</p>
-                <p>در سختی‌های حقوقی تنها نیستید.</p>
-                <p>با اطمینان قدم بردارید؛ ما پشتوانه حقوقی شما هستیم.</p>
             </div>
         </div>
 
+        <!-- آلبوم ۳ + شعار ۳ -->
         <div class="photo-card">
-            <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_20261100_212040.jpg" alt="آلبوم جدید ۳" onerror="this.src='https://via.placeholder.com/400x300?text=Error'">
+            <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B1%DB%B0%DB%B9_%DB%B2%DB%B1%DB%B2%DB%B3%DB%B5%DB%B5.jpg" alt="آلبوم ۳">
             <div class="photo-info">
                 <span class="photo-caption">تصویر شماره سه (جدید)</span>
                 <span class="photo-title">آلبوم جدید ۳</span>
             </div>
-            <div class="banner-slogans">
-                <p>حق شما شایسته پیگیری حرفه‌ای است.</p>
-                <p>با دانش و تخصص و تجربه، در کنار شما هستم.</p>
+            <div class="single-slogan">
                 <p>در سختی‌های حقوقی تنها نیستید.</p>
-                <p>با اطمینان قدم بردارید؛ ما پشتوانه حقوقی شما هستیم.</p>
             </div>
         </div>
 
+        <!-- آلبوم ۴ + شعار ۴ -->
         <div class="photo-card">
-            <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_202611000_212555.jpg" alt="آلبوم جدید ۴" onerror="this.src='https://via.placeholder.com/400x300?text=Error'">
+            <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B1%DB%B0%DB%B9_%DB%B2%DB%B1%DB%B2%DB%B4%DB%B3%DB%B3.jpg" alt="آلبوم ۴">
             <div class="photo-info">
                 <span class="photo-caption">تصویر شماره چهار (جدید)</span>
                 <span class="photo-title">آلبوم جدید ۴</span>
             </div>
-            <div class="banner-slogans">
-                <p>حق شما شایسته پیگیری حرفه‌ای است.</p>
-                <p>با دانش و تخصص و تجربه، در کنار شما هستم.</p>
-                <p>در سختی‌های حقوقی تنها نیستید.</p>
-                <p>با اطمینان قدم بردار
+            <div class="single-slogan">
+                <p>با اطمینان قدم بردارید؛ ما پشتوانه حقوقی شما هستیم.</p>
+            </div>
+        </div>
+
+        <!-- آلبوم ۵ (بدون شعار) -->
+        <div class="photo-card">
+            <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B1%DB%B0%DB%B9_%DB%B2%DB%B1%DB%B2%DB%B8%DB%B3%DB%B9.jpg" alt="آلبوم ۵">
+            <div class="photo-info">
+                <span class="photo-caption">تصویر شماره پنج (جدید)</span>
+                <span class="photo-title">آلبوم جدید ۵</span>
+            </div>
+        </div>
+
+        <!-- آلبوم ۶ (بدون شعار) -->
+        <div class="photo-card">
+            <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B1%DB%B0%DB%B9_%DB%B2%DB%B1%DB%B2%DB%B7%DB%B2%DB%B0.jpg" alt="آلبوم ۶">
+            <div class="photo-info">
+                <span class="photo-caption">تصویر شماره شش (جدید)</span>
+                <span class="photo-title">آلبوم جدید ۶</span>
+            </div>
+        </div>
+
+        <!-- آلبوم ۷ (بدون شعار) -->
+        <div class="photo-card">
+            <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B1%DB%B0%DB%B9_%DB%B2%DB%B1%DB%B2%DB%B5%DB%B5%DB%B6.jpg" alt="آلبوم ۷">
+            <div class="photo-info">
+                <span class="photo-caption">تصویر شماره هفت (جدید)</span>
+                <span class="photo-title">آلبوم جدید ۷</span>
+            </div>
+        </div>
+
+        <!-- آلبوم ۸ (بدون شعار) -->
+        <div class="photo-card">
+            <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B1%DB%B0%DB%B9_%DB%B2%DB%B1%DB%B2%DB%B5%DB%B2%DB%B3.jpg" alt="آلبوم ۸">
+            <div class="photo-info">
+                <span class="photo-caption">تصویر شماره هشت (جدید)</span>
+                <span class="photo-title">آلبوم جدید ۸</span>
+            </div>
+        </div>
+
+        <div class="back-btn-container">
+            <a href="menu.html" class="btn-back-main">بازگشت به منو</a>
+        </div>
+
+    </div>
+
+    <script>
+        function copyLink() {
+            var url = window.location.href;
+            navigator.clipboard.writeText(url).then(function() {
+                var toast = document.getElementById("toast");
+                toast.classList.add("show");
+                setTimeout(function() { toast.classList.remove("show"); }, 2000);
+            });
+        }
+    </script>
+</body>
+    </html>
