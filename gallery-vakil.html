@@ -38,36 +38,11 @@
             position: relative;
         }
 
-        /* استایل آیکون کپی */
-        .copy-icon-btn {
-            position: fixed; top: 20px; right: 20px; background-color: var(--card-bg);
-            border: 1px solid var(--border-gold); border-radius: 50%; width: 45px; height: 45px;
-            display: flex; justify-content: center; align-items: center; cursor: pointer;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1); z-index: 1000; transition: all 0.3s ease;
-        }
-        .copy-icon-btn:hover { background-color: var(--primary-navy); }
-        .copy-icon-btn:hover svg { fill: var(--gold-accent); }
-        .copy-icon-btn svg { width: 20px; height: 20px; fill: var(--primary-navy); transition: all 0.3s ease; }
-
-        .toast-msg {
-            position: fixed; top: 75px; right: 20px; background-color: var(--primary-navy);
-            color: var(--gold-accent); padding: 10px 15px; border-radius: 8px; font-size: 13px;
-            border: 1px solid var(--gold-accent); opacity: 0; visibility: hidden; transition: all 0.3s ease; z-index: 1000;
-        }
-        .toast-msg.show { opacity: 1; visibility: visible; }
-
         /* استایل پروفایل */
         .profile-card {
             background-color: var(--card-bg); border-radius: 20px; border: 2px solid var(--border-gold);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); padding: 40px 30px 30px 30px; margin-bottom: 30px; position: relative;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); padding: 30px; margin-bottom: 30px; position: relative;
         }
-        .back-menu-top { position: absolute; top: 20px; right: 20px; }
-        .btn-back-small {
-            display: inline-flex; align-items: center; gap: 5px; background-color: transparent;
-            color: var(--primary-navy); text-decoration: none; font-size: 12px; font-weight: 500;
-            padding: 5px 10px; border-radius: 8px; border: 1px solid var(--border-gold); transition: all 0.3s ease;
-        }
-        .btn-back-small:hover { background-color: var(--primary-navy); color: var(--gold-accent); }
 
         .logo-icon svg { width: 60px; height: 60px; fill: var(--primary-navy); margin-bottom: 10px; }
         h1 { font-family: 'IranSans', sans-serif; color: var(--primary-navy); font-size: 26px; margin: 0 0 10px 0; font-weight: bold; }
@@ -136,23 +111,10 @@
 </head>
 <body>
 
-    <div class="copy-icon-btn" onclick="copyLink()">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M16 1H4C2.9 1 2 1.9 2 3V17H4V3H16V1ZM19 5H8C6.9 5 6 5.9 6 7V21C6 22.1 6.9 23 8 23H19C20.1 23 21 22.1 21 21V7C21 5.9 20.1 5 19 5ZM19 21H8V7H19V21Z"/>
-        </svg>
-    </div>
-    <div class="toast-msg" id="toast">لینک کپی شد!</div>
-
     <div class="main-container">
         
+        <!-- کارت پروفایل (بدون دکمه بازگشت و آیکون کپی) -->
         <div class="profile-card">
-            <div class="back-menu-top">
-                <a href="menu.html" class="btn-back-small">
-                    <svg viewBox="0 0 24 24" style="width:14px; height:14px; fill:currentColor;"><path d="M20 11H7.83L13.42 5.41L12 4L4 12L12 20L13.41 18.59L7.83 13H20V11Z"/></svg>
-                    بازگشت
-                </a>
-            </div>
-
             <div class="logo-icon">
                 <svg viewBox="0 0 24 24"><path d="M12 2V22M12 22H7M12 22H17M12 5L4 9M12 5L20 9M4 9L2 15C2 16.1046 2.89543 17 4 17C5.10457 17 6 16.1046 6 15L4 9ZM20 9L18 15C18 16.1046 18.8954 17 20 17C21.1046 17 22 16.1046 22 15L20 9ZM12 5V22M12 2C12.5523 2 13 2.44772 13 3C13 3.55228 12.5523 4 12 4C11.4477 4 11 3.55228 11 3C11 2.44772 11.4477 2 12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
             </div>
@@ -183,9 +145,10 @@
             </div>
         </div>
 
+        <!-- گالری تصاویر -->
         <div class="gallery-title-top">گالری تصاویر وکیل</div>
 
-        <!-- آلبوم ۱ + شعار ۱ -->
+        <!-- آلبوم ۱ -->
         <div class="photo-card">
             <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B1%DB%B0%DB%B5_%DB%B2%DB%B2%DB%B5%DB%B0%DB%B1%DB%B4.jpg" alt="آلبوم ۱">
             <div class="photo-info">
@@ -197,7 +160,7 @@
             </div>
         </div>
 
-        <!-- آلبوم ۲ + شعار ۲ -->
+        <!-- آلبوم ۲ -->
         <div class="photo-card">
             <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B1%DB%B0%DB%B9_%DB%B2%DB%B1%DB%B2%DB%B0%DB%B4%DB%B0.jpg" alt="آلبوم ۲">
             <div class="photo-info">
@@ -209,7 +172,7 @@
             </div>
         </div>
 
-        <!-- آلبوم ۳ + شعار ۳ -->
+        <!-- آلبوم ۳ -->
         <div class="photo-card">
             <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B1%DB%B0%DB%B9_%DB%B2%DB%B1%DB%B2%DB%B3%DB%B5%DB%B5.jpg" alt="آلبوم ۳">
             <div class="photo-info">
@@ -221,7 +184,7 @@
             </div>
         </div>
 
-        <!-- آلبوم ۴ + شعار ۴ -->
+        <!-- آلبوم ۴ -->
         <div class="photo-card">
             <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B1%DB%B0%DB%B9_%DB%B2%DB%B1%DB%B2%DB%B4%DB%B3%DB%B3.jpg" alt="آلبوم ۴">
             <div class="photo-info">
@@ -233,7 +196,7 @@
             </div>
         </div>
 
-        <!-- آلبوم ۵ (بدون شعار) -->
+        <!-- آلبوم ۵ -->
         <div class="photo-card">
             <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B1%DB%B0%DB%B9_%DB%B2%DB%B1%DB%B2%DB%B8%DB%B3%DB%B9.jpg" alt="آلبوم ۵">
             <div class="photo-info">
@@ -242,7 +205,7 @@
             </div>
         </div>
 
-        <!-- آلبوم ۶ (بدون شعار) -->
+        <!-- آلبوم ۶ -->
         <div class="photo-card">
             <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B1%DB%B0%DB%B9_%DB%B2%DB%B1%DB%B2%DB%B7%DB%B2%DB%B0.jpg" alt="آلبوم ۶">
             <div class="photo-info">
@@ -251,7 +214,7 @@
             </div>
         </div>
 
-        <!-- آلبوم ۷ (بدون شعار) -->
+        <!-- آلبوم ۷ -->
         <div class="photo-card">
             <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B1%DB%B0%DB%B9_%DB%B2%DB%B1%DB%B2%DB%B5%DB%B5%DB%B6.jpg" alt="آلبوم ۷">
             <div class="photo-info">
@@ -260,7 +223,7 @@
             </div>
         </div>
 
-        <!-- آلبوم ۸ (بدون شعار) -->
+        <!-- آلبوم ۸ -->
         <div class="photo-card">
             <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B1%DB%B0%DB%B9_%DB%B2%DB%B1%DB%B2%DB%B5%DB%B2%DB%B3.jpg" alt="آلبوم ۸">
             <div class="photo-info">
@@ -269,21 +232,12 @@
             </div>
         </div>
 
+        <!-- دکمه بازگشت به منو (فقط در پایین) -->
         <div class="back-btn-container">
             <a href="menu.html" class="btn-back-main">بازگشت به منو</a>
         </div>
 
     </div>
 
-    <script>
-        function copyLink() {
-            var url = window.location.href;
-            navigator.clipboard.writeText(url).then(function() {
-                var toast = document.getElementById("toast");
-                toast.classList.add("show");
-                setTimeout(function() { toast.classList.remove("show"); }, 2000);
-            });
-        }
-    </script>
 </body>
-    </html>
+                            </html>
