@@ -113,33 +113,35 @@
         }
         .btn-back-main:hover { background-color: var(--primary-navy); color: var(--gold-accent); }
 
-        /* ================= استایل بزرگ‌نمایی عکس (اصلاح شده) ================= */
+        /* ================= استایل بزرگ‌نمایی عکس (اصلاح نهایی) ================= */
         .lightbox {
             display: none; position: fixed; z-index: 9999;
             top: 0; left: 0; width: 100%; height: 100%;
-            background-color: rgba(0, 0, 0, 0.9); 
+            background-color: rgba(0, 0, 0, 0.95); /* پس زمینه کاملاً تیره */
             justify-content: center; align-items: center; flex-direction: column;
-            backdrop-filter: blur(5px);
         }
 
         .lightbox img {
-            width: 95%; /* این خط باعث می‌شود عکس پهن‌تر شود */
-            height: auto; 
-            max-height: 90vh; /* جلوگیری از خارج شدن از صفحه */
+            /* این خطوط عکس را مجبور به بزرگ شدن می‌کنند */
+            width: 100% !important; 
+            height: auto !important;
+            max-height: 80vh; /* حداکثر ارتفاع */
+            object-fit: contain; /* حفظ نسبت تصویر */
             border-radius: 10px;
             border: 3px solid var(--gold-accent);
-            box-shadow: 0 0 30px rgba(196, 161, 103, 0.4);
+            box-shadow: 0 0 40px rgba(196, 161, 103, 0.6);
             animation: zoomIn 0.3s ease;
         }
 
         @keyframes zoomIn {
-            from { transform: scale(0.8); opacity: 0; }
+            from { transform: scale(0.9); opacity: 0; }
             to { transform: scale(1); opacity: 1; }
         }
 
         .lightbox-close {
-            position: absolute; top: 20px; right: 25px;
-            color: #fff; font-size: 40px; font-weight: bold; cursor: pointer; transition: 0.3s;
+            position: absolute; top: 15px; right: 25px;
+            color: #fff; font-size: 50px; font-weight: bold; cursor: pointer; transition: 0.3s;
+            line-height: 1;
         }
         .lightbox-close:hover { color: var(--gold-accent); }
     </style>
@@ -276,6 +278,7 @@
     <!-- کدهای مربوط به ساختار بزرگ‌نمایی عکس -->
     <div id="lightbox" class="lightbox" onclick="closeLightbox()">
         <span class="lightbox-close">&times;</span>
+        <!-- عکس با کلاس مخصوص لایت‌باکس -->
         <img id="lightbox-img" src="" alt="عکس بزرگ شده">
     </div>
 
@@ -293,4 +296,4 @@
         }
     </script>
 </body>
-                            </html>
+                                                     </html>
