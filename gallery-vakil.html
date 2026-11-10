@@ -81,7 +81,15 @@
             background-color: var(--card-bg); border-radius: 20px; border: 2px solid var(--border-gold);
             padding: 15px; margin-bottom: 30px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
         }
-        .photo-card img { width: 100%; height: auto; border-radius: 12px; object-fit: cover; display: block; }
+        
+        /* نشانگر موس برای عکس‌ها */
+        .photo-card img { 
+            width: 100%; height: auto; border-radius: 12px; object-fit: cover; display: block; 
+            cursor: zoom-in; transition: transform 0.3s ease;
+        }
+        .photo-card img:hover {
+            transform: scale(1.02);
+        }
 
         .photo-info {
             display: flex; flex-direction: column; align-items: flex-end;
@@ -90,7 +98,7 @@
         .photo-caption { color: var(--text-muted); font-size: 13px; margin-bottom: 5px; }
         .photo-title { color: var(--primary-navy); font-size: 18px; font-weight: bold; font-family: 'IranSans', sans-serif; }
 
-        /* استایل تک شعار (زیر هر عکس) */
+        /* استایل تک شعار */
         .single-slogan {
             background-color: var(--primary-navy); border-radius: 12px; padding: 15px 20px;
             text-align: right; border-right: 4px solid var(--gold-accent); display: flex;
@@ -99,7 +107,7 @@
         .single-slogan p { color: #FFFFFF; font-size: 15px; font-weight: 500; margin: 0; line-height: 1.5; }
         .single-slogan::before { content: "✦"; color: var(--gold-accent); font-size: 18px; }
 
-        /* دکمه بازگشت پایین */
+        /* دکمه بازگشت */
         .back-btn-container { text-align: center; margin-bottom: 40px; margin-top: 20px; }
         .btn-back-main {
             display: inline-block; background-color: var(--gold-accent); color: var(--primary-navy);
@@ -107,13 +115,54 @@
             border-radius: 12px; box-shadow: 0 4px 10px rgba(196, 161, 103, 0.3); transition: all 0.3s;
         }
         .btn-back-main:hover { background-color: var(--primary-navy); color: var(--gold-accent); }
+
+        /* ================= استایل بزرگ‌نمایی عکس (Lightbox) ================= */
+        .lightbox {
+            display: none; /* به صورت پیش‌فرض مخفی است */
+            position: fixed;
+            z-index: 9999;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-color: rgba(0, 0, 0, 0.85); /* پس‌زمینه تیره */
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            backdrop-filter: blur(5px);
+        }
+
+        .lightbox img {
+            max-width: 95%;
+            max-height: 85%;
+            border-radius: 10px;
+            border: 3px solid var(--gold-accent);
+            box-shadow: 0 0 30px rgba(196, 161, 103, 0.4);
+            animation: zoomIn 0.3s ease;
+        }
+
+        @keyframes zoomIn {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .lightbox-close:hover {
+            color: var(--gold-accent);
+        }
     </style>
 </head>
 <body>
 
     <div class="main-container">
         
-        <!-- کارت پروفایل (بدون دکمه بازگشت و آیکون کپی) -->
+        <!-- کارت پروفایل -->
         <div class="profile-card">
             <div class="logo-icon">
                 <svg viewBox="0 0 24 24"><path d="M12 2V22M12 22H7M12 22H17M12 5L4 9M12 5L20 9M4 9L2 15C2 16.1046 2.89543 17 4 17C5.10457 17 6 16.1046 6 15L4 9ZM20 9L18 15C18 16.1046 18.8954 17 20 17C21.1046 17 22 16.1046 22 15L20 9ZM12 5V22M12 2C12.5523 2 13 2.44772 13 3C13 3.55228 12.5523 4 12 4C11.4477 4 11 3.55228 11 3C11 2.44772 11.4477 2 12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
@@ -150,7 +199,8 @@
 
         <!-- آلبوم ۱ -->
         <div class="photo-card">
-            <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B1%DB%B0%DB%B5_%DB%B2%DB%B2%DB%B5%DB%B0%DB%B1%DB%B4.jpg" alt="آلبوم ۱">
+            <!-- اضافه شدن onclick برای باز کردن لایت‌باکس -->
+            <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B1%DB%B0%DB%B5_%DB%B2%DB%B2%DB%B5%DB%B0%DB%B1%DB%B4.jpg" alt="آلبوم ۱" onclick="openLightbox(this.src)">
             <div class="photo-info">
                 <span class="photo-caption">تصویر شماره یک (جدید)</span>
                 <span class="photo-title">آلبوم جدید ۱</span>
@@ -162,7 +212,7 @@
 
         <!-- آلبوم ۲ -->
         <div class="photo-card">
-            <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B1%DB%B0%DB%B9_%DB%B2%DB%B1%DB%B2%DB%B0%DB%B4%DB%B0.jpg" alt="آلبوم ۲">
+            <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B1%DB%B0%DB%B9_%DB%B2%DB%B1%DB%B2%DB%B0%DB%B4%DB%B0.jpg" alt="آلبوم ۲" onclick="openLightbox(this.src)">
             <div class="photo-info">
                 <span class="photo-caption">تصویر شماره دو (جدید)</span>
                 <span class="photo-title">آلبوم جدید ۲</span>
@@ -174,7 +224,7 @@
 
         <!-- آلبوم ۳ -->
         <div class="photo-card">
-            <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B1%DB%B0%DB%B9_%DB%B2%DB%B1%DB%B2%DB%B3%DB%B5%DB%B5.jpg" alt="آلبوم ۳">
+            <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B1%DB%B0%DB%B9_%DB%B2%DB%B1%DB%B2%DB%B3%DB%B5%DB%B5.jpg" alt="آلبوم ۳" onclick="openLightbox(this.src)">
             <div class="photo-info">
                 <span class="photo-caption">تصویر شماره سه (جدید)</span>
                 <span class="photo-title">آلبوم جدید ۳</span>
@@ -186,7 +236,7 @@
 
         <!-- آلبوم ۴ -->
         <div class="photo-card">
-            <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B1%DB%B0%DB%B9_%DB%B2%DB%B1%DB%B2%DB%B4%DB%B3%DB%B3.jpg" alt="آلبوم ۴">
+            <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B1%DB%B0%DB%B9_%DB%B2%DB%B1%DB%B2%DB%B4%DB%B3%DB%B3.jpg" alt="آلبوم ۴" onclick="openLightbox(this.src)">
             <div class="photo-info">
                 <span class="photo-caption">تصویر شماره چهار (جدید)</span>
                 <span class="photo-title">آلبوم جدید ۴</span>
@@ -198,7 +248,7 @@
 
         <!-- آلبوم ۵ -->
         <div class="photo-card">
-            <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B1%DB%B0%DB%B9_%DB%B2%DB%B1%DB%B2%DB%B8%DB%B3%DB%B9.jpg" alt="آلبوم ۵">
+            <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B1%DB%B0%DB%B9_%DB%B2%DB%B1%DB%B2%DB%B8%DB%B3%DB%B9.jpg" alt="آلبوم ۵" onclick="openLightbox(this.src)">
             <div class="photo-info">
                 <span class="photo-caption">تصویر شماره پنج (جدید)</span>
                 <span class="photo-title">آلبوم جدید ۵</span>
@@ -207,7 +257,7 @@
 
         <!-- آلبوم ۶ -->
         <div class="photo-card">
-            <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B1%DB%B0%DB%B9_%DB%B2%DB%B1%DB%B2%DB%B7%DB%B2%DB%B0.jpg" alt="آلبوم ۶">
+            <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B1%DB%B0%DB%B9_%DB%B2%DB%B1%DB%B2%DB%B7%DB%B2%DB%B0.jpg" alt="آلبوم ۶" onclick="openLightbox(this.src)">
             <div class="photo-info">
                 <span class="photo-caption">تصویر شماره شش (جدید)</span>
                 <span class="photo-title">آلبوم جدید ۶</span>
@@ -216,7 +266,7 @@
 
         <!-- آلبوم ۷ -->
         <div class="photo-card">
-            <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B1%DB%B0%DB%B9_%DB%B2%DB%B1%DB%B2%DB%B5%DB%B5%DB%B6.jpg" alt="آلبوم ۷">
+            <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B1%DB%B0%DB%B9_%DB%B2%DB%B1%DB%B2%DB%B5%DB%B5%DB%B6.jpg" alt="آلبوم ۷" onclick="openLightbox(this.src)">
             <div class="photo-info">
                 <span class="photo-caption">تصویر شماره هفت (جدید)</span>
                 <span class="photo-title">آلبوم جدید ۷</span>
@@ -225,19 +275,39 @@
 
         <!-- آلبوم ۸ -->
         <div class="photo-card">
-            <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B1%DB%B0%DB%B9_%DB%B2%DB%B1%DB%B2%DB%B5%DB%B2%DB%B3.jpg" alt="آلبوم ۸">
+            <img src="https://raw.githubusercontent.com/parisa-zare/parisa-zare-siti/main/IMG_%DB%B2%DB%B0%DB%B2%DB%B6%DB%B1%DB%B1%DB%B0%DB%B9_%DB%B2%DB%B1%DB%B2%DB%B5%DB%B2%DB%B3.jpg" alt="آلبوم ۸" onclick="openLightbox(this.src)">
             <div class="photo-info">
                 <span class="photo-caption">تصویر شماره هشت (جدید)</span>
                 <span class="photo-title">آلبوم جدید ۸</span>
             </div>
         </div>
 
-        <!-- دکمه بازگشت به منو (فقط در پایین) -->
         <div class="back-btn-container">
             <a href="menu.html" class="btn-back-main">بازگشت به منو</a>
         </div>
 
     </div>
 
+    <!-- کدهای مربوط به ساختار بزرگ‌نمایی عکس -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightbox-img" src="" alt="عکس بزرگ شده">
+    </div>
+
+    <script>
+        // تابع باز کردن عکس
+        function openLightbox(imageSrc) {
+            var lightbox = document.getElementById("lightbox");
+            var lightboxImg = document.getElementById("lightbox-img");
+            lightbox.style.display = "flex";
+            lightboxImg.src = imageSrc;
+        }
+
+        // تابع بستن عکس
+        function closeLightbox() {
+            var lightbox = document.getElementById("lightbox");
+            lightbox.style.display = "none";
+        }
+    </script>
 </body>
-                            </html>
+                    </html>
